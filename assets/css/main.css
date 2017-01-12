@@ -1,3 +1,7 @@
+* {
+  font-family: "neuzeit-grotesk", sans-serif;
+}
+
 body {
   background-color: #FFCC4C;
 }
@@ -6,21 +10,27 @@ body {
   margin: 0 auto;
 }
 
+.intro {
+  margin-bottom: 1em;
+}
+
 .intro > h1 {
-  font-size: 8.125em;
   color: #19AAD1;
   margin: 0;
+  font-weight: 900;
 }
 
 .intro > span {
   color: #19AAD1;
   display: block;
-  max-width: 70%;
-  font-size: 1.6em;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h1 > span {
   color: white;
+  text-decoration: underline;
 }
 
 ul {
@@ -30,10 +40,29 @@ ul {
 
 li {
   color: #19AAD1;
-  text-align: right;
   list-style-type: none;
+  font-size: 1.125em;
+  font-weight: 700;
 }
 
 li > a {
   color: white;
+  text-decoration: none;
+}
+
+li > a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  margin: 30px 0 30px 0;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .intro > span {
+    max-width: 70%;
+  }
 }
