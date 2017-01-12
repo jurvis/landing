@@ -1,0 +1,39 @@
+body {
+  background-color: #FFCC4C;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.intro > h1 {
+  font-size: 8.125em;
+  color: #19AAD1;
+  margin: 0;
+}
+
+.intro > span {
+  color: #19AAD1;
+  display: block;
+  max-width: 70%;
+  font-size: 1.6em;
+}
+
+h1 > span {
+  color: white;
+}
+
+ul {
+  margin: 1em 0 1em 0;
+  padding: 0;
+}
+
+li {
+  color: #19AAD1;
+  text-align: right;
+  list-style-type: none;
+}
+
+li > a {
+  color: white;
+}
