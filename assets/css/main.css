@@ -51,6 +51,11 @@ a {
   color: #357EDD;
 }
 
+.project-icon, .app-icon{
+  height: 20px;
+  width: 20px;
+}
+
 @media (max-width: 30em) {
   .intro > img {
     height: 100px;
