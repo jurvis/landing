@@ -51,8 +51,9 @@ a {
   color: #357EDD;
 }
 
-@media (min-width: 768px) {
-  .intro > span {
-    max-width: 70%;
+@media (max-width: 30em) {
+  .intro > img {
+    height: 100px;
+    width: 100px;
   }
 }
