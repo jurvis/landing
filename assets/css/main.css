@@ -56,6 +56,10 @@ a {
   width: 20px;
 }
 
+.item-list > li > a {
+  text-decoration: none;
+}
+
 @media (max-width: 30em) {
   .intro > img {
     height: 100px;
