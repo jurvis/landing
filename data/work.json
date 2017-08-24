@@ -1,0 +1,37 @@
+[
+  {
+    "name": "UserTesting",
+    "title": "Software Engineering Intern",
+    "timespan": "2016 - 2017",
+    "logo": "/static/assets/img/icons/ut.png",
+    "link": "https://usertesting.com/"
+  },
+  {
+    "name": "Nebulo",
+    "title": "iOS and Design",
+    "timespan": "",
+    "logo": "/static/assets/img/icons/nbl.png",
+    "link": "https://nebulo.undertide.co/"
+  },
+  {
+    "name": "buUuk",
+    "title": "iOS Intern",
+    "timespan": "2015",
+    "logo": "/static/assets/img/icons/bk.png",
+    "link": "http://www.buuuk.com/"
+  },
+  {
+    "name": "Carousell",
+    "title": "Developer Intern",
+    "timespan": "2013 - 2014",
+    "logo": "/static/assets/img/icons/cl.png",
+    "link": "https://carousell.com"
+  },
+  {
+    "name": "FOSSAsia",
+    "title": "iOS and Design",
+    "timespan": "",
+    "logo": "/static/assets/img/icons/fa.png",
+    "link": "#"
+  }
+]

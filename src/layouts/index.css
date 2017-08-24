@@ -3,6 +3,10 @@
   color: near-black;
 }
 
+body {
+  margin: 0;
+}
+
 .container {
   margin: 0 auto;
 }
