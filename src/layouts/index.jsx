@@ -18,7 +18,15 @@ const DescriptionText = styled('span')`
 `;
 
 const Container = styled('div')`
-  container center w-100
+  flex flex-column items-center bg-white shadow-4 w-90 mt5
+`;
+
+const Navigation = styled('nav')`
+  dt w-100 mw8 center
+`;
+
+const NavigationLinks = styled('div')`
+  dtc v-mid tr pa3
 `;
 
 const TemplateWrapper = ({ children }) =>
@@ -33,12 +41,13 @@ const TemplateWrapper = ({ children }) =>
         { property: 'og:site_name', content: 'Jurvis Tan' }
       ]}
     />
-    <StyledHeader>
-      <img src={__PATH_PREFIX__ + "/static/assets/img/profile.jpg"} alt="profile picture"/>
-      <TitleText>Hello!</TitleText>
-      <TitleText>My name is <span>Jurvis.</span></TitleText>
-      <DescriptionText>I am a software engineer based in Singapore.</DescriptionText>
-    </StyledHeader>
+    <Navigation>
+      <NavigationLinks>
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Others</a>
+      </NavigationLinks>
+    </Navigation>
     {children()}
   </Container>
 

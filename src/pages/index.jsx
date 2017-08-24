@@ -7,8 +7,12 @@ import AwardItem from '../components/AwardItem';
 import Data from '../data_factory';
 
 const ContentContainer = styled('div')`
-  content pa3 ph5-ns pv4-ns
+  flex flex-column
 `;
+
+const SubHead = styled('h1')`
+  f4 fw3 lh-copy measure ma0
+`
 
 class IndexPage extends React.Component {
   componentWillMount() {
@@ -25,6 +29,8 @@ class IndexPage extends React.Component {
   render() {
     return (
       <ContentContainer>
+        <SubHead>Hello, my name is Jurvis, a software developer based in Singapore.</SubHead>
+        <SubHead>I strive to build unforgettable digital experiences.</SubHead>
         <CategorySection title="💼 Work">
           <ul className="item-list">
             {Data.getWork.map(work => {

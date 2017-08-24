@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'tachyons-components';
 
 const StyledCategorySection = styled('div')`
-  category work
+  category work pv3
 `;
 
 const StyledSectionHeader = styled('h2')`
