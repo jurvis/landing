@@ -14,11 +14,14 @@ const HeroContainer = styled('div')`
 `
 
 const CategoriesContainer = styled('div')`
-
 `
 
 const SubHead = styled('h1')`
   f4 fw3 lh-copy measure ma0
+`
+
+const WorkList = styled('div')`
+  pa0 mv0
 `
 
 class IndexPage extends React.Component {
@@ -42,7 +45,7 @@ class IndexPage extends React.Component {
         </HeroContainer>
         <CategoriesContainer>
           <CategorySection title="Work">
-            <ul className="item-list">
+            <div className="item-list">
               {Data.getWork.map(work => {
                 return (
                   <WorkItem
@@ -50,7 +53,7 @@ class IndexPage extends React.Component {
                   />
                 )
               })}
-            </ul>
+            </div>
           </CategorySection>
 
           <CategorySection title="Awards">

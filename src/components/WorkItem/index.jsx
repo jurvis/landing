@@ -6,22 +6,27 @@ const Logo = styled('img')`
 
 `;
 const CompanyText = styled('span')`
-  f5 fw6 v-mid lh-copy near-black
-`;
-const SubText = styled('span')`
-  v-mid mid-gray
+  f5 fw6 v-mid lh-title
 `;
 
+const SubText = styled('p')`
+  lh-copy v-mid mid-gray mv0
+`;
+
+const CompanyLink = styled('a')`
+  link
+`
+
 const WorkItem = ({work}) => {
-  const { logo, name, title, timespan, link } = work;
+  const { logo, name, skills, timespan, link } = work;
   return (
-    <li>
-      <a href={link}>
+    <div>
+      <CompanyLink href={link}>
         <Logo src={`${__PATH_PREFIX__}${logo}`} alt="" />
-        <CompanyText>{name} —</CompanyText>
-        <SubText>{title}, {timespan}</SubText>
-      </a>
-    </li>
+        <CompanyText>{name}</CompanyText>
+      </CompanyLink>
+      <SubText>{skills}</SubText>
+    </div>
   );
 }
 
