@@ -29,6 +29,22 @@ const NavigationLinks = styled('div')`
   dtc v-mid tr pa3
 `;
 
+const LogoContainer = styled('div')`
+  dtc w2 v-mid pa3
+`;
+
+const NavigationLink = styled('a')`
+  f6 fw4 hover-yellow no-underline yellow-70 dn dib-ns pv2 ph3
+`;
+
+const Logo = styled('img')`
+  dib w2 h2 pa1 ba b--white-90 grow-large border-box
+`;
+
+const ContentContainer = styled('div')`
+  flex flex-column w-80
+`;
+
 const TemplateWrapper = ({ children }) =>
   <Container>
     <Helmet
@@ -42,13 +58,18 @@ const TemplateWrapper = ({ children }) =>
       ]}
     />
     <Navigation>
+      <LogoContainer>
+        <Logo src={__PATH_PREFIX__ + '/static/assets/img/profile.jpg'}/>
+      </LogoContainer>
       <NavigationLinks>
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Others</a>
+        <NavigationLink href="#">Home</NavigationLink>
+        <NavigationLink href="#">Projects</NavigationLink>
+        <NavigationLink href="#">Others</NavigationLink>
       </NavigationLinks>
     </Navigation>
-    {children()}
+    <ContentContainer>
+      {children()}
+    </ContentContainer>
   </Container>
 
 TemplateWrapper.propTypes = {
