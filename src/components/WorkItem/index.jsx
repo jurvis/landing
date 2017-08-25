@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'tachyons-components';
 
+const WorkItemContainer = styled('div')`
+  mb3
+`
+
 const Logo = styled('img')`
   v-mid project-icon
-
 `;
+
 const CompanyText = styled('span')`
-  f5 fw6 v-mid lh-title
+  pl1 f5 fw6 v-mid lh-title
 `;
 
 const SubText = styled('p')`
@@ -14,19 +18,19 @@ const SubText = styled('p')`
 `;
 
 const CompanyLink = styled('a')`
-  link
+  f4 fw6 link hover-yellow
 `
 
 const WorkItem = ({work}) => {
   const { logo, name, skills, timespan, link } = work;
   return (
-    <div>
+    <WorkItemContainer>
       <CompanyLink href={link}>
         <Logo src={`${__PATH_PREFIX__}${logo}`} alt="" />
         <CompanyText>{name}</CompanyText>
       </CompanyLink>
       <SubText>{skills}</SubText>
-    </div>
+    </WorkItemContainer>
   );
 }
 
