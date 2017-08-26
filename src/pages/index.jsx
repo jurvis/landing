@@ -25,17 +25,6 @@ const WorkList = styled('div')`
 `
 
 class IndexPage extends React.Component {
-  componentWillMount() {
-    const script = document.createElement("script");
-
-    script.src="https://use.typekit.net/ici2nml.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-    try{Typekit.load({ async: true });}catch(e){}
-  }
-
-
   render() {
     return (
       <ContentContainer>
