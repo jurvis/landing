@@ -61,11 +61,6 @@ const TemplateWrapper = ({ children }) =>
       <LogoContainer>
         <Logo src={__PATH_PREFIX__ + '/static/assets/img/profile.jpg'}/>
       </LogoContainer>
-      <NavigationLinks>
-        <NavigationLink href="#">Home</NavigationLink>
-        <NavigationLink href="#">Projects</NavigationLink>
-        <NavigationLink href="#">Others</NavigationLink>
-      </NavigationLinks>
     </Navigation>
     <ContentContainer>
       {children()}
