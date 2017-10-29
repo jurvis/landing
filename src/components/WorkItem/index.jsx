@@ -10,16 +10,16 @@ const Logo = styled('img')`
 `;
 
 const CompanyText = styled('span')`
-  pl1 f5 fw6 v-mid lh-title
+  pl1 f5 fw6 v-mid lh-title dark-gray
 `;
 
 const SubText = styled('p')`
-  lh-copy v-mid mid-gray mv0
+  fw4 lh-copy v-mid mid-gray mv0
 `;
 
 const CompanyLink = styled('a')`
-  f4 fw6 link hover-yellow
-`
+  f4 fw6 link
+`;
 
 const WorkItem = ({work}) => {
   const { logo, name, skills, timespan, link } = work;
