@@ -53,7 +53,7 @@ const TemplateWrapper = ({ children }) =>
         { name: 'viewport', content: 'width=device-width, user-scalable=no' },
         { name: 'viewport', content: 'initial-scale=1.0' },
         { property: 'og:title', content: 'Jurvis Tan' },
-        { property: 'og:decsription', content: 'I am a software engineer based in Singapore'},
+        { property: 'og:description', content: 'I am a software engineer based in Singapore'},
         { property: 'og:site_name', content: 'Jurvis Tan' }
       ]}
     />
@@ -68,7 +68,7 @@ const TemplateWrapper = ({ children }) =>
   </Container>
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.any,
 }
 
 export default TemplateWrapper
