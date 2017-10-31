@@ -22,7 +22,7 @@ const Container = styled('div')`
 `;
 
 const Navigation = styled('nav')`
-  dt w-100 mw8 center
+  dt w-100 center
 `;
 
 const NavigationLinks = styled('div')`
