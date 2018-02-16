@@ -1,5 +1,13 @@
 [
   {
+    "name": "Oromico",
+    "title": "Software Engineer",
+    "skills": "Python, React",
+    "timespan": "2017-2018",
+    "logo": "/static/assets/img/icons/oro.png",
+    "link": "https://www.oromico.com"
+  },
+  {
     "name": "UserTesting",
     "title": "Software Engineering Intern",
     "skills": "Rails, React, iOS",
@@ -26,7 +34,7 @@
   {
     "name": "Carousell",
     "title": "Developer Intern",
-    "skills": "Python, Go, Front-end development",
+    "skills": "Python, Go, Front-end Development",
     "timespan": "2013 - 2014",
     "logo": "/static/assets/img/icons/cl.png",
     "link": "https://carousell.com"

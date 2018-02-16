@@ -29,12 +29,9 @@ module.exports = class HTML extends React.Component {
             <script dangerouslySetInnerHTML={{__html: loadTypeKit}} />
             <meta charSet="utf-8" />
             <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-            <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          {this.props.headComponents}
-          {css}
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+            {this.props.headComponents}
+            {css}
         </head>
         <body>
           {this.props.preBodyComponents}
