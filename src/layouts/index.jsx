@@ -25,16 +25,16 @@ const Navigation = styled('nav')`
   dt w-100 mw8 center
 `;
 
-const NavigationLinks = styled('div')`
-  dtc v-mid tr pa3
+const NavLinksContainer = styled('div')`
+  dtc v-mid tr pa3 w-75
 `;
 
 const LogoContainer = styled('div')`
   dtc w2 v-mid pa3
 `;
 
-const NavigationLink = styled('a')`
-  f6 fw4 hover-yellow no-underline yellow-70 dn dib-ns pv2 ph3
+const NavLink = styled(Link)`
+  f6 fw4 hover-yellow no-underline yellow-70 dn dib-ns pv2 ph3 dim
 `;
 
 const Logo = styled('img')`
@@ -61,6 +61,13 @@ const TemplateWrapper = ({ children }) =>
       <LogoContainer>
         <Logo src={__PATH_PREFIX__ + '/static/assets/img/profile.jpg'}/>
       </LogoContainer>
+      <NavLinksContainer>
+        <NavLink
+          to="/projects/"
+        >
+          Projects
+        </NavLink>
+      </NavLinksContainer>
     </Navigation>
     <ContentContainer>
       {children()}
