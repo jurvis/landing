@@ -1,7 +1,18 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `Jurvis Tan`,
-    pathPrefix: '/'
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: path.join(__dirname, `data`),
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
+  ],
 };
