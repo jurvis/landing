@@ -4,9 +4,17 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.8.12",
+    "@types/lodash": "^4.14.104",
+    "@types/react-helmet": "^5.0.5",
+    "@types/slug": "^0.9.0",
+    "gatsby": "^1.9.231",
     "gatsby-link": "^1.6.8",
-    "gatsby-plugin-react-helmet": "^1.0.3",
+    "gatsby-plugin-react-helmet": "^2.0.7",
+    "gatsby-source-filesystem": "^1.5.27",
+    "gatsby-transformer-json": "^1.0.16",
+    "lodash": "^4.17.5",
+    "react-helmet": "^5.2.0",
+    "slug": "^0.9.1",
     "tachyons-components": "^1.0.0-1"
   },
   "keywords": [
