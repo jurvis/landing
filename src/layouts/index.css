@@ -1,0 +1,101 @@
+* {
+  font-family: "nudista-web", sans-serif;
+  color: near-black;
+}
+
+body {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #384150;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh
+}
+
+.app {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+  background-image: linear-gradient(90deg, #FBF1A9 0, #FFD700);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.intro > h1 {
+  color: #19AAD1;
+  margin: 0;
+  font-weight: 900;
+}
+
+.intro > span {
+  color: #19AAD1;
+  display: block;
+  font-weight: 400;
+}
+
+.intro > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+h1 > span {
+  color: white;
+  text-decoration: underline;
+}
+
+ul.item-list {
+  margin: 1em 0 1e 0;
+  padding: 0;
+  list-style: none;
+} ul.item-list > li:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+img.app-icon {
+  border-radius: 20%;
+}
+
+a {
+  color: #357EDD;
+}
+
+.project-icon, .app-icon{
+  height: 20px;
+  width: 20px;
+}
+
+.item-list > li > a {
+  text-decoration: none;
+}
+
+@media (max-width: 30em) {
+  .intro > img {
+    height: 100px;
+    width: 100px;
+  }
+}
