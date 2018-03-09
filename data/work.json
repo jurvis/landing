@@ -1,5 +1,6 @@
 [
   {
+    "id": "ut",
     "name": "UserTesting",
     "title": "Software Engineering Intern",
     "skills": "Rails, React, iOS",
@@ -8,6 +9,7 @@
     "link": "https://usertesting.com/"
   },
   {
+    "id": "nbl",
     "name": "Nebulo",
     "title": "iOS and Design",
     "timespan": "",
@@ -16,26 +18,26 @@
     "link": "https://nebulo.undertide.co/"
   },
   {
+    "id": "bk",
     "name": "buUuk",
     "title": "iOS Intern",
     "skills": "iOS",
-    "timespan": "2015",
     "logo": "/static/assets/img/icons/bk.png",
     "link": "http://www.buuuk.com/"
   },
   {
+    "id": "cl",
     "name": "Carousell",
     "title": "Developer Intern",
     "skills": "Python, Go, Front-end development",
-    "timespan": "2013 - 2014",
     "logo": "/static/assets/img/icons/cl.png",
     "link": "https://carousell.com"
   },
   {
+    "id": "fa",
     "name": "FOSSAsia",
     "title": "iOS and Design",
     "skills": "iOS, Design",
-    "timespan": "",
     "logo": "/static/assets/img/icons/fa.png",
     "link": "#"
   }
