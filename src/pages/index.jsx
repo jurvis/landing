@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Link from 'gatsby-link';
 import styled from 'tachyons-components';
 import CategorySection from '../components/CategorySection';
@@ -25,7 +25,15 @@ const WorkList = styled('div')`
 `
 
 class IndexPage extends React.Component {
+  static propTypes = {
+    data: PropTypes.shape({
+      allWorkJson: PropTypes.object.isRequired,
+      allAwardsJson: PropTypes.object.isRequired
+    })
+  }
+
   render() {
+    const { data } = this.props;
     return (
       <ContentContainer>
         <HeroContainer>
@@ -35,10 +43,10 @@ class IndexPage extends React.Component {
         <CategoriesContainer>
           <CategorySection title="Work">
             <div className="item-list">
-              {Data.getWork.map(work => {
+              {data.allWorkJson.edges.map(work => {
                 return (
                   <WorkItem
-                    work={work}
+                    work={work.node}
                   />
                 )
               })}
@@ -47,10 +55,10 @@ class IndexPage extends React.Component {
 
           <CategorySection title="Awards">
             <ul className="item-list">
-              {Data.getAwards.map(award => {
+              {data.allAwardsJson.edges.map(award => {
                 return (
                   <AwardItem
-                    award={award}
+                    award={award.node}
                   />
                 )
               })}
@@ -83,3 +91,26 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query IndexQuery {
+    allWorkJson {
+      edges {
+        node {
+          logo
+          name
+          skills
+          link
+          timespan
+        }
+      }
+    }
+    allAwardsJson {
+      edges {
+        node {
+          name
+        }
+      }
+    }
+  }
+`

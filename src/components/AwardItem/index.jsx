@@ -5,9 +5,9 @@ const AwardString = styled('span')`
   f5 v-mid lh-copy near-black
 `;
 
-const AwardItem = ({award}) =>
+const AwardItem = ({ award }) =>
   <li>
-    <AwardString>{award}</AwardString>
+    <AwardString>{award.name}</AwardString>
   </li>
 
 export default AwardItem;
