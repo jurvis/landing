@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const projectTemplate = path.resolve(`src/templates/project-page.js`)
         _.each(result.data.allProjectsJson.edges, edge => {
           createPage({
-            path: `/${slug(edge.node.id)}/`,
+            path: `/projects/${slug(edge.node.id)}/`,
             component: slash(projectTemplate),
             context: {
               id: edge.node.id,
