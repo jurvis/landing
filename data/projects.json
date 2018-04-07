@@ -1,17 +1,38 @@
 [
   {
+    "id": "snb",
+    "name": "SG NextBus",
+    "skills": "reactjs",
+    "image_dir": "/static/assets/img/projects/nextbus/1.jpg"
+  },
+  {
     "id": "fa",
     "name": "FOSSAsia 2016 iOS App",
-    "subhead": "iOS and Design"
+    "skills": "ios, design",
+    "image_dir": "/static/assets/img/projects/fossasia/1.jpg"
   },
   {
     "id": "nbl",
     "name": "Nebulo",
-    "subhead": "iOS and Design"
+    "skills": "ios, design",
+    "image_dir": "/static/assets/img/projects/nebulo/1.jpg"
   },
   {
-    "id": "snb",
-    "name": "SG NextBus",
-    "subhead": "Frontend Development"
+    "id": "eg",
+    "name": "ExhibitGuide",
+    "skills": "ios",
+    "image_dir": "/static/assets/img/projects/exhibitguide/1.jpg"
+  },
+  {
+    "id": "mt",
+    "name": "Multitude",
+    "skills": "web",
+    "image_dir": "/static/assets/img/projects/multitude/1.jpg"
+  },
+  {
+    "id": "rp",
+    "name": "RelayPlay",
+    "skills": "ios, web",
+    "image_dir": "/static/assets/img/projects/relayplay/1.jpg"
   }
 ]
