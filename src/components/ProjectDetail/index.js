@@ -1,4 +1,29 @@
 import React from "react"
+import styled from 'tachyons-components';
+
+const ProjectContainer = styled('article')`
+  fl w-100 w-50-m w-25-ns pa2-ns
+`
+
+const ImageContainer = styled('div')`
+  aspect-ratio aspect-ratio--7x5
+`
+
+const Image = styled('img')`
+  db bg-center cover aspect-ratio--object
+`
+
+const LinkContainer = styled('a')`
+  ph2 ph0-ns pb3 link db
+`
+
+const Title = styled('h3')`
+  f5 f4-ns mb0 black-90
+`
+
+const SubTitle = styled('h3')`
+  f6 f5 fw4 mt2 black-60
+`
 
 class ProjectDetail extends React.Component {
   constructor() {
@@ -8,14 +33,20 @@ class ProjectDetail extends React.Component {
   render() {
     const {
       name,
-      subhead,
+      skills,
+      image_dir,
     } = this.props.project
 
     return (
-      <div>
-        <h2>{name}</h2>
-        <h3>{subhead}</h3>
-      </div>
+      <ProjectContainer>
+        <ImageContainer>
+          <Image style={{backgroundImage: `url(${image_dir})`}}/>
+        </ImageContainer>
+        <LinkContainer>
+          <Title>{name}</Title>
+          <SubTitle>{skills}</SubTitle>
+        </LinkContainer>
+      </ProjectContainer>
     )
   }
 }
@@ -25,6 +56,7 @@ export default ProjectDetail
 export const projectDetailFragment = graphql`
   fragment Project_detail on ProjectsJson {
     name
-    subhead
+    skills
+    image_dir
   }
 `
