@@ -1,5 +1,22 @@
 [
   {
+    "id": "ua",
+    "name": "Undertide Apps",
+    "title": "Co-Founder and Developer",
+    "skills": "iOS, Web, Design",
+    "logo": "/static/assets/img/icons/ua.png",
+    "link": "https://undertide.co"
+  },
+  {
+    "id": "oro",
+    "name": "Oromico",
+    "title": "Software Engineer",
+    "skills": "Python Flask, MongoDB",
+    "timespan": "2017-2018",
+    "logo": "/static/assets/img/icons/oro.png",
+    "link": "https://oromico.com/"
+  },
+  {
     "id": "ut",
     "name": "UserTesting",
     "title": "Software Engineering Intern",
@@ -7,14 +24,6 @@
     "timespan": "2016 - 2017",
     "logo": "/static/assets/img/icons/ut.png",
     "link": "https://usertesting.com/"
-  },
-  {
-    "id": "nbl",
-    "name": "Nebulo",
-    "title": "iOS and Design",
-    "skills": "iOS, Design",
-    "logo": "/static/assets/img/icons/nbl.png",
-    "link": "https://nebulo.undertide.co/"
   },
   {
     "id": "bk",
@@ -31,13 +40,5 @@
     "skills": "Python, Go, Front-end development",
     "logo": "/static/assets/img/icons/cl.png",
     "link": "https://carousell.com"
-  },
-  {
-    "id": "fa",
-    "name": "FOSSAsia",
-    "title": "iOS and Design",
-    "skills": "iOS, Design",
-    "logo": "/static/assets/img/icons/fa.png",
-    "link": "https://github.com/fossasia/open-event-ios"
   }
 ]

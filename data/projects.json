@@ -8,5 +8,10 @@
     "id": "nbl",
     "name": "Nebulo",
     "subhead": "iOS and Design"
+  },
+  {
+    "id": "snb",
+    "name": "SG NextBus",
+    "subhead": "Frontend Development"
   }
 ]
