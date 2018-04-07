@@ -12,7 +12,6 @@
     "id": "nbl",
     "name": "Nebulo",
     "title": "iOS and Design",
-    "timespan": "",
     "skills": "iOS, Design",
     "logo": "/static/assets/img/icons/nbl.png",
     "link": "https://nebulo.undertide.co/"
@@ -39,6 +38,6 @@
     "title": "iOS and Design",
     "skills": "iOS, Design",
     "logo": "/static/assets/img/icons/fa.png",
-    "link": "#"
+    "link": "https://github.com/fossasia/open-event-ios"
   }
 ]
