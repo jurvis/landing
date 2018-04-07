@@ -22,7 +22,7 @@ const Container = styled('div')`
 `;
 
 const Navigation = styled('nav')`
-  dt w-100 mw8 center
+  dt w-90 w-80-ns center pa3
 `;
 
 const NavLinksContainer = styled('div')`
@@ -30,7 +30,7 @@ const NavLinksContainer = styled('div')`
 `;
 
 const LogoContainer = styled('div')`
-  dtc w2 v-mid pa3
+  dtc w2 v-mid
 `;
 
 const NavLink = styled(Link)`
@@ -42,7 +42,7 @@ const Logo = styled('img')`
 `;
 
 const ContentContainer = styled('div')`
-  flex flex-column w-80
+  flex flex-column w-90 w-80-ns
 `;
 
 const TemplateWrapper = ({ children }) =>
