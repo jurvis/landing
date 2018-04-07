@@ -8,6 +8,7 @@
     "@types/react-helmet": "^5.0.5",
     "@types/slug": "^0.9.0",
     "gatsby": "^1.9.231",
+    "gatsby-cli": "^1.1.50",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-react-helmet": "^2.0.7",
     "gatsby-source-filesystem": "^1.5.27",

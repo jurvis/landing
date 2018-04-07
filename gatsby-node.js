@@ -12,7 +12,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(
         `
           {
-            allProjectsJson(limit: 1000) {
+            allProjectsJson {
               edges {
                 node {
                   id
