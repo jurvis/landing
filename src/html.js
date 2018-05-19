@@ -25,14 +25,11 @@ module.exports = class HTML extends React.Component {
     return (
       <html>
         <head>
-            <script src="https://use.typekit.net/ici2nml.js"></script>
-            <script dangerouslySetInnerHTML={{__html: loadTypeKit}} />
-            <meta charSet="utf-8" />
-            <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-            <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
+          <script src="https://use.typekit.net/ici2nml.js"></script>
+          <script dangerouslySetInnerHTML={{__html: loadTypeKit}} />
+          <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
           {this.props.headComponents}
           {css}
         </head>

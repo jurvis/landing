@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'tachyons-components';
 import ProjectDetail from '../components/ProjectDetail'
 
-const ContentContainer = styled('div')`
+const ContentContainer = styled('section')`
+  cf w-100
 `;
 
 class ProjectsPage extends React.Component {

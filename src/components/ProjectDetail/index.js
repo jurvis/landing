@@ -2,11 +2,11 @@ import React from "react"
 import styled from 'tachyons-components';
 
 const ProjectContainer = styled('article')`
-  fl w-100 w-50-m w-25-ns pa2-ns
+  fl w-100 w-50-m w-third-ns pa2-ns
 `
 
 const ImageContainer = styled('div')`
-  aspect-ratio aspect-ratio--7x5
+  aspect-ratio aspect-ratio--1x1
 `
 
 const Image = styled('img')`
