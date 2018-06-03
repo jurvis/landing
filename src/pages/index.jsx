@@ -45,6 +45,18 @@ class IndexPage extends React.Component {
             </div>
           </CategorySection>
 
+          <CategorySection title="Projects">
+            <div className="item-list">
+              {Data.getProjects.map(project => {
+                return (
+                  <WorkItem
+                    work={project}
+                  />
+                )
+              })}
+            </div>
+          </CategorySection>
+
           <CategorySection title="Awards">
             <ul className="item-list">
               {Data.getAwards.map(award => {
