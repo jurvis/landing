@@ -3,14 +3,14 @@
     "name": "Harmany",
     "title": "iOS and Design",
     "skills": "iOS, Design",
-    "logo": "/static/assets/img/icons/hmn.png",
+    "logo": "/img/icons/hmn.png",
     "link": "https://harmany.me/"
   },
   {
     "name": "SG NextBus",
     "title": "Front-End Web and Design",
     "skills": "React, Design",
-    "logo": "/static/assets/img/icons/nb.png",
+    "logo": "/img/icons/nb.png",
     "link": "https://nextbus.sg/"
   },
   {
@@ -18,7 +18,7 @@
     "title": "iOS and Design",
     "timespan": "",
     "skills": "iOS, Design",
-    "logo": "/static/assets/img/icons/nbl.png",
+    "logo": "/img/icons/nbl.png",
     "link": "https://nebulo.undertide.co/"
   },
   {
@@ -26,7 +26,7 @@
     "title": "iOS and Design",
     "skills": "iOS, Design",
     "timespan": "",
-    "logo": "/static/assets/img/icons/fa.png",
+    "logo": "/img/icons/fa.png",
     "link": "#"
   }
 ]

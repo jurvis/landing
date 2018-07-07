@@ -4,7 +4,7 @@
     "title": "Software Engineer",
     "skills": "Python, React",
     "timespan": "2017-2018",
-    "logo": "/static/assets/img/icons/oro.png",
+    "logo": "/img/icons/oro.png",
     "link": "https://www.oromico.com"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Software Engineering Intern",
     "skills": "Rails, React, iOS",
     "timespan": "2016 - 2017",
-    "logo": "/static/assets/img/icons/ut.png",
+    "logo": "/img/icons/ut.png",
     "link": "https://usertesting.com/"
   },
   {
@@ -20,7 +20,7 @@
     "title": "iOS Intern",
     "skills": "iOS",
     "timespan": "2015",
-    "logo": "/static/assets/img/icons/bk.png",
+    "logo": "/img/icons/bk.png",
     "link": "http://www.buuuk.com/"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Developer Intern",
     "skills": "Python, Go, Front-end Development",
     "timespan": "2013 - 2014",
-    "logo": "/static/assets/img/icons/cl.png",
+    "logo": "/img/icons/cl.png",
     "link": "https://carousell.com"
   }
 ]

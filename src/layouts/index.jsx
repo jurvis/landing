@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import avatar from "../assets/img/profile.jpg"
 import styled from 'tachyons-components';
 
 import './index.css';
@@ -59,7 +60,7 @@ const TemplateWrapper = ({ children }) =>
     />
     <Navigation>
       <LogoContainer>
-        <Logo src={__PATH_PREFIX__ + '/static/assets/img/profile.jpg'}/>
+        <Logo src={avatar}/>
       </LogoContainer>
     </Navigation>
     <ContentContainer>
