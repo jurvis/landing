@@ -32,11 +32,11 @@ const Container = styled.div`
   }
 `
 
-const ContentContainer = styled.div`
+const NameContainer = styled.div`
   font-weight: 600;
 `
 
-const LinksContainer = styled(ContentContainer)`
+const LinksContainer = styled.div`
   display: flex;
   width: 100%;
   order: 1;
@@ -87,18 +87,18 @@ const PageLink = styled(Link)`
   }
 
   @media only screen and (min-width: 700px) {
-    font-size: 1.1.rem;
+    font-size: 1.1rem;
   }
 `
 
 const Header = ({ siteTitle }) => (
   <Nav>
     <Container>
-      <ContentContainer>
+      <NameContainer>
         <BrandLink to="/">
           <span>Jurvis Tan</span>
         </BrandLink>
-      </ContentContainer>
+      </NameContainer>
       <LinksContainer>
         <PageLink to="/me">About Me</PageLink>
         <PageLink to="/blog">Blog</PageLink>
