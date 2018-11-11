@@ -20,7 +20,7 @@ const Main = styled.main`
 `
 
 const MainContainer = styled.div`
-  max-width: 850px;
+  max-width: 62rem;
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;

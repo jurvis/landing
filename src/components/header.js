@@ -19,7 +19,7 @@ const Nav = styled.nav`
 `
 
 const Container = styled.div`
-  max-width: 850px;
+  max-width: 62rem;
   margin: auto;
   padding: 0 15px;
   flex-wrap: wrap;
