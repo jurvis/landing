@@ -1,6 +1,7 @@
 ---
 title: "Highlights & Notes: Antifragile by Nassim Nicholas Taleb"
 date: '2018-08-28'
+path: '/posts/antifragile-highlights-notes'
 ---
 ### 1. Someone who has made plenty of errors -- though never the same error more than once -- is more reliable than someone who has never made any
 A common theme throughout this entire book promotes practice over theory. In a world ridden with uncertainty, an individual that is familiar with overcoming errors and setbacks have a favourable chance of survival over another who might only have been minimally exposed to them.
