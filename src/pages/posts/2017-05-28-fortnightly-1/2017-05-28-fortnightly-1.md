@@ -1,7 +1,7 @@
 ---
 title:  "A Fortnightly Summary: Issue #1"
 date: '2017-05-28'
-path: 'posts/fortnightly-1'
+path: '/posts/fortnightly-1'
 excerpt: People Hear But Don't Listen, TPUs - WTF are they?, Breaking The 2-Hour Marathon, and the Double Crown Weekend.
 ---
 Hello and welcome to issue #1 of my little blog series.

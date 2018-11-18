@@ -1,7 +1,7 @@
 ---
-title: DOM and Component Elements in React
+title: 'DOM and Component Elements in React'
 date: '2017-02-01'
-path: 'posts/dom-component-elements-react'
+path: '/posts/dom-component-elements-react'
 excerpt: In the past couple of days, I’ve been taking some time to fully understand and wrap my head around the [react-fiber-architecture document](https://github.com/acdlite/react-fiber-architecture). In it’s prerequisites section lies this [gem](https://facebook.github.io/react/blog/2015/12/18/react-components-elements-and-instances.html), where Dan Abramov goes into detail the core philosophies of React components/elements and their relationship with actual DOM elements that get rendered in a typical React application.
 ---
 In the past couple of days, I’ve been taking some time to fully understand and wrap my head around the [react-fiber-architecture document](https://github.com/acdlite/react-fiber-architecture). In it’s prerequisites section lies this [gem](https://facebook.github.io/react/blog/2015/12/18/react-components-elements-and-instances.html), where Dan Abramov goes into detail the core philosophies of React components/elements and their relationship with actual DOM elements that get rendered in a typical React application.

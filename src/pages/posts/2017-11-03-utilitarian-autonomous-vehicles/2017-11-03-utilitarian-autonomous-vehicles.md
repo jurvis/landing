@@ -1,11 +1,8 @@
 ---
 title: "Anyone Else But Me: Utilitarian Autonomous Vehicles"
-date: '2017-11-03'
-path: 'posts/utilitarian-autonomous-vehicles'
-excerpt: Should autonomous cars sacrifice the life of it's owner in exchange for more lives? 
+date: "2017-11-03"
+path: "/posts/utilitarian-autonomous-vehicles"
 ---
-
-
 A couple of months ago while I was still in school, I had to write a paper discussing an ethical conflict. As someone who works in technology and is constantly exposed to the ever-growing conversation of artificial intelligence, the discussion of a machine's moral agency felt like the most compelling abstract to sink my teeth into.
 
 I decided to focus on the "modern trolley problem" -- where an autonomous vehicle has to decide between protecting it's occupants even if it means swerving into a crowd of pedestrians, or make the utilitarian calculation to cause minimal loss of life even if that means killing the people inside it.

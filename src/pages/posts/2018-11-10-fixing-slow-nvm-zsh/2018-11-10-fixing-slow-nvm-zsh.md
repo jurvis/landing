@@ -1,12 +1,12 @@
 ---
-title: Fixing a slow initialisation of ZSH
+title: "Fixing a slow initialisation of ZSH"
 date: "2018-11-10"
 path: "/posts/fixing-a-slow-initialisation-of-zsh"
 ---
 If you use `creationix/nvm` like I do, you will have probably ran into some painfully slow zsh startup times (10-ish seconds).
 
 And this is not an uncommon symptom:
-![](/_images/2018-11-10-fixing-slow-nvm-zsh/tg_image_1367217862.jpeg)
+![](tg_image_1367217862.jpeg)
 
 After digging through the interwebs for a bit, I could determine and conclude that the biggest culprit of all were these lines added to the end of `.zshrc` during the installation process:
 

@@ -3,7 +3,7 @@ title: "Definite Optimism as Human capital"
 hotlink: "https://danwang.co/definite-optimism-as-human-capital/"
 excerpt: Is raising the floor of education without raising the ceiling running counter with building a society of innovators?
 date: '2017-09-04'
-path: 'posts/optimism-as-human-capital'
+path: '/posts/optimism-as-human-capital'
 ---
 
 This was a fantastic 20-minute read on getting it's readers to re-think the importance of manufacturing and industry, optimism as fuel for innovation driven by movies, and perhaps how a recession has more detrimental effects on the economy than one driven by debt-fuelled stimulus policies to avoid a recession (see: China).
