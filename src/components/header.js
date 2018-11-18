@@ -100,8 +100,9 @@ const Header = ({ siteTitle }) => (
         </BrandLink>
       </NameContainer>
       <LinksContainer>
-        <PageLink to="/me">About Me</PageLink>
-        <PageLink to="/blog">Blog</PageLink>
+        <PageLink to="/me">About me</PageLink>
+        <PageLink to="/blog">Writing</PageLink>
+        <PageLink to="/gallery">Gallery</PageLink>
       </LinksContainer>
     </Container>
   </Nav>
