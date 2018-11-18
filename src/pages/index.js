@@ -9,8 +9,6 @@ const IntroLine = styled.p`
 `
 
 const Section = styled.section`
-  margin: 50px 0;
-
   &:first-of-type {
     margin-top: 0;
   }
@@ -22,14 +20,28 @@ const Section = styled.section`
 
 const HorizontalSection = styled(Section)`
   display: flex;
-  flex-direction: horizontal;
+  flex-direction: column;
+
+  @media only screen and (min-width: 700px) {
+    flex-direction: row;
+  }
 `
 
 const PostsSection = styled.div`
-  width: 40%;
+  width: 100%;
+  margin: 20px 0;
+
+  @media only screen and (min-width: 700px) {
+    width: 40%;
+  }
 `
 const GallerySection = styled.div`
-  width: 60%;
+  width: 100%;
+  margin: 20px 0;
+
+  @media only screen and (min-width: 700px) {
+    width: 60%;
+  }
 `
 
 const IndexPage = ({ data }) => {

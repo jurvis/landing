@@ -9,7 +9,6 @@ const Container = styled.div`
 `
 const PostLink = styled(Link)``
 const Post = styled.div`
-  border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding: 1.5em 0em;
 
@@ -19,6 +18,10 @@ const Post = styled.div`
 
   &:hover {
     background-color: #f8f8f8;
+  }
+
+  @media only screen and (min-width: 700px) {
+    border-right: 1px solid #eee;
   }
 `
 const Title = styled.h3`
