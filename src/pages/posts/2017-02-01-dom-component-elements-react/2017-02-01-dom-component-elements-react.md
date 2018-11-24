@@ -54,7 +54,7 @@ Like the React DOM Element shown above, they aren’t any different. This allows
 ## What Does This All Mean?
 In the same post, Dan puts up a fantastic example demonstrating how this plays well when React has to do top-down reconciliation:
 
-```js
+```json
 // React: You told me this...
 {
   type: Form,

@@ -10,14 +10,14 @@ And this is not an uncommon symptom:
 
 After digging through the interwebs for a bit, I could determine and conclude that the biggest culprit of all were these lines added to the end of `.zshrc` during the installation process:
 
-```
+```bash
 export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
 There were many other solutions: lazy-loading, adding a `-no--use` flag to the running of `nvm.sh`, but what I found worked for me was the following script I [found](https://www.growingwiththeweb.com/2018/01/slow-nvm-init.html):
 
-```
+```bash
 if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -t __init_nvm)" = function ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
@@ -31,3 +31,4 @@ if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -t __init_nvm)" = function ]; then
   for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
 fi
 ```
+

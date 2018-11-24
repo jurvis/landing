@@ -10,11 +10,7 @@ const Container = styled.div`
 const PostLink = styled(Link)``
 const Post = styled.div`
   border-bottom: 1px solid #eee;
-  padding: 1.5em 0em;
-
-  &:first-child {
-    padding-top: 0em;
-  }
+  padding: 1em .5em;
 
   &:hover {
     background-color: #f8f8f8;
@@ -32,12 +28,6 @@ const Title = styled.h3`
   font-weight: 600;
   margin: .25em 0em;
 `
-const Excerpt = styled.p`
-  color: #4A4235;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 0;
-`
 
 const Posts = ({ posts }) => (
   <Container>
@@ -48,9 +38,6 @@ const Posts = ({ posts }) => (
         <Post key={path}>
           <PostLink to={path}>
             <Title>{title}</Title>
-            <Excerpt>
-              {post.node.excerpt}
-            </Excerpt>
           </PostLink>
         </Post>
       );

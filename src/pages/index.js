@@ -43,6 +43,9 @@ const GallerySection = styled.div`
     width: 60%;
   }
 `
+const SectionTitle = styled.h2`
+  margin-bottom: 0;
+`
 
 const IndexPage = ({ data }) => {
   const posts = data ? data.allMarkdownRemark.edges : [];
@@ -56,11 +59,11 @@ const IndexPage = ({ data }) => {
       </Section>
       <HorizontalSection>
         <PostsSection>
-          <h2>Posts</h2>
+          <SectionTitle>Posts</SectionTitle>
           <PostList posts={posts} />
         </PostsSection>
         <GallerySection>
-          <h2>Gallery</h2>
+          <SectionTitle>Gallery</SectionTitle>
         </GallerySection>
       </HorizontalSection>
     </Layout>

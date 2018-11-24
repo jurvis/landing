@@ -2,7 +2,7 @@
   "name": "gatsby-starter-default",
   "description": "Gatsby default starter",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jurvis Tan <jurvistan@gmail.com>",
   "dependencies": {
     "@types/typography": "^0.16.0",
     "babel-plugin-styled-components": "^1.8.0",
