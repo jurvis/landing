@@ -50,7 +50,7 @@ class BlogPost extends Component {
 
     console.log(this.props);
     const {
-      frontmatter: { title, date, path, subtitle },
+      frontmatter: { title, subtitle },
       html,
       excerpt
     } = this.props.data.markdownRemark;

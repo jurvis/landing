@@ -47,11 +47,6 @@ const LinksContainer = styled.div`
     order: 0;
     margin: 0;
   }
-
-  @media only screen and (min-width: 700px) {
-    justify-content: flex-start;
-    margin: .5rem 0;
-  }
 `
 
 const BrandLink = styled(Link)`
@@ -101,7 +96,7 @@ const Header = ({ siteTitle }) => (
       </NameContainer>
       <LinksContainer>
         <PageLink to="/me">About me</PageLink>
-        <PageLink to="/blog">Writing</PageLink>
+        <PageLink to="/posts">Writing</PageLink>
         <PageLink to="/photos">Photos</PageLink>
       </LinksContainer>
     </Container>

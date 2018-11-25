@@ -13,7 +13,7 @@ const Section = styled.section`
     margin-top: 0;
   }
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 850px) {
     margin: 80px 0;
   }
 `
@@ -22,7 +22,7 @@ const HorizontalSection = styled(Section)`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 850px) {
     flex-direction: row;
   }
 `
@@ -31,7 +31,7 @@ const PostsSection = styled.div`
   width: 100%;
   margin: 20px 0;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 850px) {
     width: 40%;
   }
 `
@@ -39,7 +39,7 @@ const GallerySection = styled.div`
   width: 100%;
   margin: 20px 0;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 850px) {
     width: 60%;
   }
 `
@@ -74,7 +74,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(limit:10, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node  {
           frontmatter {

@@ -4,8 +4,6 @@ import Link from 'gatsby-link'
 import styled from 'styled-components';
 
 const Container = styled.div`
-  padding-top: 1em;
-  margin: 0;
 `
 const PostLink = styled(Link)``
 const Post = styled.div`
@@ -29,15 +27,37 @@ const Title = styled.h3`
   margin: .25em 0em;
 `
 
-const Posts = ({ posts }) => (
+const SubTitle = styled.h4`
+  display: block;
+  color: #888;
+  margin-bottom: 0;
+  font-weight: 500;
+`
+
+const Excerpt = styled.p`
+  color: #4A4235;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 2.25rem 0;
+  margin-bottom: 0;
+`
+
+const Posts = ({ posts, withExcerpt }) => (
   <Container>
     {posts.map(post => {
+      const { excerpt } = post.node;
       const { title, path, date } = post.node.frontmatter;
 
       return (
         <Post key={path}>
           <PostLink to={path}>
             <Title>{title}</Title>
+            <SubTitle>{date}</SubTitle>
+            {withExcerpt &&
+              <Excerpt>
+                {excerpt}
+              </Excerpt>
+            }
           </PostLink>
         </Post>
       );
