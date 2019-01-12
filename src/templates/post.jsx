@@ -33,12 +33,12 @@ const ArticleHeader = styled.header`
     font-weight: 700;
 
     @media only screen and (min-width: 700px) {
-      font-size: 3.875em;
+      font-size: 3.725em;
     }
   }
 
   @media only screen and (min-width: 700px) {
-    width: 40em;
+    width: 50em;
   }
 `
 

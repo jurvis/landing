@@ -9,7 +9,6 @@ import Header from './header'
 import "./layout.css"
 
 const Main = styled.main`
-  margin-top: 60px;
   padding: 60px 0 0;
   min-height: calc(100vh - 210px);
 

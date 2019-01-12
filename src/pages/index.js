@@ -21,18 +21,20 @@ const Section = styled.section`
 const HorizontalSection = styled(Section)`
   display: flex;
   flex-direction: column;
-
+ 
   @media only screen and (min-width: 850px) {
     flex-direction: row;
   }
 `
 
 const PostsSection = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 20px 0;
 
   @media only screen and (min-width: 850px) {
-    width: 40%;
+    // width: 40%;
   }
 `
 const GallerySection = styled.div`
@@ -44,7 +46,26 @@ const GallerySection = styled.div`
   }
 `
 const SectionTitle = styled.h2`
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+`
+
+const LinkButton = styled.a`
+  border: 1px solid #1d78bd;
+  color: #1d78bd;
+  border-radius:100px;
+  transition: background 0.2s ease-in-out;
+  padding: 0.7rem;
+  width: 200px;
+
+  &:hover {
+    background: #1d78bd;
+    color: #fff
+  }
+`
+
+const ShowMoreContainer = styled.div`
+  text-align: center;
+  margin-top: 2.5em;
 `
 
 const IndexPage = ({ data }) => {
@@ -59,12 +80,15 @@ const IndexPage = ({ data }) => {
       </Section>
       <HorizontalSection>
         <PostsSection>
-          <SectionTitle>Posts</SectionTitle>
+          <SectionTitle>Latest Posts</SectionTitle>
           <PostList posts={posts} />
+          <ShowMoreContainer>
+            <LinkButton href="/posts">Show More</LinkButton>
+          </ShowMoreContainer>
         </PostsSection>
-        <GallerySection>
-          <SectionTitle>Gallery</SectionTitle>
-        </GallerySection>
+        {/* <GallerySection>
+          <SectionTitle>Photos</SectionTitle>
+        </GallerySection> */}
       </HorizontalSection>
     </Layout>
   )
@@ -74,7 +98,8 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(limit:10, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(limit:8, sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
       edges {
         node  {
           frontmatter {

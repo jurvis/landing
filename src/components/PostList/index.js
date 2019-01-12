@@ -15,7 +15,7 @@ const Post = styled.div`
   }
 
   @media only screen and (min-width: 700px) {
-    border-right: 1px solid #eee;
+    // border-right: 1px solid #eee;
   }
 `
 const Title = styled.h3`
