@@ -74,9 +74,9 @@ const IndexPage = ({ data }) => {
   return ( 
     <Layout>
       <Section>
-        <h1>Hello, my name is Jurvis Tan.</h1>
+        <h1>Hello there! My name is Jurvis.</h1>
         <IntroLine>I am a software developer based in Singapore</IntroLine>
-        <IntroLine>I blog about my travels, things I read, software development, and technology.</IntroLine>
+        <IntroLine>This site houses my writing about my travels, things I read, software development, and technology.</IntroLine>
       </Section>
       <HorizontalSection>
         <PostsSection>
