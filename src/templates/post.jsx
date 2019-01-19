@@ -38,7 +38,7 @@ const ArticleHeader = styled.header`
   }
 
   @media only screen and (min-width: 700px) {
-    width: 50em;
+    width: 40em;
   }
 `
 
