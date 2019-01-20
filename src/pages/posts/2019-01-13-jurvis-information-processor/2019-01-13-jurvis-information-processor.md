@@ -2,6 +2,7 @@
 title: "Re-designing my Information Processor"
 date: "2019-01-13"
 path: "/posts/jurvis-information-processor-2019"
+thumbnail: "IMG_1232-1.jpg"
 ---
 
 In 2019, I am making a personal commitment to improve my reading on the following fronts:
