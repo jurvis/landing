@@ -34,6 +34,11 @@ const Container = styled.div`
 
 const NameContainer = styled.div`
   font-weight: 600;
+  margin: .5rem auto 0 auto;
+
+  @media only screen and (min-width: 850px) {
+    margin: 0;
+  }
 `
 
 const LinksContainer = styled.div`
