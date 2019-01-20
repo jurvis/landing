@@ -2,6 +2,7 @@ import { Component } from 'react';
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import Img from "gatsby-image";
 
 import Header from '../components/header.js';
 import Article from '../components/articlePost.jsx';
@@ -10,19 +11,19 @@ const Container = styled.div`
 `
 
 const Content = styled.main`
-  margin-top: 60px;
+  margin-top: 2rem;
   padding: 60px 0 0;
   min-height: calc(100vh - 210px);
 
   @media only screen and (min-width: 700px) {
-    margin-top: 70px;
+    margin-top: 1em;
     padding: 80px 0 0;
   }
 `
 
 const ArticleHeader = styled.header`
-  margin-top: 4em;
-  margin-bottom: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   margin: 0 auto;
   width: 92%;
   padding: 0 15px;
@@ -42,6 +43,11 @@ const ArticleHeader = styled.header`
   }
 `
 
+const PostHero = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
+`
+
 class BlogPost extends Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -50,7 +56,7 @@ class BlogPost extends Component {
 
     console.log(this.props);
     const {
-      frontmatter: { title, subtitle },
+      frontmatter: { title, subtitle, thumbnail },
       html,
       excerpt
     } = this.props.data.markdownRemark;
@@ -60,13 +66,17 @@ class BlogPost extends Component {
         <Helmet title={`${title} | ${siteTitle}`}>
           <meta name="description" content={excerpt}/>
         </Helmet>
-
         <Header/>
         <Content>
           <ArticleHeader>
             <h1>{title}</h1>
             {subtitle && <h2>${subtitle}</h2>}
           </ArticleHeader>
+          {thumbnail &&
+            <PostHero>
+              <Img key={thumbnail.childImageSharp.fluid.src} fluid={thumbnail.childImageSharp.fluid}/>
+            </PostHero>
+          }
           <Article dangerouslySetInnerHTML={{__html: html}} />
         </Content>
       </Container>
@@ -91,6 +101,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "Do MMMM YYYY")
         path
+        thumbnail{
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

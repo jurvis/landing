@@ -5,7 +5,7 @@ const Article = styled.article`
   flex-direction: column;
   width: 92%;
   padding: 0 15px;
-  margin: 0 auto;
+  margin: 2rem auto;
 
   h1, h2, h3, h4, h5, h6 {
     color: #161718;
@@ -54,6 +54,7 @@ const Article = styled.article`
   
   @media only screen and (min-width: 700px) {
     width: 40em;
+    margin-top: 2rem;
   }
 `
 
