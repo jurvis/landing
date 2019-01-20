@@ -7,6 +7,31 @@
 // You can delete this file if you're not using it
 
 const path = require('path')
+const { attachFields } = require('gatsby-plugin-node-fields')
+
+function isArticle(node) {
+  const regex = /^posts\/.+/gm;
+
+  return (node.frontmatter != null) && regex.test(node.relativePath);
+}
+
+const descriptors = [
+  {
+    predicate: isArticle,
+    fields: [
+      {
+        name: 'thumbnail',
+        getter: node => node.frontmatter.thumbnail,
+        defaultValue: null,
+      }
+    ]
+  }
+]
+
+exports.onCreateNode = ({node, boundActionCreators}) => {
+  const { createNodeField } = boundActionCreators;
+  attachFields(node, createNodeField, descriptors);
+}
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
