@@ -10,7 +10,7 @@ const IntroLine = styled.p`
 
 const Section = styled.section`
   &:first-of-type {
-    margin-top: 0;
+    margin-top: 3rem;
   }
 
   @media only screen and (min-width: 850px) {

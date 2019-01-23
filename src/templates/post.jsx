@@ -63,7 +63,10 @@ class BlogPost extends Component {
 
     return (
       <Container>
-        <Helmet title={`${title} | ${siteTitle}`}>
+        <Helmet title={`${title} | ${siteTitle}`} meta={[
+          { name: 'viewport', content: 'width=device-width, user-scalable=no' },
+          { name: 'viewport', content: 'initial-scale=1.0' },
+        ]}>
           <meta name="description" content={excerpt}/>
         </Helmet>
         <Header/>
