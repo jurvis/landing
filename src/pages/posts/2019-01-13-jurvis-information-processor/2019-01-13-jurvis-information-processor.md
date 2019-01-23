@@ -20,7 +20,7 @@ They both committed to a format that looks something like this:
 3. Writing
 
 ## Reading/Consumption
-### 1. Highlights
+### Highlights
 Highlights is the easiest to do. I do it today, and have been doing it for a very long time. However, I have the “highlight and forget” syndrome. Which does not encourage information retention at any level.
 
 Last year I started a commonplace book where I started recording down my highlights in index cards and mark them topically before transferring them into Evernote and shelving them into long-term storage.
@@ -33,7 +33,7 @@ On top of having highlights marked topically, they should also be categorised to
 
 Which brings us to the next system: the symbols to indicate them while reading a book.
 
-### 2. Symbols
+### Symbols
 ![](symbols.jpeg)
 * **Needs more research** — highlights that are interesting, but I’ll like to do more research on it. 
 * **Needs to be remembered** — highlights that form the foundations of understanding an idea that is being put forth by the writer/speaker
@@ -41,7 +41,7 @@ Which brings us to the next system: the symbols to indicate them while reading a
 * **LOL** — just funny stuff I read/hear about; will probably send to my partner too
 * **Vocabulary** — words that are new to me
 
-### 3. Chapter Summaries (Books Only)
+### Chapter Summaries (Books Only)
 I envision this to be the toughest piece out of the three to execute simply because it takes more time. However, after my experience of maintaining a commonplace book over the past year, it has further reinforce the need for a chapter summary to exist
 
 While I end up with a large collection of highlights, more often than not I forget why I thought they were interesting at that point. These chapter summaries should chiefly highlight 2 things: 1. quickly outline what the chapter was about 2. biggest takeaway from the chapter.
