@@ -23,7 +23,6 @@ const MainContainer = styled.div`
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
 `
 
 const Layout = ({ children }) => (

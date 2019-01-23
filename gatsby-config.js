@@ -48,5 +48,12 @@ module.exports = {
         display: 'minimal-ui',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
   ],
 }

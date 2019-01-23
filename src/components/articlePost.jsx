@@ -9,7 +9,7 @@ const Article = styled.article`
 
   h1, h2, h3, h4, h5, h6 {
     color: #333333;
-    line-height: 1.1;
+    line-height: 1.5;
     margin: 0 0 1rem;
   }
 
