@@ -107,7 +107,7 @@ const Header = ({ siteTitle }) => (
       <LinksContainer>
         <PageLink to="/me">About me</PageLink>
         <PageLink to="/posts">Writing</PageLink>
-        <PageLink to="/photos">Photos</PageLink>
+        {/* <PageLink to="/photos">Photos</PageLink> */}
       </LinksContainer>
     </Container>
   </Nav>
