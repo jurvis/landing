@@ -50,11 +50,11 @@ const SectionTitle = styled.h2`
 `
 
 const LinkButton = styled.a`
-  border: 1px solid #1d78bd;
+  border: 1.5px solid #1d78bd;
   color: #1d78bd;
   border-radius:100px;
   transition: background 0.2s ease-in-out;
-  padding: 0.7rem;
+  padding: 0.7rem 1.3rem;
   width: 200px;
 
   &:hover {
