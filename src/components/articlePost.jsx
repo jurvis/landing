@@ -8,10 +8,9 @@ const Article = styled.article`
   margin: 2rem auto;
 
   h1, h2, h3, h4, h5, h6 {
-    color: #161718;
+    color: #333333;
     line-height: 1.1;
     margin: 0 0 1rem;
-
   }
 
   h1 {
@@ -32,6 +31,7 @@ const Article = styled.article`
 
   h3 {
     font-size: 1em;
+    color: #555555;
 
     @media only screen and (min-width: 700px) {
       font-size: 1.5em;
@@ -40,6 +40,7 @@ const Article = styled.article`
 
   h4 {
     font-size: 1em;
+    color: #777777;
 
     @media only screen and (min-width: 700px) {
       font-size: 1.4em;
