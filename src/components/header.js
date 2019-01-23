@@ -89,6 +89,11 @@ const PageLink = styled(Link)`
   @media only screen and (min-width: 700px) {
     font-size: 1.1rem;
   }
+
+  &:hover {
+    color: #333;
+    text-decoration: underline;
+  }
 `
 
 const Header = ({ siteTitle }) => (
