@@ -8,7 +8,7 @@ const Container = styled.div`
 const PostLink = styled(Link)``
 const Post = styled.div`
   border-bottom: 1px solid #eee;
-  padding: 1em .5em;
+  padding: 1em 0;
 
   &:hover {
     background-color: #f8f8f8;

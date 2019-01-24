@@ -8,13 +8,13 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
-  display: ListItemst-item;
+  display: list-item;
   font-size: 1em;
   line-height: 1.3;
 `
 
 const Para = styled.p`
-  font-size: 1.3em;
+  font-size: 1.25rem;
   line-height: 1.6;
 `
 
@@ -24,10 +24,14 @@ const ProfileImageContainer = styled.div`
   margin-bottom: 2rem;
 `
 
+const IntroContainer = styled.div`
+  max-width: 40em;
+`
+
 const MePage = ({ data }) => {
   return ( 
     <Layout>
-      <div>
+      <IntroContainer>
         <ProfileImageContainer>
           <ProfileImage/>
         </ProfileImageContainer>
@@ -51,7 +55,7 @@ const MePage = ({ data }) => {
           <ListItem><b>buUuk</b> - iOS</ListItem>
           <ListItem><b>Carousell</b> - Python, Go, Front-end Development</ListItem>
         </List>
-      </div> 
+      </IntroContainer> 
       <div>
         <h2>Projects</h2>
         <List>

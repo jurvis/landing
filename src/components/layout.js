@@ -13,7 +13,6 @@ const Main = styled.main`
   min-height: calc(100vh - 210px);
 
   @media only screen and (min-width: 700px) {
-    margin-top: 70px;
     padding: 80px 0 0;
   }
 `
@@ -21,9 +20,11 @@ const Main = styled.main`
 const MainContainer = styled.div`
   max-width: 62rem;
   padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
+  margin: 4rem auto;
+
+  @media only screen and (min-width: 700px) {
+    margin: 2rem auto;
+  }
 `
 
 const Layout = ({ children }) => (
