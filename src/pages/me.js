@@ -70,7 +70,7 @@ const MePage = ({ data }) => {
         <List>
           <ListItem>Singapore Computer Society Silver Medal and Prize</ListItem>
           <ListItem>Apple Worldwide Developer Conference (WWDC) 2016 Scholarship Recipient</ListItem>
-          <ListItem>CodeXtremeApps 2014 Hackathon FinaListItemst</ListItem>
+          <ListItem>CodeXtremeApps 2014 Hackathon Finalist</ListItem>
           <ListItem>AngelHack AppHack Fall 2013 Prize Winner</ListItem>
         </List>
       </div> 
