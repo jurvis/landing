@@ -44,7 +44,7 @@ const ArticleHeader = styled.header`
 `
 
 const PostHero = styled.div`
-  max-width: 1024px;
+  max-width: 45rem;
   margin: 0 auto;
 `
 
