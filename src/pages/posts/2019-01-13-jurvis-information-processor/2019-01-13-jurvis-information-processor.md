@@ -11,17 +11,14 @@ In 2019, I am making a personal commitment to improve my reading on the followin
 3. Make more connections with material I engage with
 
 Deep in the bowels of my Instapaper archives, I fished out two articles for reference: 
-* Robert Heaton’s How To Read: https://robertheaton.com/2018/0625/how-to-read/
-* Sirupsen’s How I Read: https://sirupsen.com/read/
+* [Robert Heaton’s How To Read](https://robertheaton.com/2018/0625/how-to-read/)
+* [Sirupsen’s How I Read](https://sirupsen.com/read/)
 
-They both committed to a format that looks something like this: 
-1. Reading
-2. Processing
-3. Writing
+Most reading processing techniques seems to follow the uniform format of: Reading, Processing, and Writing. Since they seem to have worked so reliably for many others, I will  be thinking about my own in the same format.
 
-## Reading/Consumption
+## Consumption
 ### Highlights
-Highlights is the easiest to do. I do it today, and have been doing it for a very long time. However, I have the “highlight and forget” syndrome. Which does not encourage information retention at any level.
+Highlights is the easiest to do. I do it today, and have been doing it for a very long time. However, I suffer from what I call the “highlight and forget” syndrome. Which does not encourage information retention at any level.
 
 Last year I started a commonplace book where I started recording down my highlights in index cards and mark them topically before transferring them into Evernote and shelving them into long-term storage.
 
@@ -42,9 +39,11 @@ Which brings us to the next system: the symbols to indicate them while reading a
 * **Vocabulary** — words that are new to me
 
 ### Chapter Summaries (Books Only)
-I envision this to be the toughest piece out of the three to execute simply because it takes more time. However, after my experience of maintaining a commonplace book over the past year, it has further reinforce the need for a chapter summary to exist
+I envision this to be the toughest piece out of the three to execute simply because it takes more time. However, after my experience of maintaining a commonplace book over the past year, it further reinforced the need for a chapter summary to exist.
 
-While I end up with a large collection of highlights, more often than not I forget why I thought they were interesting at that point. These chapter summaries should chiefly highlight 2 things: 1. quickly outline what the chapter was about 2. biggest takeaway from the chapter.
+While I end up with a large collection of highlights, more often than not I forget why I thought they were interesting at that point. These chapter summaries should chiefly highlight 2 things: 
+1. Quickly outline what the chapter was about 
+2. Biggest takeaway from the chapter.
 
 Hopefully, chapter summaries will help me contextualise my highlights after reading a book; making it easier to do a writeup (which I will discuss in more detail in the “Writing” section below)
 

@@ -10,11 +10,10 @@ const Article = styled.article`
   h1, h2, h3, h4, h5, h6 {
     color: #333333;
     line-height: 1.5;
-    margin: 0 0 1rem;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 3rem;
 
     @media only screen and (min-width: 700px) {
       font-size: 3em;
@@ -22,7 +21,7 @@ const Article = styled.article`
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 2.25rem;
 
     @media only screen and (min-width: 700px) {
       font-size: 2rem;
@@ -30,7 +29,7 @@ const Article = styled.article`
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 1.5rem;
     color: #555555;
 
     @media only screen and (min-width: 700px) {
@@ -39,7 +38,7 @@ const Article = styled.article`
   }
 
   h4 {
-    font-size: 1em;
+    font-size: 1.25rem;
     color: #777777;
 
     @media only screen and (min-width: 700px) {
@@ -48,14 +47,13 @@ const Article = styled.article`
   }
 
   p {
-    font-size: 18px;
-    line-height: 1.75;
-    margin: 0 0 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   @media only screen and (min-width: 700px) {
     width: 40em;
-    margin-top: 2rem;
+    margin-top: 2rem
   }
 `
 
