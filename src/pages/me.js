@@ -5,17 +5,20 @@ import Layout from '../components/layout'
 import ProfileImage from '../components/profile_image'
 
 const List = styled.ul`
+  margin: 0 0 2rem;
 `
 
 const ListItem = styled.li`
   display: list-item;
   font-size: 1em;
   line-height: 1.3;
+  margin: 0 0 1rem;
 `
 
 const Para = styled.p`
   font-size: 1.25rem;
   line-height: 1.6;
+  margin: 0 0 1rem;
 `
 
 const ProfileImageContainer = styled.div`
@@ -26,6 +29,7 @@ const ProfileImageContainer = styled.div`
 
 const IntroContainer = styled.div`
   max-width: 40em;
+  margin-bottom: 2rem;
 `
 
 const MePage = ({ data }) => {
@@ -48,6 +52,8 @@ const MePage = ({ data }) => {
         <Para>
           This site is inspired by <a href="https://www.taniarascia.com/">Tania Rascia</a> and <a href="https://paulstamatiou.com/">Paul Stamatiou</a>.
         </Para>
+      </IntroContainer>
+      <div>
         <h2>Work</h2>
         <List>
           <ListItem><b>Oromico</b> - Python, React</ListItem>
@@ -55,7 +61,7 @@ const MePage = ({ data }) => {
           <ListItem><b>buUuk</b> - iOS</ListItem>
           <ListItem><b>Carousell</b> - Python, Go, Front-end Development</ListItem>
         </List>
-      </IntroContainer> 
+      </div>
       <div>
         <h2>Projects</h2>
         <List>
