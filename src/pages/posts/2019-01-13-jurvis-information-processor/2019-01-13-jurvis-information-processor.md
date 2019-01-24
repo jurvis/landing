@@ -11,7 +11,7 @@ In 2019, I am making a personal commitment to improve my reading on the followin
 3. Make more connections with material I engage with
 
 Deep in the bowels of my Instapaper archives, I fished out two articles for reference: 
-* [Robert Heaton’s How To Read](https://robertheaton.com/2018/0625/how-to-read/)
+* [Robert Heaton’s How To Read](https://robertheaton.com/2018/06/25/how-to-read/)
 * [Sirupsen’s How I Read](https://sirupsen.com/read/)
 
 Most reading processing techniques seems to follow the uniform format of: Reading, Processing, and Writing. Since they seem to have worked so reliably for many others, I will  be thinking about my own in the same format.
