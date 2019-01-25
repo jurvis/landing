@@ -66,7 +66,19 @@ class BlogPost extends Component {
         <Helmet title={`${title} | ${siteTitle}`} meta={[
           { name: 'viewport', content: 'width=device-width, user-scalable=no' },
           { name: 'viewport', content: 'initial-scale=1.0' },
+          { name: 'og:title', content: title},
+          { name: 'og:desciption', content: excerpt},
+
+          { name: 'twitter:creator', content: '@jurvistan'},
+          { name: 'twitter:title', content: title },
+          { name: 'twitter.description', content: excerpt }
         ]}>
+          {thumbnail &&
+            <meta name="og:image" content={thumbnail.childImageSharp.fluid.src} fluid={thumbnail.childImageSharp.fluid}/>
+          }
+          { thumbnail &&
+            <meta name="twitter:image" content={thumbnail.childImageSharp.fluid.src} />
+          }
           <meta name="description" content={excerpt}/>
         </Helmet>
         <Header/>
