@@ -1,5 +1,5 @@
 ---
-title: "Re-designing my Information Processor"
+title: "🧠 Re-designing my Information Processor"
 date: "2019-01-13"
 path: "/posts/jurvis-information-processor-2019"
 thumbnail: "IMG_1232-1.jpg"

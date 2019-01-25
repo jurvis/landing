@@ -1,5 +1,5 @@
 ---
-title: "Fixing a slow initialisation of ZSH"
+title: "💻  Fixing a slow initialisation of ZSH"
 date: "2018-11-10"
 path: "/posts/fixing-a-slow-initialisation-of-zsh"
 ---

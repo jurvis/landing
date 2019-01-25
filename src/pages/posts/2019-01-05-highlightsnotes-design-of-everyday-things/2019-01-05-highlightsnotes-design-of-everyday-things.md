@@ -1,5 +1,5 @@
 ---
-title: "Highlights and Notes: The Design of Everyday Things"
+title: "📝 Highlights and Notes: The Design of Everyday Things"
 date: "2019-01-05"
 path: "/posts/highlightsnotes-design-of-everyday-things"
 ---

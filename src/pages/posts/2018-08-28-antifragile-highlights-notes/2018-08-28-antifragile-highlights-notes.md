@@ -1,5 +1,5 @@
 ---
-title: "Highlights & Notes: Antifragile by Nassim Nicholas Taleb"
+title: "📝 Highlights & Notes: Antifragile by Nassim Nicholas Taleb"
 date: '2018-08-28'
 path: '/posts/antifragile-highlights-notes'
 ---
