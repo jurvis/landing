@@ -14,25 +14,27 @@ Deep in the bowels of my Instapaper archives, I fished out two articles for refe
 * [Robert Heaton’s How To Read](https://robertheaton.com/2018/06/25/how-to-read/)
 * [Sirupsen’s How I Read](https://sirupsen.com/read/)
 
-Most reading processing techniques seems to follow the uniform format of: Reading, Processing, and Writing. Since they seem to have worked so reliably for many others, I will  be thinking about my own in the same format.
+Most reading processing techniques seems to follow the uniform format of: Reading, Processing, and Writing. Since they seem to have worked so reliably for many others, I will be doing the same.
 
 ## Consumption
 ### Highlights
-Highlights is the easiest to do. I do it today, and have been doing it for a very long time. However, I suffer from what I call the “highlight and forget” syndrome. Which does not encourage information retention at any level.
+Highlights is the easiest thing to do. I do it today, and have been doing it for a very long time. However, I suffer from what I call the “highlight and forget” syndrome. Which does not encourage information retention at any level.
 
-Last year I started a commonplace book where I started recording down my highlights in index cards and mark them topically before transferring them into Evernote and shelving them into long-term storage.
+2 years ago I started a commonplace book after reading this [blog post](https://ryanholiday.net/how-and-why-to-keep-a-commonplace-book/) by Ryan Holiday. I started recording down my highlights in index cards and mark them topically before transferring them into Evernote and shelving them into long-term storage.
 
-Unfortunately, I never revisit these index cards unless I’m writing something (which unfortunately became rare as my time in service continued on). 
+Unfortunately, I never revisit these index cards unless I’m writing something. This became rarer over time, as my time in military service continued on. 
 
 I want to change that.
 
-On top of having highlights marked topically, they should also be categorised to the following: key to remember, needs more research, requires more questioning, funny. These symbols will then determine how they get processed (a system that will be discussed further down in this post).
+On top of having highlights marked topically, they should also be categorised to the following: key to remember, needs more research, requires more questioning, funny, and new vocabuluary. 
 
-Which brings us to the next system: the symbols to indicate them while reading a book.
+These categories will then have a defined set of symbols to represent them; forming the final determinant of how they get processed (a system to be discussed further down this post.)
+
+Which brings us to the next system: the drawing symbols to indicate them while reading a book.
 
 ### Symbols
 ![](symbols.jpeg)
-* **Needs more research** — highlights that are interesting, but I’ll like to do more research on it. 
+* **Needs more research** — highlights that are interesting, but I will like to do more research on it. 
 * **Needs to be remembered** — highlights that form the foundations of understanding an idea that is being put forth by the writer/speaker
 * **Points that require more questioning** — Things that I find complicated to understand I will like to spend more time thinking about.
 * **LOL** — just funny stuff I read/hear about; will probably send to my partner too
@@ -41,11 +43,11 @@ Which brings us to the next system: the symbols to indicate them while reading a
 ### Chapter Summaries (Books Only)
 I envision this to be the toughest piece out of the three to execute simply because it takes more time. However, after my experience of maintaining a commonplace book over the past year, it further reinforced the need for a chapter summary to exist.
 
-While I end up with a large collection of highlights, more often than not I forget why I thought they were interesting at that point. These chapter summaries should chiefly highlight 2 things: 
+While I end up with a large collection of highlights, I always forget why I thought they were interesting at that point. Writing chapter summaries should achieve 2 things: 
 1. Quickly outline what the chapter was about 
 2. Biggest takeaway from the chapter.
 
-Hopefully, chapter summaries will help me contextualise my highlights after reading a book; making it easier to do a writeup (which I will discuss in more detail in the “Writing” section below)
+Hopefully, chapter summaries will contextualise my highlights after reading a book; making it easier to do a writeup (which I will discuss in more detail in the “Writing” section below)
 
 ## Processing
 Most of my processing workflow will surround the creation of flash cards. Depending on what my highlights are, they will invite a different treatment in this step.
@@ -59,7 +61,7 @@ Most of my processing workflow will surround the creation of flash cards. Depend
 
 ## Writing
 ### A (Personal) Daily Reflection Journal
-I have endeavored on this many times, but always struggled with “coming up with things to talk about”. To help give myself a bit of a leg up, I will be reading a book called “A Calendar of Wisdom” this year. This book features a collection of ancient and classic texts giving good, actionable advice from diverse schools of thought. It has a page for each day of the year, so I will be using it as a muse.
+I have endeavored on this many times, but always struggled with “coming up with things to talk about”. To help give myself a bit of a leg up, I will be reading a book called [“A Calendar of Wisdom”](https://amzn.to/2MuoLCe) this year. This book features a collection of ancient and classic texts giving good, actionable advice from diverse schools of thought. It has a page for each day of the year, so I will be using it as a muse.
 
 Each day’s entry will take the following format
 1. Favorite quote
@@ -77,6 +79,6 @@ My challenge to myself will be to append an additional summary at the bottom of 
 4. Come up with 1 question to ask the interviewee if you had the chance to talk to them
 
 ### Highlights and Notes Series
-Late in 2018, I started this mini-series of notes on my Evernote I called “Highlights and Notes”. It started off as just a collection of highlights I have made in my physical books/Kindle as well as any pertinent notes I have written along the way. You can think of it as a single note consisting of information I have also written down on index cards.
+Late in 2018, I started this mini-series of notes on my Evernote I called “Highlights and Notes”. It started off as just a collection of highlights I have made in my physical books/Kindle as well as any pertinent notes I have written along the way. You can think of it as a single note consisting of all information I have also written down on index cards.
 
-This year, I will like to do more of this. Like [this post](http://blog.jurv.is/highlights-and-notes-antifragile-by-nassim-nicholas-taleb) on my blog, I will like to commit myself to selecting 10 key ideas and draw references from other things I have read. This will be hard, but I suspect it will be very worth it.
+This year, I will like to do more of this. Like [this post](http://blog.jurv.is/highlights-and-notes-antifragile-by-nassim-nicholas-taleb) on my blog, I will want to commit selecting 10 key ideas and draw references from other things I have read. This will be hard, but I suspect it will be very worth it.
