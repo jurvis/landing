@@ -6,17 +6,28 @@ import ProfileImage from '../components/profile_image'
 
 const List = styled.ul`
   margin: 0 0 2rem;
+  list-style: none;
 `
 
 const ListItem = styled.li`
-  display: list-item;
   font-size: 1em;
   line-height: 1.3;
   margin: 0 0 1rem;
 `
+const WorkTitle = styled.h4`
+  margin: 0;
+`
+const WorkLocation = styled.p`
+  margin: 0;
+  color: #8895A7;
+`
+const WorkSkills = styled.p`
+  margin: 0;
+  color: #5F6B7A;
+`
 
 const Para = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.25rem
   line-height: 1.6;
   margin: 0 0 1rem;
 `
@@ -56,10 +67,26 @@ const MePage = ({ data }) => {
       <div>
         <h2>Work</h2>
         <List>
-          <ListItem><b>Oromico</b> - Python, React</ListItem>
-          <ListItem><b>UserTesting</b> - Rails, React, iOS</ListItem>
-          <ListItem><b>buUuk</b> - iOS</ListItem>
-          <ListItem><b>Carousell</b> - Python, Go, Front-end Development</ListItem>
+          <ListItem>
+            <WorkTitle>Oromico</WorkTitle>
+            <WorkSkills>Python, React</WorkSkills>
+            <WorkLocation>Singapore</WorkLocation>
+          </ListItem>
+          <ListItem>
+            <WorkTitle>UserTesting</WorkTitle>
+            <WorkSkills>Rails, React, iOS</WorkSkills>
+            <WorkLocation>San Francisco Bay Area</WorkLocation>
+          </ListItem>
+          <ListItem>
+            <WorkTitle>buUuk</WorkTitle>
+            <WorkSkills>iOS</WorkSkills>
+            <WorkLocation>Singapore</WorkLocation>
+          </ListItem>
+          <ListItem>
+            <WorkTitle>Carousell</WorkTitle>
+            <WorkSkills>Python, Go, Front-end Development</WorkSkills>
+            <WorkLocation>Singapore</WorkLocation>
+          </ListItem>
         </List>
       </div>
       <div>
