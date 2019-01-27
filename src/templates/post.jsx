@@ -61,18 +61,22 @@ class BlogPost extends Component {
       excerpt
     } = this.props.data.markdownRemark;
 
+    let meta = [
+      { name: 'viewport', content: 'width=device-width, user-scalable=no' },
+      { name: 'viewport', content: 'initial-scale=1.0' },
+      { name: 'og:title', content: title},
+      { name: 'og:desciption', content: excerpt},
+
+      { name: 'twitter:creator', content: '@jurvistan'},
+      { name: 'twitter:title', content: title },
+      { name: 'twitter.description', content: excerpt }
+    ];
+    
+    if (thumbnail != null) { meta = meta.push({ name: 'og:image', content: thumbnail.childImageSharp.fluid.src })};
+
     return (
       <Container>
-        <Helmet title={`${title} | ${siteTitle}`} meta={[
-          { name: 'viewport', content: 'width=device-width, user-scalable=no' },
-          { name: 'viewport', content: 'initial-scale=1.0' },
-          { name: 'og:title', content: title},
-          { name: 'og:desciption', content: excerpt},
-
-          { name: 'twitter:creator', content: '@jurvistan'},
-          { name: 'twitter:title', content: title },
-          { name: 'twitter.description', content: excerpt }
-        ]}>
+        <Helmet title={`${title} | ${siteTitle}`} meta={meta}>
           {thumbnail &&
             <meta name="og:image" content={thumbnail.childImageSharp.fluid.src} fluid={thumbnail.childImageSharp.fluid}/>
           }
