@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-remark-overflow-tables",
+  "version": "1.0.0",
+  "description": "wrap tables in div and allow them to overflow within container",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "remark"
+  ],
+  "author": "Jurvis Tan <hello@jurvis.co>",
+  "license": "MIT"
+}
