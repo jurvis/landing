@@ -23,6 +23,11 @@ const descriptors = [
         name: 'thumbnail',
         getter: node => node.frontmatter.thumbnail,
         defaultValue: null,
+      },
+      {
+        name: 'thumbnailCaption',
+        getter: node => node.frontmatter.thumbnailCaption,
+        defaultValue: undefined
       }
     ]
   }
