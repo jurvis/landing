@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import { Component } from 'react';
 import React from 'react';
 import Helmet from 'react-helmet';

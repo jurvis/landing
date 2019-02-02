@@ -1,3 +1,5 @@
+import { graphql } from 'gatsby';
+
 import React from 'react'
 import PostList from '../components/PostList'
 import styled from 'styled-components'
