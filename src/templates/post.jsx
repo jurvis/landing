@@ -13,18 +13,16 @@ const Container = styled.div`
 
 const Content = styled.main`
   margin-top: 2rem;
-  padding: 60px 0 0;
+  padding: 70px 0 0;
   min-height: calc(100vh - 210px);
 
   @media only screen and (min-width: 700px) {
-    margin-top: 1em;
+    margin-top: 1.85em;
     padding: 80px 0 0;
   }
 `
 
 const ArticleHeader = styled.header`
-  margin-top: 1em;
-  margin-bottom: 1em;
   margin: 0 auto;
   width: 92%;
   padding: 0 15px;
@@ -40,7 +38,7 @@ const ArticleHeader = styled.header`
   }
 
   @media only screen and (min-width: 700px) {
-    width: 40em;
+    width: 45em;
   }
 `
 

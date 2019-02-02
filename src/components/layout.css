@@ -54,6 +54,10 @@ blockquote > p {
   margin: 0 !important;
 }
 
+img {
+  margin-bottom: 0;
+}
+
 @media (min-width: 700px) {
   h1 {
     font-size: 2rem;
