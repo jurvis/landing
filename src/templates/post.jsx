@@ -45,6 +45,17 @@ const ArticleHeader = styled.header`
 const PostHero = styled.div`
   max-width: 45rem;
   margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+`
+
+const ThumbnailCaption = styled.small`
+  font-size: .9rem;
+  color: #5F6B7A;
+  line-height: 1.5;
+  display: inline-block;
+  width: 44em;
+  align-self:center
 `
 
 class BlogPost extends Component {
@@ -55,7 +66,7 @@ class BlogPost extends Component {
 
     console.log(this.props);
     const {
-      frontmatter: { title, subtitle, thumbnail },
+      frontmatter: { title, subtitle, thumbnail, thumbnailCaption },
       html,
       excerpt
     } = this.props.data.markdownRemark;
@@ -93,6 +104,7 @@ class BlogPost extends Component {
           {thumbnail &&
             <PostHero>
               <Img key={thumbnail.childImageSharp.fluid.src} fluid={thumbnail.childImageSharp.fluid}/>
+              {thumbnailCaption && <ThumbnailCaption>{thumbnailCaption}</ThumbnailCaption>}
             </PostHero>
           }
           <Article dangerouslySetInnerHTML={{__html: html}} />
@@ -126,6 +138,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        thumbnailCaption
       }
     }
   }
