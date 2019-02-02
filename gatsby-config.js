@@ -21,6 +21,7 @@ module.exports = {
           'gatsby-remark-smartypants',
           'gatsby-remark-responsive-iframe',
           'gatsby-plugin-styled-components',
+          'gatsby-remark-overflow-tables'
         ],
       },
     },

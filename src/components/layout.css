@@ -30,6 +30,13 @@ table, p {
   margin: 0 0 1rem;
 }
 
+div.wrapped-table {
+  overflow-x: auto;
+  margin: 0 0 1rem;
+} div.wrapped-table > table {
+  margin: 0;
+}
+
 li {
   margin: 0;
 }
