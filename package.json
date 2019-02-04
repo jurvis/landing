@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "jurvis-landing",
+  "description": "Personal website of Jurvis Tan",
   "version": "1.0.0",
   "author": "Jurvis Tan <jurvistan@gmail.com>",
   "dependencies": {
