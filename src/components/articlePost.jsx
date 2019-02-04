@@ -48,7 +48,7 @@ const Article = styled.article`
 
   p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
   
   @media only screen and (min-width: 700px) {
