@@ -41,15 +41,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'Jurvis Tan',
-        short_name: 'Jurvis',
-        start_url: '/',
-        display: 'minimal-ui',
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
