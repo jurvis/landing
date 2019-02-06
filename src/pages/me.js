@@ -52,7 +52,10 @@ const MePage = ({ data }) => {
         </ProfileImageContainer>
         <h2>About Me</h2>
         <Para>
-          Hello there, I'm Jurvis. I am a developer based in the island nation of Singapore. I spend most of my time developing applications in Rails, Elixir, React, Node, and Swift (in no specific order). As part of my conscription, I now spend most of my time executing command systems operations for the Singapore Armed Forces.
+          Hello there, I'm Jurvis. I am a developer based in the island nation of Singapore. I spend most of my time developing applications in Rails, Elixir, React, Node, and Swift (in no specific order). In 2013, I started <a href="https://undertide.co/">Undertide</a> to build websites and apps.
+        </Para>
+        <Para>
+         As part of my conscription, I now spend most of my time as a Signals Sergeant executing command information systems operations for the Singapore Armed Forces.
         </Para>
         <Para>
           I take a lot of <a href="https://instagram.com/jurv.is">photos</a> too! 
