@@ -3,6 +3,7 @@ title: "💻 Keeping Track of What To Read in 2019"
 date: "2019-02-06"
 path: "/posts/keeping-track-of-what-to-read-2019"
 thumbnail: "cover.png"
+thumbnailCaption: "This is a spreadsheet I use on AirTable to keep track of the books I want to read."
 ---
 
 After reading this magnificent [post](http://sirupsen.com/read/) by Simon, I was inspired to come up with a new way of processing information when I read my books. You can read more about that [here](https://jurv.is/posts/jurvis-information-processor-2019).
