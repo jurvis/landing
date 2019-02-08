@@ -54,8 +54,8 @@ const ThumbnailCaption = styled.small`
   color: #5F6B7A;
   line-height: 1.5;
   display: inline-block;
-  width: 44em;
-  align-self:center
+  align-self:center;
+  margin-top: 0.3em;
 `
 
 class BlogPost extends Component {
