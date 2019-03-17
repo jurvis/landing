@@ -31,9 +31,11 @@ const ArticleHeader = styled.header`
     color: #161718;
     font-size: 1.85em;
     font-weight: 700;
+    line-height: 1.5;
 
     @media only screen and (min-width: 700px) {
-      font-size: 3.725em;
+      font-size: 3em;
+      line-height: 1.2;
     }
   }
 

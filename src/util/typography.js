@@ -8,8 +8,13 @@ const typography = new Typography({
   overrideStyles: () => ({
     blockquote: {
       borderLeft: `.25rem solid #408bc9`,
-      margin: `1rem 0 2rem 1rem`,
+      margin: `1rem 0 2rem 0rem`,
       paddingLeft: `1rem`,
+     },
+    '@media only screen and (min-width: 700px)': {
+      blockquote: {
+        margin: `1rem 0 2rem 1rem`,
+      }
     }
   })
 });
