@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Jurvis Tan',
+    siteUrl: 'https://jurv.is'
   },
   plugins: [
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {

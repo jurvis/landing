@@ -66,7 +66,8 @@ class BlogPost extends Component {
       ? this.props.data.site.siteMetadata.title
       : null
 
-    console.log(this.props);
+    const { siteUrl } = this.props.data.site.siteMetadata;
+    const { href } = this.props.location;
     const {
       frontmatter: { title, subtitle, thumbnail, thumbnailCaption },
       html,
@@ -77,26 +78,26 @@ class BlogPost extends Component {
       { name: 'viewport', content: 'width=device-width, user-scalable=no' },
       { name: 'viewport', content: 'initial-scale=1.0' },
       { name: 'og:title', content: title},
-      { name: 'og:desciption', content: excerpt},
+      { name: 'og:type', content: 'article'},
+      { name: 'og:description', content: excerpt},
+      { name: 'og:url', content: href },
 
-      { name: 'twitter:creator', content: '@jurvistan'},
-      { name: 'twitter:title', content: title },
-      { name: 'twitter.description', content: excerpt }
+      { name: 'twitter:creator', content: '@jurvistan'}
     ];
     
-    if (thumbnail != null) { meta = meta.push({ name: 'og:image', content: thumbnail.childImageSharp.fluid.src })};
+    if (thumbnail != null) { 
+      meta.push({ name: 'og:image', content: `${siteUrl}${thumbnail.childImageSharp.fluid.src}` });
+      meta.push({ name: 'og:type', content: 'summary_large_image'});
+      meta.push({ name: 'twitter:image', content: `${siteUrl}${thumbnail.childImageSharp.fluid.src}`});
+      meta.push({ name: 'twitter:card', content: 'summary_large_image'});
+    } else {
+      meta.push({ name: 'og:type', content: 'summary'});
+      meta.push({ name: 'twitter:card', content: 'summary'});
+    };
 
     return (
       <Container>
-        <Helmet title={`${title} | ${siteTitle}`} meta={meta}>
-          {thumbnail &&
-            <meta name="og:image" content={thumbnail.childImageSharp.fluid.src} fluid={thumbnail.childImageSharp.fluid}/>
-          }
-          { thumbnail &&
-            <meta name="twitter:image" content={thumbnail.childImageSharp.fluid.src} />
-          }
-          <meta name="description" content={excerpt}/>
-        </Helmet>
+        <Helmet title={`${title} | ${siteTitle}`} meta={ meta } />
         <Header/>
         <Content>
           <ArticleHeader>
@@ -123,6 +124,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
