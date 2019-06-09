@@ -46,11 +46,12 @@ const Posts = ({ posts, withExcerpt }) => (
   <Container>
     {posts.map(post => {
       const { excerpt } = post.node;
-      const { title, path, date } = post.node.frontmatter;
+      const { postPath } = post.node.fields;
+      const { title, date } = post.node.frontmatter;
 
       return (
-        <Post key={path}>
-          <PostLink to={path}>
+        <Post key={postPath}>
+          <PostLink to={postPath}>
             <Title>{title}</Title>
             <SubTitle>{date}</SubTitle>
             {withExcerpt &&

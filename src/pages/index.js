@@ -105,6 +105,9 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node  {
+          fields {
+            postPath
+          }
           frontmatter {
             path
             date(formatString: "Do MMMM YYYY")
