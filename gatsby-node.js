@@ -10,9 +10,7 @@ const path = require('path')
 const { attachFields } = require('gatsby-plugin-node-fields')
 
 function isArticle(node) {
-  const regex = /^posts\/.+/gm;
-
-  return (node.frontmatter != null) && regex.test(node.relativePath);
+  return node.frontmatter != null && node.fileAbsolutePath.includes('/posts/');
 }
 
 const descriptors = [
@@ -27,24 +25,39 @@ const descriptors = [
       {
         name: 'thumbnailCaption',
         getter: node => node.frontmatter.thumbnailCaption,
-        defaultValue: undefined
+        defaultValue: undefined 
       },
       {
-        name: 'slug',
-        getter: node => node.frontmatter.slug,
-        defaultValue: undefined
+        name: 'postPath',
+        getter: node => {
+          return {
+            date: node.frontmatter.date,
+            slug: node.frontmatter.slug,
+            path: node.frontmatter.path,
+          }
+        },
+        defaultValue: null,
+        transformer: value => getFullPath(value)
       }
     ]
   }
 ]
 
-exports.onCreateNode = ({node, boundActionCreators}) => {
-  const { createNodeField } = boundActionCreators;
+const getFullPath = ({ date, slug, path }) => {
+  const pathSlug = (path != null) ? path.split('/').pop() : slug
+
+  const parsedDate = new Date(date);
+  const paddedMonth = ('0' + (parsedDate.getMonth()+1)).slice(-2)
+  return `/posts/${parsedDate.getFullYear()}/${paddedMonth}/${pathSlug}`
+}
+
+exports.onCreateNode = ({node, actions}) => {
+  const { createNodeField } = actions;
   attachFields(node, createNodeField, descriptors);
 }
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
   return new Promise((resolve, reject) => {
     const pages = []
@@ -57,10 +70,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             allMarkdownRemark(limit: 1000) {
               edges {
                 node {
-                  frontmatter {
-                    path
-                    slug
-                    date
+                  fields {
+                    postPath
                   }
                 }
               }
@@ -73,15 +84,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const { edges } = result.data.allMarkdownRemark
 
         edges.forEach(edge => {
-          const { date, slug, path } = edge.node.frontmatter;
-          const pathSlug = (path != null) ? path.split('/').pop() : slug
-
-          const parsedDate = new Date(date);
-          const paddedMonth = ('0' + (parsedDate.getMonth()+1)).slice(-2)
-          const path = `/posts/${parsedDate.getFullYear()}/${paddedMonth}/${pathSlug}`
-
           createPage({
-            path,
+            path: edge.node.fields.postPath,
             component: post,
           })
         })
