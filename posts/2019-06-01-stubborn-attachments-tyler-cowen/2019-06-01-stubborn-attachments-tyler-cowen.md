@@ -2,6 +2,7 @@
 title: "📝 Building A Society of Free, Prosperous and Responsible Individuals" 
 date: "2019-06-02"
 path: "/posts/stubborn-attachments-tyler-cowen"
+slug: "stubborn-attachments-tyler-cowen"
 thumbnail: "cover.jpg"
 ---
 
