@@ -127,14 +127,13 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { postPath: { eq: $path } }) {
       id
       html
       excerpt(pruneLength: 320)
       frontmatter {
         title
         date(formatString: "Do MMMM YYYY")
-        path
         thumbnail{
           childImageSharp {
             fluid(maxWidth: 1000) {
