@@ -28,6 +28,11 @@ const descriptors = [
         name: 'thumbnailCaption',
         getter: node => node.frontmatter.thumbnailCaption,
         defaultValue: undefined
+      },
+      {
+        name: 'slug',
+        getter: node => node.frontmatter.slug,
+        defaultValue: undefined
       }
     ]
   }
@@ -54,6 +59,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 node {
                   frontmatter {
                     path
+                    slug
+                    date
                   }
                 }
               }
@@ -66,8 +73,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const { edges } = result.data.allMarkdownRemark
 
         edges.forEach(edge => {
+          const { date, slug, path } = edge.node.frontmatter;
+          const pathSlug = (path != null) ? path.split('/').pop() : slug
+
+          const parsedDate = new Date(date);
+          const paddedMonth = ('0' + (parsedDate.getMonth()+1)).slice(-2)
+          const path = `/posts/${parsedDate.getFullYear()}/${paddedMonth}/${pathSlug}`
+
           createPage({
-            path: edge.node.frontmatter.path,
+            path,
             component: post,
           })
         })
