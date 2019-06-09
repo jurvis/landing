@@ -5452,10 +5452,9 @@ gatsby-link@^2.0.6:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-node-fields@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-node-fields/-/gatsby-plugin-node-fields-2.0.1.tgz#a61fbacecb24b06b21b49e39cc2d438d408f6126"
-  integrity sha512-RxACLZyM6vST7PiIaVXjjZpBxjRiR1CMsi4D4UqiOhO15XAdHoWRa0oJ+8hGbSF6Bx54d+qfMdMuVzZOUUNyMA==
+gatsby-plugin-node-fields@gkcgautam/gatsby-plugin-node-fields#rename-boundActionCreators:
+  version "0.0.6"
+  resolved "https://codeload.github.com/gkcgautam/gatsby-plugin-node-fields/tar.gz/d9542419d37144584071b13d5962c0d6093f4f65"
   dependencies:
     joi "^13.4.0"
     ramda "^0.25.0"
