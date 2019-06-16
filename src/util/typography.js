@@ -4,7 +4,7 @@ const typography = new Typography({
   headerFontFamily: ["-apple-system", "BlinkMacSystemFont","Roboto","Helvetica Neue","Helvetica","Arial","sans-serif"], 
   bodyFontFamily: ["-apple-system", "BlinkMacSystemFont","Roboto","Helvetica Neue","Helvetica","Arial","sans-serif"],
   baseFontSize: '16px',
-  baseLineHeight: 1.7,
+  baseLineHeight: 1.8,
   overrideStyles: () => ({
     blockquote: {
       borderLeft: `.25rem solid #408bc9`,
