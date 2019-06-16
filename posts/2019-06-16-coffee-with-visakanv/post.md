@@ -4,7 +4,7 @@ date: "2019-06-16"
 slug: "coffee-with-visakanv"
 ---
 
-Yesterday, I met with Visakan to discuss a whole variety of topics. It all started with a question I sent on Twitter to him: what holds Singapore back and where does a country who generally gets praised for nearly everything progress?
+Yesterday, I met with Visakan to discuss a whole variety of topics. It all started with a question I sent on Twitter to him: what holds Singapore back and where does a country who generally gets praised for nearly everything go from here?
 
 On Twitter, we went back and forth on uninspired populations, discussed national identity, trauma caused by WW2, LKY’s naughty boy DNA, and how we can condition ourselves to have more engaging discourse around more social issues.
 
