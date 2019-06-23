@@ -13,18 +13,18 @@ const Article = styled.article`
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.85rem;
 
     @media only screen and (min-width: 700px) {
-      font-size: 3em;
+      font-size: 1.85rem;
     }
   }
 
   h2 {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
 
     @media only screen and (min-width: 700px) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -38,11 +38,11 @@ const Article = styled.article`
   }
 
   h4 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: #777777;
 
     @media only screen and (min-width: 700px) {
-      font-size: 1.4em;
+      font-size: 1.3em;
     }
   }
 
@@ -51,7 +51,7 @@ const Article = styled.article`
   }
   
   @media only screen and (min-width: 700px) {
-    width: 40em;
+    width: 45em;
     margin-top: 2rem
   }
 `
