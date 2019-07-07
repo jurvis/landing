@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "author": "Jurvis Tan <jurvistan@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@types/typography": "^0.16.0",
     "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.19",
