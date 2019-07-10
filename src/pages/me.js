@@ -20,6 +20,8 @@ const ProjectListItem = styled(ListItem)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  margin: 0 0 3.75rem;
 `
 
 const WorkTitle = styled.h4`
@@ -37,7 +39,6 @@ const WorkSkills = styled.p`
 `
 
 const Para = styled.p`
-  font-size: 1.25rem
   line-height: 1.6;
   margin: 0 0 1rem;
 `
@@ -122,48 +123,51 @@ const MePage = ({ data }) => {
           <ProjectListItem>
             <WorkMetaContainer>
               <WorkTitle>Harmany</WorkTitle>
-              <WorkSkills>Undertide LLP</WorkSkills>
+              <WorkSkills>Music Sharing Made Easy</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien sit amet porta euismod. Pellentesque vel vulputate ligula, ornare ornare neque. Aenean orci justo, fermentum sit amet accumsan a, lobortis in magna. Suspendisse condimentum tortor eu odio gravida, aliquam ornare ligula consequat. Sed porta velit id sapien fringilla vulputate. Etiam rutrum enim sit amet arcu ultrices mattis. Aliquam erat volutpat. Mauris rutrum convallis libero, quis porta sem blandit quis. Cras hendrerit dui aliquam, auctor eros ac, vehicula quam.
-              </Para>
-            </WorkDescriptionContainer>
-          </ProjectListItem>
-          <ProjectListItem>
-            <WorkMetaContainer>
-              <WorkTitle>NextBus.SG</WorkTitle>
-              <WorkSkills>Undertide LLP</WorkSkills>
-              <WorkLocation>React, Design</WorkLocation>
-            </WorkMetaContainer>
-            <WorkDescriptionContainer>
-              <Para>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien sit amet porta euismod. Pellentesque vel vulputate ligula, ornare ornare neque. Aenean orci justo, fermentum sit amet accumsan a, lobortis in magna. Suspendisse condimentum tortor eu odio gravida, aliquam ornare ligula consequat. Sed porta velit id sapien fringilla vulputate. Etiam rutrum enim sit amet arcu ultrices mattis. Aliquam erat volutpat. Mauris rutrum convallis libero, quis porta sem blandit quis. Cras hendrerit dui aliquam, auctor eros ac, vehicula quam.
+                Harmany is a simple utility that allows you to share music with your friends without having to know which streaming service they use. Especially when you have a song you really want to share, making it as easy as possible for them to reach the play button is crucial.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
               <WorkTitle>Nebulo</WorkTitle>
-              <WorkSkills>Undertide LLP</WorkSkills>
-              <WorkLocation>iOS, Golang, Design</WorkLocation>
+              <WorkSkills>Beautiful Smog Reports</WorkSkills>
+              <WorkLocation>iOS, Design</WorkLocation>
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien sit amet porta euismod. Pellentesque vel vulputate ligula, ornare ornare neque. Aenean orci justo, fermentum sit amet accumsan a, lobortis in magna. Suspendisse condimentum tortor eu odio gravida, aliquam ornare ligula consequat. Sed porta velit id sapien fringilla vulputate. Etiam rutrum enim sit amet arcu ultrices mattis. Aliquam erat volutpat. Mauris rutrum convallis libero, quis porta sem blandit quis. Cras hendrerit dui aliquam, auctor eros ac, vehicula quam.
+              With just a tap, Nebulo aims to create a seamless and easy experience for people to check for the current air quality data. Putting smog advisory first, users can care less about what the science and focus on how to react when air quality reaches unhealthy levels.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
-              <WorkTitle>FOSSAsia</WorkTitle>
-              <WorkSkills>Undertide LLP</WorkSkills>
+              <WorkTitle>FOSSAsia iOS</WorkTitle>
+              <WorkSkills>For Asia's largest open technology conference</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien sit amet porta euismod. Pellentesque vel vulputate ligula, ornare ornare neque. Aenean orci justo, fermentum sit amet accumsan a, lobortis in magna. Suspendisse condimentum tortor eu odio gravida, aliquam ornare ligula consequat. Sed porta velit id sapien fringilla vulputate. Etiam rutrum enim sit amet arcu ultrices mattis. Aliquam erat volutpat. Mauris rutrum convallis libero, quis porta sem blandit quis. Cras hendrerit dui aliquam, auctor eros ac, vehicula quam.
+               Volunteered and led the open-source development of iOS app that will allow conference attendees to browse available sessions, bookmark, and set alerts for them.
+              </Para>
+            </WorkDescriptionContainer>
+          </ProjectListItem>
+          <ProjectListItem>
+            <WorkMetaContainer>
+              <WorkTitle>ExhibitGuide</WorkTitle>
+              <WorkSkills>Context-Aware Exhibition Experiences</WorkSkills>
+              <WorkLocation>iOS, Design</WorkLocation>
+            </WorkMetaContainer>
+            <WorkDescriptionContainer>
+              <Para>
+                Created with the purpose of improving audio tours, ExhibitGuide uses proximity-based information gathered from Bluetooth Low-Energy Beacons to track a user's position within an exhibition and displays relevant exhibit data to the user’s phones.
+              </Para>
+              <Para>
+                I was involved in the product design process and wrote the iOS app as an experiment for potential clients like the Singapore Art Science Museum.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
