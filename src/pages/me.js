@@ -57,6 +57,8 @@ const HorizontalContainer = styled.div`
 
 const HeaderContainer = styled(HorizontalContainer)`
   margin-bottom: 2rem;
+  margin: 0 auto 2rem auto;
+  width: 90%;
 `
 
 const IntroContainer = styled.div`
@@ -72,6 +74,11 @@ const TitleContainer = styled.div`
   margin-bottom: 2rem;
 `
 
+const ContentContainer = styled.div`
+  width: 90%;
+  margin: 0 auto;
+`
+
 const SocialsContainer = styled.div`
   padding-top: 1rem;
   width: 100px;
@@ -79,11 +86,15 @@ const SocialsContainer = styled.div`
 `
 
 const WorkMetaContainer = styled.div`
-  width: 20%;
+  width: 25%;
 `
 
 const WorkDescriptionContainer = styled.div`
   width: 70%;
+`
+
+const ImageContainer = styled.div`
+  margin-bottom: .5rem;
 `
 
 const MePage = ({ data }) => {
@@ -91,7 +102,7 @@ const MePage = ({ data }) => {
   return ( 
     <Layout>
       <TitleContainer>
-        <HeaderTitle>About Me</HeaderTitle>
+        <HeaderTitle>About</HeaderTitle>
       </TitleContainer>
       <HeaderContainer>
         <IntroContainer>
@@ -118,7 +129,7 @@ const MePage = ({ data }) => {
           </SocialsContainer>
         </ProfileImageContainer>
       </HeaderContainer>
-      <div>
+      <ContentContainer>
         <TitleContainer>
           <HeaderTitle>Projects</HeaderTitle>
         </TitleContainer>
@@ -187,8 +198,8 @@ const MePage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
         </List>
-      </div> 
-      <div>
+      </ContentContainer> 
+      <ContentContainer>
         <TitleContainer>
           <HeaderTitle>Work Experience</HeaderTitle>
         </TitleContainer>
@@ -214,7 +225,7 @@ const MePage = ({ data }) => {
             <WorkLocation>Singapore</WorkLocation>
           </ListItem>
         </List>
-      </div>
+      </ContentContainer>
       <div>
         <h2>Awards</h2>
         <List>
@@ -228,7 +239,6 @@ const MePage = ({ data }) => {
   )
 }
 
-export default MePage
 export default MePage;
 
 export const pageQuery = graphql`
