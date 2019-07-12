@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image';
 
 import Layout from '../components/layout'
 import ProfileImage from '../components/profile_image'
@@ -85,6 +87,7 @@ const WorkDescriptionContainer = styled.div`
 `
 
 const MePage = ({ data }) => {
+  const { harmanyImage, fossasiaImage, nebuloImage, exhibitGuideImage } = data;
   return ( 
     <Layout>
       <TitleContainer>
@@ -122,6 +125,9 @@ const MePage = ({ data }) => {
         <List>
           <ProjectListItem>
             <WorkMetaContainer>
+              <ImageContainer>
+                <Img fluid={harmanyImage.childImageSharp.fluid}/>
+              </ImageContainer>
               <WorkTitle>Harmany</WorkTitle>
               <WorkSkills>Music Sharing Made Easy</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
@@ -134,6 +140,9 @@ const MePage = ({ data }) => {
           </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
+              <ImageContainer>
+                <Img fluid={nebuloImage.childImageSharp.fluid}/>
+              </ImageContainer>
               <WorkTitle>Nebulo</WorkTitle>
               <WorkSkills>Beautiful Smog Reports</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
@@ -146,6 +155,9 @@ const MePage = ({ data }) => {
           </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
+              <ImageContainer>
+                <Img fluid={fossasiaImage.childImageSharp.fluid}/>
+              </ImageContainer>
               <WorkTitle>FOSSAsia iOS</WorkTitle>
               <WorkSkills>For Asia's largest open technology conference</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
@@ -158,6 +170,9 @@ const MePage = ({ data }) => {
           </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
+              <ImageContainer>
+                <Img fluid={exhibitGuideImage.childImageSharp.fluid}/>
+              </ImageContainer>
               <WorkTitle>ExhibitGuide</WorkTitle>
               <WorkSkills>Context-Aware Exhibition Experiences</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
@@ -214,3 +229,37 @@ const MePage = ({ data }) => {
 }
 
 export default MePage
+export default MePage;
+
+export const pageQuery = graphql`
+  query MePageQuery {
+    exhibitGuideImage: file(relativePath: { eq: "exhibitguide.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    harmanyImage: file(relativePath: { eq: "harmany.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fossasiaImage: file(relativePath: { eq: "fossasia.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    nebuloImage: file(relativePath: { eq: "nebulo.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
