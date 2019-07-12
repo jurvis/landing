@@ -204,26 +204,55 @@ const MePage = ({ data }) => {
           <HeaderTitle>Work Experience</HeaderTitle>
         </TitleContainer>
         <List>
-          <ListItem>
-            <WorkTitle>Oromico</WorkTitle>
-            <WorkSkills>Python, React</WorkSkills>
-            <WorkLocation>Singapore</WorkLocation>
-          </ListItem>
-          <ListItem>
-            <WorkTitle>UserTesting</WorkTitle>
-            <WorkSkills>Rails, React, iOS</WorkSkills>
-            <WorkLocation>San Francisco Bay Area</WorkLocation>
-          </ListItem>
-          <ListItem>
-            <WorkTitle>buUuk</WorkTitle>
-            <WorkSkills>iOS</WorkSkills>
-            <WorkLocation>Singapore</WorkLocation>
-          </ListItem>
-          <ListItem>
-            <WorkTitle>Carousell</WorkTitle>
-            <WorkSkills>Python, Go, Front-end Development</WorkSkills>
-            <WorkLocation>Singapore</WorkLocation>
-          </ListItem>
+          <ProjectListItem>
+            <WorkMetaContainer>
+              <WorkTitle>Oromico</WorkTitle>
+              <WorkSkills>Python, React</WorkSkills>
+              <WorkLocation>Singapore</WorkLocation>
+            </WorkMetaContainer>
+            <WorkDescriptionContainer>
+              Early-stage engineer building asset report-parsing software to make it easier for individuals to surface their individual financial positions and file taxes with ease.
+            </WorkDescriptionContainer>
+          </ProjectListItem>
+          <ProjectListItem>
+            <WorkMetaContainer>
+              <WorkTitle>UserTesting</WorkTitle>
+              <WorkSkills>Rails, React, iOS</WorkSkills>
+              <WorkLocation>San Francisco Bay Area</WorkLocation>
+            </WorkMetaContainer>
+            <WorkDescriptionContainer>
+              <Para>
+                Worked on tools for managers to measure team productivity, QA tools for automated regression testing for our mobile apps, as well as a bug tracking tool that helps the engineering department prioritise in tandem with our customer support team.
+              </Para>
+              <Para>
+                I also contributed to the UserTesting Dashboard iOS app, the app testers use to take usability tests on our platform.
+              </Para>
+            </WorkDescriptionContainer>
+          </ProjectListItem>
+          <ProjectListItem>
+            <WorkMetaContainer>
+              <WorkTitle>buUuk</WorkTitle>
+              <WorkSkills>iOS</WorkSkills>
+              <WorkLocation>Singapore</WorkLocation>
+            </WorkMetaContainer>
+            <WorkDescriptionContainer>
+              <Para>
+                Created with the purpose of enhancing the feature of existing audio tour systems, I prototyped an app that uses proximity-based information gathered from Bluetooth Low-Energy Beacons to track a user's position within an exhibition and displays relevant metadata on their phones.
+              </Para>
+            </WorkDescriptionContainer>
+          </ProjectListItem>
+          <ProjectListItem>
+            <WorkMetaContainer>
+              <WorkTitle>Carousell</WorkTitle>
+              <WorkSkills>Python, Go, Front-end Development</WorkSkills>
+              <WorkLocation>Singapore</WorkLocation>
+            </WorkMetaContainer>
+            <WorkDescriptionContainer>
+              <Para>
+                Built an internal moderator tool for managing listings posted by users on the platform, as well as initial web functionality.
+              </Para>
+            </WorkDescriptionContainer>
+          </ProjectListItem>
         </List>
       </ContentContainer>
       <div>
