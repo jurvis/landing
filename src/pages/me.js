@@ -47,6 +47,11 @@ const WorkSkills = styled.p`
 const Para = styled.p`
   line-height: 1.6;
   margin: 0 0 1rem;
+  text-align: ${props => props.center ? 'center' : 'left'};
+
+  @media only screen and (min-width: 850px) {
+    text-align: left;
+  }
 `
 
 const ProfileImageContainer = styled.div`
@@ -114,7 +119,7 @@ const SocialsContainer = styled.div`
   margin: 0 auto;
 `
 
-const WorkMetaContainer = styled.div`
+const MetaContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -124,7 +129,16 @@ const WorkMetaContainer = styled.div`
   }
 `
 
-const ProjectMetaContainer = styled(WorkMetaContainer)`
+const WorkMetaContainer = styled(MetaContainer)`
+  align-items: center;
+  margin-bottom: .5rem;
+
+  @media only screen and (min-width: 850px) {
+    align-items: left;
+  }
+`
+
+const ProjectMetaContainer = styled(MetaContainer)`
   justify-content: space-evenly;
   height: 325px;
 
@@ -134,7 +148,7 @@ const ProjectMetaContainer = styled(WorkMetaContainer)`
 `
 
 const WorkDescriptionContainer = styled.div`
-  width: 90%;
+  width: 100%;
 
   @media only screen and (min-width: 850px) {
     width: 70%;
@@ -169,8 +183,14 @@ const ContentSeparator = styled.hr`
   }
 `
 
+const CompanyImage = styled(Img)`
+  border-radius: 20%;
+  margin-bottom: .5rem;
+`
+
 const MePage = ({ data }) => {
   const { harmanyImage, fossasiaImage, nebuloImage, exhibitGuideImage } = data;
+  const { oromicoImage, userTestingImage, buuukImage, carousellImage } = data;
   return ( 
     <Layout>
       <TitleContainer>
@@ -283,51 +303,55 @@ const MePage = ({ data }) => {
         <List>
           <ProjectListItem>
             <WorkMetaContainer>
+              <CompanyImage fixed={oromicoImage.childImageSharp.fixed} />
               <WorkTitle>Oromico</WorkTitle>
               <WorkSkills>Python, React</WorkSkills>
               <WorkLocation>Singapore</WorkLocation>
             </WorkMetaContainer>
             <WorkDescriptionContainer>
-              <Para>
+              <Para center>
                 Early-stage engineer building asset report-parsing software to make it easier for individuals to surface their individual financial positions and file taxes with ease.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
+              <CompanyImage fixed={userTestingImage.childImageSharp.fixed} />
               <WorkTitle>UserTesting</WorkTitle>
               <WorkSkills>Rails, React, iOS</WorkSkills>
               <WorkLocation>San Francisco Bay Area</WorkLocation>
             </WorkMetaContainer>
             <WorkDescriptionContainer>
-              <Para>
+              <Para center>
                 Worked on tools for managers to measure team productivity, QA tools for automated regression testing for our mobile apps, as well as a bug tracking tool that helps the engineering department prioritise in tandem with our customer support team.
               </Para>
-              <Para>
+              <Para center>
                 I also contributed to the UserTesting Dashboard iOS app, the app testers use to take usability tests on our platform.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
+              <CompanyImage fixed={buuukImage.childImageSharp.fixed} />
               <WorkTitle>buUuk</WorkTitle>
               <WorkSkills>iOS</WorkSkills>
               <WorkLocation>Singapore</WorkLocation>
             </WorkMetaContainer>
             <WorkDescriptionContainer>
-              <Para>
+              <Para center>
                 Created with the purpose of enhancing the feature of existing audio tour systems, I prototyped an app that uses proximity-based information gathered from Bluetooth Low-Energy Beacons to track a user's position within an exhibition and displays relevant metadata on their phones.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
+              <CompanyImage fixed={carousellImage.childImageSharp.fixed} />
               <WorkTitle>Carousell</WorkTitle>
-              <WorkSkills>Python, Go, Front-end Development</WorkSkills>
+              <WorkSkills>Python, Go, JavaScript</WorkSkills>
               <WorkLocation>Singapore</WorkLocation>
             </WorkMetaContainer>
             <WorkDescriptionContainer>
-              <Para>
+              <Para center>
                 Built an internal moderator tool for managing listings posted by users on the platform, as well as initial web functionality.
               </Para>
             </WorkDescriptionContainer>
@@ -377,6 +401,34 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxHeight: 250) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    oromicoImage: file(relativePath: { eq: "oromico.png" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    buuukImage: file(relativePath: { eq: "buuuk.jpeg" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    carousellImage: file(relativePath: { eq: "carousell.png" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    userTestingImage: file(relativePath: { eq: "usertesting.png" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
