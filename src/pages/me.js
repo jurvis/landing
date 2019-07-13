@@ -101,7 +101,7 @@ const HeaderTitle = styled.h2`
 `
 
 const TitleContainer = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 `
 
 const ContentContainer = styled.div`
