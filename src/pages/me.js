@@ -20,10 +20,14 @@ const ListItem = styled.li`
 
 const ProjectListItem = styled(ListItem)`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 
-  margin: 0 0 3.75rem;
+  @media only screen and (min-width: 850px) {
+    flex-direction: row;
+    margin-bottom: 3.75rem;
+  }
 `
 
 const WorkTitle = styled.h4`
@@ -46,23 +50,44 @@ const Para = styled.p`
 `
 
 const ProfileImageContainer = styled.div`
-  min-width: 200px;
+  width: 150px;
+  order: 1;
+  margin-bottom: 1rem;
+
+  @media only screen and (min-width: 850px) {
+    order: 2;
+    min-width: 200px;
+  }
 `
 
 const HorizontalContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between; 
+
+  @media only screen and (min-width: 850px) {
+    flex-direction: row;
+  }
 `
 
 const HeaderContainer = styled(HorizontalContainer)`
-  margin-bottom: 2rem;
-  margin: 0 auto 2rem auto;
-  width: 90%;
+  align-items: center;
+
+  @media only screen and (min-width: 850px) {
+    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
+    width: 90%;
+  }
 `
 
 const IntroContainer = styled.div`
-  width: 40rem;
+  order: 2;
+  width: 100%
+
+  @media only screen and (min-width: 850px) {
+    order: 1;
+    width: 40rem;
+  }
 `
 
 const HeaderTitle = styled.h2`
@@ -75,8 +100,12 @@ const TitleContainer = styled.div`
 `
 
 const ContentContainer = styled.div`
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+
+  @media only screen and (min-width: 850px) {
+    width: 80%;
+  }
 `
 
 const SocialsContainer = styled.div`
@@ -86,11 +115,30 @@ const SocialsContainer = styled.div`
 `
 
 const WorkMetaContainer = styled.div`
-  width: 25%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media only screen and (min-width: 850px) {
+    width: 25%;
+  }
+`
+
+const ProjectMetaContainer = styled(WorkMetaContainer)`
+  justify-content: space-evenly;
+  height: 325px;
+
+  @media only screen and (min-width: 850px) {
+    height: auto;
+  }
 `
 
 const WorkDescriptionContainer = styled.div`
-  width: 70%;
+  width: 90%;
+
+  @media only screen and (min-width: 850px) {
+    width: 70%;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -98,7 +146,7 @@ const ImageContainer = styled.div`
 `
 
 const ContentSeparator = styled.hr`
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -114,6 +162,10 @@ const ContentSeparator = styled.hr`
     top: -1em;
     padding: 0 0.25em;
     background: white;
+  }
+
+  @media only screen and (min-width: 850px) {
+    width: 90%
   }
 `
 
@@ -153,14 +205,14 @@ const MePage = ({ data }) => {
         </TitleContainer>
         <List>
           <ProjectListItem>
-            <WorkMetaContainer>
+            <ProjectMetaContainer>
               <ImageContainer>
                 <Img fluid={harmanyImage.childImageSharp.fluid}/>
               </ImageContainer>
               <WorkTitle>Harmany</WorkTitle>
               <WorkSkills>Music Sharing Made Easy</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
-            </WorkMetaContainer>
+            </ProjectMetaContainer>
             <WorkDescriptionContainer>
               <Para>
                 Harmany is a simple utility that allows you to share music with your friends without having to know which streaming service they use. Especially when you have a song you really want to share, making it as easy as possible to reach the play button is crucial. 
@@ -171,14 +223,14 @@ const MePage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
-            <WorkMetaContainer>
+            <ProjectMetaContainer>
               <ImageContainer>
                 <Img fluid={nebuloImage.childImageSharp.fluid}/>
               </ImageContainer>
               <WorkTitle>Nebulo</WorkTitle>
               <WorkSkills>Beautiful Smog Reports</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
-            </WorkMetaContainer>
+            </ProjectMetaContainer>
             <WorkDescriptionContainer>
               <Para>
               With just a tap, Nebulo aims to create a seamless and easy experience for people to check for the current air quality data. Putting smog advisory first, users can care less about what the science and focus on how to react when air quality reaches unhealthy levels.
@@ -186,14 +238,14 @@ const MePage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
-            <WorkMetaContainer>
+            <ProjectMetaContainer>
               <ImageContainer>
                 <Img fluid={fossasiaImage.childImageSharp.fluid}/>
               </ImageContainer>
               <WorkTitle>FOSSAsia iOS</WorkTitle>
               <WorkSkills>For Asia's largest open technology conference</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
-            </WorkMetaContainer>
+            </ProjectMetaContainer>
             <WorkDescriptionContainer>
               <Para>
                 Designed with usability in mind, FOSSAsia iOS is a companion iOS apps that allows conference atnedees to easily browse available sessions
@@ -204,14 +256,14 @@ const MePage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
-            <WorkMetaContainer>
+            <ProjectMetaContainer>
               <ImageContainer>
                 <Img fluid={exhibitGuideImage.childImageSharp.fluid}/>
               </ImageContainer>
               <WorkTitle>ExhibitGuide</WorkTitle>
               <WorkSkills>Context-Aware Exhibition Experiences</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
-            </WorkMetaContainer>
+            </ProjectMetaContainer>
             <WorkDescriptionContainer>
               <Para>
                 Created with the purpose of improving audio tours, ExhibitGuide uses proximity-based information gathered from Bluetooth Low-Energy Beacons to track a user's position within an exhibition and displays relevant exhibit data to the user’s phones.
@@ -236,7 +288,9 @@ const MePage = ({ data }) => {
               <WorkLocation>Singapore</WorkLocation>
             </WorkMetaContainer>
             <WorkDescriptionContainer>
-              Early-stage engineer building asset report-parsing software to make it easier for individuals to surface their individual financial positions and file taxes with ease.
+              <Para>
+                Early-stage engineer building asset report-parsing software to make it easier for individuals to surface their individual financial positions and file taxes with ease.
+              </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
