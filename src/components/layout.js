@@ -9,22 +9,14 @@ import Header from './header'
 import "./layout.css"
 
 const Main = styled.main`
-  padding: 60px 0 0;
+  padding: 80px 0 0;
   min-height: calc(100vh - 210px);
-
-  @media only screen and (min-width: 700px) {
-    padding: 80px 0 0;
-  }
 `
 
 const MainContainer = styled.div`
   max-width: 62rem;
   padding: 0 15px;
-  margin: 4rem auto;
-
-  @media only screen and (min-width: 700px) {
-    margin: 2rem auto;
-  }
+  margin: 1rem auto;
 `
 
 const Layout = ({ children }) => (
