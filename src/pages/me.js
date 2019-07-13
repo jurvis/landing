@@ -75,7 +75,7 @@ const TitleContainer = styled.div`
 `
 
 const ContentContainer = styled.div`
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 `
 
@@ -97,6 +97,26 @@ const ImageContainer = styled.div`
   margin-bottom: .5rem;
 `
 
+const ContentSeparator = styled.hr`
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  border: none;
+  border-top: medium #333;
+  color: #666;
+  text-align: center;
+
+  &:after {
+    content: "◆";
+    display: inline-block;
+    position: relative;
+    top: -1em;
+    padding: 0 0.25em;
+    background: white;
+  }
+`
+
 const MePage = ({ data }) => {
   const { harmanyImage, fossasiaImage, nebuloImage, exhibitGuideImage } = data;
   return ( 
@@ -115,9 +135,6 @@ const MePage = ({ data }) => {
           <Para>
             I take a lot of <a href="https://instagram.com/jurv.is">photos</a> too! 
           </Para>
-          {/* <Para>
-            I take a lot of <a href="https://instagram.com/jurv.is">photos</a> as a hobby and have always wanted to build an internet space like this one to document my journey as a developer as well as showcase my pictures in a pleasant format independent of Instagram/SmugMug so I get as much control over the experience as much as possible.
-          </Para> */}
           <Para>
             This site is inspired by <a href="https://www.taniarascia.com/">Tania Rascia</a> and <a href="https://paulstamatiou.com/">Paul Stamatiou</a>.
           </Para>
@@ -129,6 +146,7 @@ const MePage = ({ data }) => {
           </SocialsContainer>
         </ProfileImageContainer>
       </HeaderContainer>
+      <ContentSeparator/>
       <ContentContainer>
         <TitleContainer>
           <HeaderTitle>Projects</HeaderTitle>
@@ -145,7 +163,10 @@ const MePage = ({ data }) => {
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para>
-                Harmany is a simple utility that allows you to share music with your friends without having to know which streaming service they use. Especially when you have a song you really want to share, making it as easy as possible for them to reach the play button is crucial.
+                Harmany is a simple utility that allows you to share music with your friends without having to know which streaming service they use. Especially when you have a song you really want to share, making it as easy as possible to reach the play button is crucial. 
+              </Para>
+              <Para>
+                Just hit share from your music service of choice, and let Harmany take care of the rest.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
@@ -175,6 +196,9 @@ const MePage = ({ data }) => {
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para>
+                Designed with usability in mind, FOSSAsia iOS is a companion iOS apps that allows conference atnedees to easily browse available sessions
+              </Para>
+              <Para>
                Volunteered and led the open-source development of iOS app that will allow conference attendees to browse available sessions, bookmark, and set alerts for them.
               </Para>
             </WorkDescriptionContainer>
@@ -199,6 +223,7 @@ const MePage = ({ data }) => {
           </ProjectListItem>
         </List>
       </ContentContainer> 
+      <ContentSeparator/>
       <ContentContainer>
         <TitleContainer>
           <HeaderTitle>Work Experience</HeaderTitle>
@@ -255,15 +280,16 @@ const MePage = ({ data }) => {
           </ProjectListItem>
         </List>
       </ContentContainer>
-      <div>
-        <h2>Awards</h2>
+      <ContentSeparator/>
+      <ContentContainer>
+        <HeaderTitle>Awards</HeaderTitle>
         <List>
           <ListItem>Singapore Computer Society Silver Medal and Prize</ListItem>
           <ListItem>Apple Worldwide Developer Conference (WWDC) 2016 Scholarship Recipient</ListItem>
           <ListItem>CodeXtremeApps 2014 Hackathon Finalist</ListItem>
           <ListItem>AngelHack AppHack Fall 2013 Prize Winner</ListItem>
         </List>
-      </div> 
+      </ContentContainer> 
     </Layout>
   )
 }
