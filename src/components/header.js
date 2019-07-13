@@ -96,7 +96,7 @@ const PageLink = styled(Link)`
   }
 `
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <Nav>
     <Container>
       <NameContainer>
@@ -105,7 +105,7 @@ const Header = ({ siteTitle }) => (
         </BrandLink>
       </NameContainer>
       <LinksContainer>
-        <PageLink to="/me">About me</PageLink>
+        <PageLink to="/me">About</PageLink>
         <PageLink to="/posts">Writing</PageLink>
         {/* <PageLink to="/photos">Photos</PageLink> */}
       </LinksContainer>
