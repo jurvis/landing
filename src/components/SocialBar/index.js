@@ -25,7 +25,7 @@ const FAIcon = styled(FontAwesomeIcon)`
 const SocialBar = () => (
   <Container>
 		<SocialIconContainer href="https://angel.co/jurvis"><FAIcon icon={ faAngellist } size="lg" /></SocialIconContainer>
-    <SocialIconContainer href="https://twiter.com/jurvistan"><FAIcon icon={ faTwitter } size="lg" /></SocialIconContainer>
+    <SocialIconContainer href="https://twitter.com/jurvistan"><FAIcon icon={ faTwitter } size="lg" /></SocialIconContainer>
     <SocialIconContainer href="https://github.com/jurvis"><FAIcon icon={ faGithubAlt } size="lg" /></SocialIconContainer>
   </Container>
 )
