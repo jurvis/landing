@@ -7,6 +7,9 @@ import Layout from '../components/layout'
 import ProfileImage from '../components/profile_image'
 import SocialBar from '../components/SocialBar'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGlobeAsia, faCodeBranch, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+
 const List = styled.ul`
   margin: 0 0 2rem;
   list-style: none;
@@ -46,10 +49,11 @@ const WorkSkills = styled.p`
 
 const Para = styled.p`
   line-height: 1.6;
-  margin: 0 0 1rem;
+  margin: 0;
   text-align: ${props => props.center ? 'center' : 'left'};
 
   @media only screen and (min-width: 850px) {
+    margin: 0 0 1rem;
     text-align: left;
   }
 `
@@ -188,6 +192,38 @@ const CompanyImage = styled(Img)`
   margin-bottom: .5rem;
 `
 
+const ProjectLinks = styled.ul`
+  margin-top: 10px;
+  display: flex;
+  list-style-type: none;
+  order: 0;
+`
+
+const ProjectLinkContainer = styled.li`
+  &:not(:last-of-type) {
+    margin-right: 10px;
+    padding-right: 20px;
+  }
+`
+
+const ProjectIcon = styled(FontAwesomeIcon)`
+  margin-right: 0.5em;
+  color: #3f80ff;
+`
+
+const ProjectLink = styled.a`
+  font-weight: 600;
+  text-transform: uppercase;
+  background: rgba(245,215,110,0.5);
+  text-decoration: none;
+  transition: all linear .2s;
+  padding: 2px;
+
+  &:hover {
+    background: rgba(245,215,110,1);
+  }
+`
+
 const MePage = ({ data }) => {
   const { harmanyImage, fossasiaImage, nebuloImage, exhibitGuideImage } = data;
   const { oromicoImage, userTestingImage, buuukImage, carousellImage } = data;
@@ -240,6 +276,12 @@ const MePage = ({ data }) => {
               <Para>
                 Just hit share from your music service of choice, and let Harmany take care of the rest.
               </Para>
+              <ProjectLinks>
+                <ProjectLinkContainer>
+                    <ProjectIcon icon={ faGlobeAsia } size="text" />
+                    <ProjectLink href="https://harmany.me/">Website</ProjectLink>
+                </ProjectLinkContainer>
+              </ProjectLinks>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
@@ -252,9 +294,14 @@ const MePage = ({ data }) => {
               <WorkLocation>iOS, Design</WorkLocation>
             </ProjectMetaContainer>
             <WorkDescriptionContainer>
-              <Para>
-              With just a tap, Nebulo aims to create a seamless and easy experience for people to check for the current air quality data. Putting smog advisory first, users can care less about what the science and focus on how to react when air quality reaches unhealthy levels.
-              </Para>
+              <Para>Nebulo aims at creating a seamless and easy experience for people to check for the current air quality data. With just a tap, Nebulo puts smog advisory first so users can care less about the science and focus on how to react when air quality reaches unhealthy levels.</Para>
+              <Para>Featured regionally and nationally, Nebulo is the top app in South East Asia for those looking to receive alerts and stay up to date with air quality.</Para>
+              <ProjectLinks>
+                <ProjectLinkContainer>
+                    <ProjectIcon icon={ faGlobeAsia } size="text" />
+                    <ProjectLink href="https://nebulo.undertide.co/">Website</ProjectLink>
+                </ProjectLinkContainer>
+              </ProjectLinks>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
@@ -263,16 +310,17 @@ const MePage = ({ data }) => {
                 <Img fluid={fossasiaImage.childImageSharp.fluid}/>
               </ImageContainer>
               <WorkTitle>FOSSAsia iOS</WorkTitle>
-              <WorkSkills>For Asia's largest open technology conference</WorkSkills>
+              <WorkSkills>Asia's largest open technology conference</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
             </ProjectMetaContainer>
             <WorkDescriptionContainer>
-              <Para>
-                Designed with usability in mind, FOSSAsia iOS is a companion iOS apps that allows conference atnedees to easily browse available sessions
-              </Para>
-              <Para>
-               Volunteered and led the open-source development of iOS app that will allow conference attendees to browse available sessions, bookmark, and set alerts for them.
-              </Para>
+              <Para>Designed with usability as a priority, I volunteered and led the design and open-source development of the companion iOS app for FOSSAsia 2016. The app allows to conference attendees to view more information about speakers, browse and bookmark available sessions, and set reminders for them.</Para>
+              <ProjectLinks>
+                <ProjectLinkContainer>
+                    <ProjectIcon icon={ faCodeBranch } size="text" />
+                    <ProjectLink href="https://github.com/fossasia/open-event-ios">Code</ProjectLink>
+                </ProjectLinkContainer>
+              </ProjectLinks>
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
@@ -291,6 +339,12 @@ const MePage = ({ data }) => {
               <Para>
                 I was involved in the product design process and wrote the iOS app as an experiment for potential clients like the Singapore Art Science Museum.
               </Para>
+              <ProjectLinks>
+                <ProjectLinkContainer>
+                    <ProjectIcon icon={ faPlayCircle } size="text" />
+                    <ProjectLink href="https://vimeo.com/126036144">Video</ProjectLink>
+                </ProjectLinkContainer>
+              </ProjectLinks>
             </WorkDescriptionContainer>
           </ProjectListItem>
         </List>
