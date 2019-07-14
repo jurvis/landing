@@ -199,7 +199,7 @@ const CompanyImage = styled(Img)`
 `
 
 const ProjectLinks = styled.ul`
-  margin-top: 10px;
+  margin: 10px 0 0;
   display: flex;
   list-style-type: none;
   order: 0;
