@@ -176,6 +176,8 @@ const ContentSeparator = styled.hr`
   border-top: medium #333;
   color: #666;
   text-align: center;
+  margin-bottom: calc(1.8rem - 1px);
+  margin-top: calc(1.8rem - 1px);
 
   &:after {
     content: "◆";
