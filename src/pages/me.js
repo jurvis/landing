@@ -49,8 +49,12 @@ const WorkSkills = styled.p`
 
 const Para = styled.p`
   line-height: 1.6;
-  margin: 0;
+  margin: 0 0 1rem;
   text-align: ${props => props.center ? 'center' : 'left'};
+
+  &:last-of-type {
+    margin: 0;
+  }
 
   @media only screen and (min-width: 850px) {
     margin: 0 0 1rem;
