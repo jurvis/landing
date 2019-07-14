@@ -183,7 +183,7 @@ const ContentSeparator = styled.hr`
     content: "◆";
     display: inline-block;
     position: relative;
-    top: -1em;
+    top: -0.95em;
     padding: 0 0.25em;
     background: white;
   }
@@ -223,7 +223,7 @@ const ProjectLink = styled.a`
   background: rgba(245,215,110,0.5);
   text-decoration: none;
   transition: all linear .2s;
-  padding: 2px;
+  padding: 3px 4px;
 
   &:hover {
     background: rgba(245,215,110,1);
