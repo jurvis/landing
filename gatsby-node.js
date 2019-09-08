@@ -8,6 +8,7 @@
 
 const path = require('path')
 const { attachFields } = require('gatsby-plugin-node-fields')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 function isArticle(node) {
   return node.frontmatter != null && node.fileAbsolutePath.includes('/posts/');
@@ -51,7 +52,7 @@ const getFullPath = ({ date, slug, path }) => {
   return `/posts/${parsedDate.getFullYear()}/${paddedMonth}/${pathSlug}`
 }
 
-exports.onCreateNode = ({node, actions}) => {
+exports.onCreateNode = ({node, actions, getNode}) => {
   const { createNodeField } = actions;
   attachFields(node, createNodeField, descriptors);
 }
