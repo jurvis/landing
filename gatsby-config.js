@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Jurvis Tan',
-    siteUrl: 'https://jurv.is'
+    siteUrl: 'https://jurv.is',
+    description: `Jurvis' Personal Website`
   },
   plugins: [
     'gatsby-plugin-robots-txt',
