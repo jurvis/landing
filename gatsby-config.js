@@ -31,6 +31,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.postPath,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.postPath,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
