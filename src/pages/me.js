@@ -9,6 +9,7 @@ import SocialBar from '../components/SocialBar'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAsia, faCodeBranch, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import GoodreadsBook from '../components/GoodreadsBook';
 
 const List = styled.ul`
   margin: 0 0 2rem;
@@ -233,6 +234,20 @@ const ProjectLink = styled.a`
 const MePage = ({ data }) => {
   const { harmanyImage, fossasiaImage, nebuloImage, exhibitGuideImage } = data;
   const { oromicoImage, userTestingImage, buuukImage, carousellImage } = data;
+
+  const nowReadingBooks = [
+    { name: 'The Quest of the Simple Life', link: 'https://www.goodreads.com/book/show/18670760-the-quest-of-the-simple-life' },
+    { name: 'Thinking in Systems: A Primer', link: 'https://www.goodreads.com/book/show/3828902-thinking-in-systems' },
+    { name: 'A History of Interest Rates', link: 'https://www.goodreads.com/book/show/19076493-a-history-of-interest-rates' },
+    { name: 'Finite and Infinite Games: A Vision of Life as Play and Possibility', link: 'https://www.goodreads.com/book/show/189989.Finite_and_Infinite_Games' },
+    { name: 'The Sovereign Individual: Mastering the Transition to the Information Age', link: 'https://www.goodreads.com/book/show/82256.The_Sovereign_Individual' },
+    { name: 'Cryptonomicon', link: 'https://www.goodreads.com/book/show/38897904-cryptonomicon' }
+  ].map( b => {
+    return (
+      <GoodreadsBook url={b.link} name={b.name}/>
+    )
+  });
+
   return ( 
     <Layout>
       <TitleContainer>
@@ -242,6 +257,9 @@ const MePage = ({ data }) => {
         <IntroContainer>
           <Para>
             Hello there, I'm Jurvis. I am a developer based in the island nation of Singapore. I spend most of my time developing applications in Rails, Elixir, React, Node, and Swift (in no specific order). In 2013, I started <a href="https://undertide.co/">Undertide</a> to build websites and apps.
+          </Para>
+          <Para>
+            In my free time, I like reading and writing about governance and identity systems and how we can establish a better framework for understanding them, in order to design better incentives that lead to more positive outcomes.
           </Para>
           <Para>
             I take a lot of <a href="https://instagram.com/jurv.is">photos</a> too! 
@@ -254,6 +272,13 @@ const MePage = ({ data }) => {
           </SocialsContainer>
         </ProfileImageContainer>
       </HeaderContainer>
+      <ContentSeparator/>
+      <ContentContainer>
+        <TitleContainer>
+          <HeaderTitle>What Am I Reading?</HeaderTitle>
+          {nowReadingBooks}
+        </TitleContainer> 
+      </ContentContainer>
       <ContentSeparator/>
       <ContentContainer>
         <TitleContainer>
