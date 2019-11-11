@@ -256,10 +256,13 @@ const MePage = ({ data }) => {
       <HeaderContainer>
         <IntroContainer>
           <Para>
-            Hello there, I'm Jurvis. I am a developer based in the island nation of Singapore. I spend most of my time developing applications in Rails, Elixir, React, Node, and Swift (in no specific order). In 2013, I started <a href="https://undertide.co/">Undertide</a> to build websites and apps.
+            Hello there, I’m Jurvis. I am a software engineer from the island nation of Singapore.
           </Para>
           <Para>
-            In my free time, I like reading and writing about governance and identity systems and how we can establish a better framework for understanding them, in order to design better incentives that lead to more positive outcomes.
+            When not busy burying my head in code, I enjoy spending my time thinking about the governance and identity systems that make up our world. My interest in that topic surrounds my desire to work on products and services that aim to provision equitable access to core services like healthcare, finance, energy, and education. 
+          </Para>
+          <Para>
+            I measure the value of my life's work by my participation in using technology to open up innovation, participation, and ingenuity to people around the globe. 
           </Para>
           <Para>
             I take a lot of <a href="https://instagram.com/jurv.is">photos</a> too! 
