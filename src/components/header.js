@@ -106,6 +106,7 @@ const Header = () => (
       </NameContainer>
       <LinksContainer>
         <PageLink to="/me">About</PageLink>
+        <PageLink to="/work">Portfolio</PageLink>
         <PageLink to="/posts">Writing</PageLink>
         {/* <PageLink to="/photos">Photos</PageLink> */}
       </LinksContainer>
