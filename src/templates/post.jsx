@@ -34,7 +34,7 @@ const ArticleHeader = styled.header`
     line-height: 1.5;
 
     @media only screen and (min-width: 700px) {
-      font-size: 3em;
+      font-size: 2.5em;
       line-height: 1.2;
     }
   }
