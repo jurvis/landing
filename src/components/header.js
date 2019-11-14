@@ -94,6 +94,10 @@ const PageLink = styled(Link)`
     color: #333;
     text-decoration: underline;
   }
+
+  &:last-of-type {
+    margin: 0;
+  }
 `
 
 const Header = () => (
