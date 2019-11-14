@@ -87,9 +87,23 @@ const SocialsContainer = styled.div`
   margin: 0 auto;
 `
 
-const SubstackContainer = styled(ContentContainer)`
+const SubstackParentContainer = styled(ContentContainer)`
   margin: 0 auto;
   text-align: center;
+`
+
+const SubstackContainer = styled(ContentContainer)`
+  position: relative;
+  overflow: hidden;
+  padding-top: 80%
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const SubstackPara = styled.p`
@@ -171,12 +185,14 @@ const MePage = () => {
         </TitleContainer> 
       </ContentContainer>
       <ContentSeparator/>
-      <SubstackContainer>
+      <SubstackParentContainer>
         <HeaderTitle>Let's Keep In Touch</HeaderTitle>
         <SubstackPara>Want to be friends? The best way is to sign up for my newsletter where I share the comings and goings of what I'm working/thinking about.</SubstackPara>
         <SubstackPara>Join the conversation!</SubstackPara>
-        <iframe width="480" height="320" src="https://jurvis.substack.com/embed" frameborder="0" scrolling="no"></iframe>
-      </SubstackContainer>
+        <SubstackContainer>
+          <iframe height="320px" src="https://jurvis.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+        </SubstackContainer>
+      </SubstackParentContainer>
     </Layout>
   )
 }
