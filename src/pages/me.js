@@ -95,7 +95,11 @@ const SubstackParentContainer = styled(ContentContainer)`
 const SubstackContainer = styled(ContentContainer)`
   position: relative;
   overflow: hidden;
-  padding-top: 80%
+  padding-top: 100%;
+
+  @media only screen and (min-width: 850px) {
+    padding-top: 40%;
+  }
   
   iframe {
     position: absolute;
