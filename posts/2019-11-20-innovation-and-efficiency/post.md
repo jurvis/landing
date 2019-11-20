@@ -2,8 +2,6 @@
 title: "📝 To Build a Sustainable Culture of Innovation, Stop Trying To Be Efficient" 
 date: "2019-11-20"
 slug: "sustainable-innovation-and-efficiency"
-thumbnail: "cover.jpg"
-thumbnailCaption: "Altar Lamps at Duomo Pisa That Inspired Galileo"
 ---
 
 In the 1990s, Dell Computer hit its stride and quickly rose to become the one of the most successful and profitable computer companies in the world. 
