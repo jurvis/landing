@@ -10,6 +10,8 @@ However, in an attempt to continually improve efficiency metrics and financial r
 
 Outsourcing made Dell’s balance sheet look good, but only in expense of their innovative prowess. The success of their efforts became evident, and that led to even more outsourcing — effectively putting Asus into the business of creating its own brand of computers, and made them more competitive than Dell herself.
 
+![Dell's Stock Plunge At The Turn of The Century](dell_stock.png)
+
 ## What Efficiency Leaves Out
 Modern design thinking teaches divergent exploration, to emphasise an equal part importance in problem discovery and definition with solution discovery and solution.
 
