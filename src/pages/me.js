@@ -162,7 +162,7 @@ const MePage = () => {
       <HeaderContainer>
         <IntroContainer>
           <Para>
-            Hello there, I’m Jurvis. I am a software engineer from the island nation of Singapore.
+            Hello there, I’m Jurvis. I am a software engineer raised in Singapore, and now live in Los Angeles.
           </Para>
           <Para>
             I enjoy spending my time thinking about the governance and identity systems that make up our world. My interest in that topic surrounds my desire to work on products and services that aim to provision equitable access to core services like healthcare, finance, energy, and education. 

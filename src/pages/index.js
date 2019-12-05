@@ -78,7 +78,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Section>
         <h1>Hello there! My name is Jurvis.</h1>
-        <IntroLine>I am a software developer based in Singapore</IntroLine>
+        <IntroLine>I am a software engineer based in Los Angeles.</IntroLine>
         <IntroLine>This site houses my writing about my travels, things I read, software development, and technology.</IntroLine>
       </Section>
       <HorizontalSection>
