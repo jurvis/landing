@@ -53,44 +53,30 @@ const getFullPath = ({ date, slug, path }) => {
 }
 
 exports.onCreateNode = ({node, actions, getNode}) => {
-  const { createNodeField } = actions;
-  attachFields(node, createNodeField, descriptors);
+  // const { createNodeField } = actions;
+  attachFields(node, actions, getNode, descriptors);
 }
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-
-  return new Promise((resolve, reject) => {
-    const pages = []
-    const post = path.resolve('./src/templates/post.jsx')
-
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(limit: 1000) {
-              edges {
-                node {
-                  fields {
-                    postPath
-                  }
-                }
-              }
+exports.createPages = async  ({ graphql, actions }) => {
+  const { data } = await graphql(`
+    query {
+      allMarkdownRemark(limit: 1000) {
+        edges {
+          node {
+            fields {
+              postPath
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) reject(result.errors)
+        }
+      }
+    } 
+  `)
 
-        const { edges } = result.data.allMarkdownRemark
-
-        edges.forEach(edge => {
-          createPage({
-            path: edge.node.fields.postPath,
-            component: post,
-          })
-        })
-      })
-    )
+  data.allMarkdownRemark.edges.forEach(edge => {
+    const slug = edge.node.fields.postPath
+    actions.createPage({
+      path: slug,
+      component: require.resolve('./src/templates/post.jsx'),
+    })
   })
 }
