@@ -183,7 +183,7 @@ const ProjectLink = styled.a`
 
 const WorkPage = ({ data }) => {
   const { harmanyImage, fossasiaImage, nebuloImage, exhibitGuideImage } = data;
-  const { oromicoImage, userTestingImage, buuukImage, carousellImage } = data;
+  const { oromicoImage, userTestingImage, buuukImage, carousellImage, undertideImage, safImage } = data;
 
   return ( 
     <Layout>
@@ -287,6 +287,42 @@ const WorkPage = ({ data }) => {
           <HeaderTitle>Work Experience</HeaderTitle>
         </TitleContainer>
         <List>
+          <ProjectListItem>
+            <WorkMetaContainer>
+              <CompanyImage fixed={undertideImage.childImageSharp.fixed} />
+              <WorkTitle>Undertide Apps</WorkTitle>
+              <WorkSkills>Co-Founder/Developer</WorkSkills>
+              <WorkLocation>Singapore</WorkLocation>
+            </WorkMetaContainer>
+            <WorkDescriptionContainer>
+              <Para center>
+                Focused on helping technically talented middle/high school students in Singapore find fulfilling gigs beyond our tiny shores, Undertide's primary mission is to help young developers get the exposure and focus they need to level themselves up quickly. 
+              </Para>
+              <Para center>                
+                We figure out what they feel passionate about the most, match them with the right contracts through people we trust, take care of everything administrative
+                from negotiations, product management, engineering management, and invoicing; so they can focus on their technical craft.
+              </Para>
+              <Para center>
+                Our Pride: We have never gotten a single late payment.
+              </Para>
+            </WorkDescriptionContainer>
+          </ProjectListItem>
+          <ProjectListItem>
+            <WorkMetaContainer>
+              <CompanyImage fixed={safImage.childImageSharp.fixed} />
+              <WorkTitle>Singapore Armed Forces</WorkTitle>
+              <WorkSkills>Signals Platoon Sergeant</WorkSkills>
+              <WorkLocation>Singapore</WorkLocation>
+            </WorkMetaContainer>
+            <WorkDescriptionContainer>
+              <Para center>
+                I directly manage and train a platoon of soldiers, built in-house administrative systems with Node.JS, and designed knowledge management repositories for our operations post-mortems.
+              </Para>
+              <Para center>
+                Because our functional role relative to the rest of the Army is extremely technical, the training/knowledge management piece was my center of focus; to ensure maximum availability of our computer systems when coordinating and integrating fighting forces. 
+              </Para>
+            </WorkDescriptionContainer>
+          </ProjectListItem>
           <ProjectListItem>
             <WorkMetaContainer>
               <CompanyImage fixed={oromicoImage.childImageSharp.fixed} />
@@ -412,6 +448,20 @@ export const pageQuery = graphql`
       }
     }
     userTestingImage: file(relativePath: { eq: "usertesting.png" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    safImage: file(relativePath: { eq: "saf.png" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    undertideImage: file(relativePath: { eq: "undertide.png" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed

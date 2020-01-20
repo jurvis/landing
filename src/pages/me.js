@@ -142,10 +142,11 @@ const ContentSeparator = styled.hr`
 
 const MePage = () => {
   const nowReadingBooks = [
+    { name: 'On the Shortness of Life', link: 'https://www.goodreads.com/book/show/97412.On_the_Shortness_of_Life' },
+    { name: 'The Evolution of Everything', link: 'https://www.goodreads.com/book/show/25816925-the-evolution-of-everything'},
+    { name: 'Jerusalem, The Biography', link: 'https://www.goodreads.com/book/show/12114607-jerusalem-the-biography' },
     { name: 'The Quest of the Simple Life', link: 'https://www.goodreads.com/book/show/18670760-the-quest-of-the-simple-life' },
-    { name: 'Thinking in Systems: A Primer', link: 'https://www.goodreads.com/book/show/3828902-thinking-in-systems' },
     { name: 'A History of Interest Rates', link: 'https://www.goodreads.com/book/show/19076493-a-history-of-interest-rates' },
-    { name: 'Finite and Infinite Games: A Vision of Life as Play and Possibility', link: 'https://www.goodreads.com/book/show/189989.Finite_and_Infinite_Games' },
     { name: 'The Sovereign Individual: Mastering the Transition to the Information Age', link: 'https://www.goodreads.com/book/show/82256.The_Sovereign_Individual' },
     { name: 'Cryptonomicon', link: 'https://www.goodreads.com/book/show/38897904-cryptonomicon' }
   ].map( b => {
@@ -162,7 +163,7 @@ const MePage = () => {
       <HeaderContainer>
         <IntroContainer>
           <Para>
-            Hello there, my name is Jurvis. I am a software engineer based in Los Angeles.
+            Hello there, my name is Jurvis. I am a software engineer now based in Los Angeles for college.
           </Para>
           <Para>
             I enjoy spending my time thinking about the governance and identity systems that make up our world. My interest in that topic surrounds my desire to work on products and services that aim to provision equitable access to core services like healthcare, finance, energy, and education. 
