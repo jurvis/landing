@@ -142,10 +142,12 @@ const ContentSeparator = styled.hr`
 
 const MePage = () => {
   const nowReadingBooks = [
+    { name: 'The Great Depression: A Diary', link: 'https://www.goodreads.com/book/show/6601224-the-great-depression' },
+    { name: 'Carrying The Fire', link: 'https://www.goodreads.com/book/show/612456.Carrying_the_Fire' },
+    { name: 'Work Clean', link: 'https://www.goodreads.com/book/show/26114603-work-clean' },
+    { name: 'Superforecasting', link: 'https://www.goodreads.com/book/show/23995360-superforecasting'},
     { name: 'On the Shortness of Life', link: 'https://www.goodreads.com/book/show/97412.On_the_Shortness_of_Life' },
-    { name: 'The Evolution of Everything', link: 'https://www.goodreads.com/book/show/25816925-the-evolution-of-everything'},
     { name: 'Jerusalem, The Biography', link: 'https://www.goodreads.com/book/show/12114607-jerusalem-the-biography' },
-    { name: 'The Quest of the Simple Life', link: 'https://www.goodreads.com/book/show/18670760-the-quest-of-the-simple-life' },
     { name: 'A History of Interest Rates', link: 'https://www.goodreads.com/book/show/19076493-a-history-of-interest-rates' },
     { name: 'The Sovereign Individual: Mastering the Transition to the Information Age', link: 'https://www.goodreads.com/book/show/82256.The_Sovereign_Individual' },
     { name: 'Cryptonomicon', link: 'https://www.goodreads.com/book/show/38897904-cryptonomicon' }
