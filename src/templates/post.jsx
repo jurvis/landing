@@ -7,6 +7,7 @@ import Img from "gatsby-image";
 
 import Header from '../components/header.js';
 import Article from '../components/articlePost.jsx';
+import Footer from '../components/Footer';
 
 const Container = styled.div`
 `
@@ -112,6 +113,7 @@ class BlogPost extends Component {
           }
           <Article dangerouslySetInnerHTML={{__html: html}} />
         </Content>
+        <Footer />
       </Container>
     )
   }
