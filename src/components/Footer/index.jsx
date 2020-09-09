@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubAlt, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import React from 'react'
+import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithubAlt, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const MainContainer = styled.div`
   max-width: 62rem;
@@ -15,7 +15,7 @@ const FooterContainer = styled(MainContainer)`
   margin-top: 2.5rem;
   flex-direction: column;
   justify-content: space-between;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, 0.6);
 
   @media only screen and (min-width: 700px) {
     margin: 60px auto;
@@ -32,7 +32,7 @@ const FooterChildContainer = styled.div`
 
 const FooterLink = styled.a`
   font-weight: 400;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, 0.6);
   display: block;
   margin-right: 1.5rem;
 `
@@ -41,7 +41,6 @@ const FooterIcon = styled(FontAwesomeIcon)`
   font-size: 1.5em;
 `
 
-
 const Footer = () => (
   <FooterContainer>
     <FooterChildContainer>
@@ -49,10 +48,14 @@ const Footer = () => (
       <FooterLink href="https://jurv.is/rss.xml">RSS</FooterLink>
     </FooterChildContainer>
     <FooterChildContainer>
-      <FooterLink href="https://github.com/jurvis/landing"><FooterIcon icon={ faTwitter } color="#00aced"/></FooterLink>
-      <FooterLink href="https://twitter.com/jurvistan"><FooterIcon icon={ faGithubAlt }/></FooterLink>
+      <FooterLink href="https://twitter.com/jurvistan">
+        <FooterIcon icon={faTwitter} color="#00aced" />
+      </FooterLink>
+      <FooterLink href="https://github.com/jurvis/">
+        <FooterIcon icon={faGithubAlt} />
+      </FooterLink>
     </FooterChildContainer>
   </FooterContainer>
 )
 
-export default Footer;
+export default Footer
