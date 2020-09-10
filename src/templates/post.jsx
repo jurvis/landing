@@ -23,7 +23,7 @@ const Content = styled.main`
 `
 
 const ArticleHeader = styled.header`
-  margin: 0 auto;
+  margin: 0 auto 2em auto;
   width: 92%;
   padding: 0 15px;
 
@@ -33,6 +33,7 @@ const ArticleHeader = styled.header`
     font-size: 1.85em;
     font-weight: 700;
     line-height: 1.5;
+    margin: 0;
 
     @media only screen and (min-width: 700px) {
       font-size: 2.5em;
@@ -66,6 +67,10 @@ const ThumbnailCaption = styled.small`
   margin-top: 0.3em;
 `
 
+const DateLabel = styled.span`
+  color: #777777;
+`
+
 class BlogPost extends Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -75,7 +80,7 @@ class BlogPost extends Component {
     const { siteUrl } = this.props.data.site.siteMetadata
     const { href } = this.props.location
     const {
-      frontmatter: { title, subtitle, thumbnail, thumbnailCaption },
+      frontmatter: { title, subtitle, thumbnail, thumbnailCaption, date },
       html,
       excerpt,
     } = this.props.data.markdownRemark
@@ -115,6 +120,7 @@ class BlogPost extends Component {
           <ArticleHeader>
             <h1>{title}</h1>
             {subtitle && <h2>${subtitle}</h2>}
+            <DateLabel>{date}</DateLabel>
           </ArticleHeader>
           {thumbnail && (
             <PostHero>
