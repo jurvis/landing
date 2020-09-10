@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Jurvis Tan',
     siteUrl: 'https://jurv.is',
-    description: `Jurvis' Personal Website`
+    description: `Jurvis' Personal Website`,
   },
   plugins: [
     'gatsby-plugin-robots-txt',
@@ -31,7 +31,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.postPath,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.postPath,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
@@ -54,16 +54,16 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "jurv.is",
+            output: '/rss.xml',
+            title: 'jurv.is',
           },
         ],
-      }
+      },
     },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins:[
+        plugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -76,7 +76,7 @@ module.exports = {
           'gatsby-remark-smartypants',
           'gatsby-remark-responsive-iframe',
           'gatsby-plugin-styled-components',
-          'gatsby-remark-overflow-tables'
+          'gatsby-remark-overflow-tables',
         ],
       },
     },
@@ -107,6 +107,17 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-175944214-2',
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
+        defer: false,
       },
     },
   ],
