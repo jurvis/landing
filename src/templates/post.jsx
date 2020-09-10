@@ -1,16 +1,15 @@
-import { graphql } from 'gatsby';
-import { Component } from 'react';
-import React from 'react';
-import Helmet from 'react-helmet';
-import styled from 'styled-components';
-import Img from "gatsby-image";
+import { graphql } from 'gatsby'
+import { Component } from 'react'
+import React from 'react'
+import Helmet from 'react-helmet'
+import styled from 'styled-components'
+import Img from 'gatsby-image'
 
-import Header from '../components/header.js';
-import Article from '../components/articlePost.jsx';
-import Footer from '../components/Footer';
+import Header from '../components/header.js'
+import Article from '../components/articlePost.jsx'
+import Footer from '../components/Footer'
 
-const Container = styled.div`
-`
+const Container = styled.div``
 
 const Content = styled.main`
   margin-top: 2rem;
@@ -28,7 +27,8 @@ const ArticleHeader = styled.header`
   width: 92%;
   padding: 0 15px;
 
-  h1, h2 {
+  h1,
+  h2 {
     color: #161718;
     font-size: 1.85em;
     font-weight: 700;
@@ -46,18 +46,23 @@ const ArticleHeader = styled.header`
 `
 
 const PostHero = styled.div`
-  max-width: 45rem;
+  max-width: 62rem;
+  max-height: 500px;
   margin: 0 auto;
-  display:flex;
+  display: flex;
   flex-direction: column;
+
+  & > img {
+    object-fit: fill;
+  }
 `
 
 const ThumbnailCaption = styled.small`
-  font-size: .9rem;
-  color: #5F6B7A;
+  font-size: 0.9rem;
+  color: #5f6b7a;
   line-height: 1.5;
   display: inline-block;
-  align-self:center;
+  align-self: center;
   margin-top: 0.3em;
 `
 
@@ -67,51 +72,62 @@ class BlogPost extends Component {
       ? this.props.data.site.siteMetadata.title
       : null
 
-    const { siteUrl } = this.props.data.site.siteMetadata;
-    const { href } = this.props.location;
+    const { siteUrl } = this.props.data.site.siteMetadata
+    const { href } = this.props.location
     const {
       frontmatter: { title, subtitle, thumbnail, thumbnailCaption },
       html,
-      excerpt
-    } = this.props.data.markdownRemark;
+      excerpt,
+    } = this.props.data.markdownRemark
 
     let meta = [
       { name: 'viewport', content: 'width=device-width, user-scalable=no' },
       { name: 'viewport', content: 'initial-scale=1.0' },
-      { name: 'og:title', content: title},
-      { name: 'og:type', content: 'article'},
-      { name: 'og:description', content: excerpt},
+      { name: 'og:title', content: title },
+      { name: 'og:type', content: 'article' },
+      { name: 'og:description', content: excerpt },
       { name: 'og:url', content: href },
 
-      { name: 'twitter:creator', content: '@jurvistan'}
-    ];
-    
-    if (thumbnail != null) { 
-      meta.push({ name: 'og:image', content: `${siteUrl}${thumbnail.childImageSharp.fluid.src}` });
-      meta.push({ name: 'og:type', content: 'summary_large_image'});
-      meta.push({ name: 'twitter:image', content: `${siteUrl}${thumbnail.childImageSharp.fluid.src}`});
-      meta.push({ name: 'twitter:card', content: 'summary_large_image'});
+      { name: 'twitter:creator', content: '@jurvistan' },
+    ]
+
+    if (thumbnail != null) {
+      meta.push({
+        name: 'og:image',
+        content: `${siteUrl}${thumbnail.childImageSharp.fluid.src}`,
+      })
+      meta.push({ name: 'og:type', content: 'summary_large_image' })
+      meta.push({
+        name: 'twitter:image',
+        content: `${siteUrl}${thumbnail.childImageSharp.fluid.src}`,
+      })
+      meta.push({ name: 'twitter:card', content: 'summary_large_image' })
     } else {
-      meta.push({ name: 'og:type', content: 'summary'});
-      meta.push({ name: 'twitter:card', content: 'summary'});
-    };
+      meta.push({ name: 'og:type', content: 'summary' })
+      meta.push({ name: 'twitter:card', content: 'summary' })
+    }
 
     return (
       <Container>
-        <Helmet title={`${title} | ${siteTitle}`} meta={ meta } />
-        <Header/>
+        <Helmet title={`${title} | ${siteTitle}`} meta={meta} />
+        <Header />
         <Content>
           <ArticleHeader>
             <h1>{title}</h1>
             {subtitle && <h2>${subtitle}</h2>}
           </ArticleHeader>
-          {thumbnail &&
+          {thumbnail && (
             <PostHero>
-              <Img key={thumbnail.childImageSharp.fluid.src} fluid={thumbnail.childImageSharp.fluid}/>
-              {thumbnailCaption && <ThumbnailCaption>{thumbnailCaption}</ThumbnailCaption>}
+              <Img
+                key={thumbnail.childImageSharp.fluid.src}
+                fluid={thumbnail.childImageSharp.fluid}
+              />
+              {thumbnailCaption && (
+                <ThumbnailCaption>{thumbnailCaption}</ThumbnailCaption>
+              )}
             </PostHero>
-          }
-          <Article dangerouslySetInnerHTML={{__html: html}} />
+          )}
+          <Article dangerouslySetInnerHTML={{ __html: html }} />
         </Content>
         <Footer />
       </Container>
@@ -136,7 +152,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "Do MMMM YYYY")
-        thumbnail{
+        thumbnail {
           childImageSharp {
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
@@ -148,4 +164,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
