@@ -6,11 +6,11 @@ thumbnail: "cover.jpg"
 thumbnailIsCover: false
 ---
 
-This month, Cedric is helping me level up my writing dojo. Every Thursday, we get on call and I watch as he edits my drafts, sentence after sentence. 
+This month, Cedric is helping me level up my writing dojo. Every Thursday, we get on a call, and I watch as he edits my drafts, sentence after sentence.
 
 We do this so I can acquire the skills "[tacitly](https://commoncog.com/blog/the-tacit-knowledge-series/)," getting into his perspective and allowing the skill to be transferred by osmosis. 
 
-We are planning to livestream our session this week, and will like to invite you to [join us](https://www.twitch.tv/jurvistan).
+We are planning to live-stream our session this week and will like to invite you to [join us](https://www.twitch.tv/jurvistan).
 
 **More Time Zones:**
 <br>6  am in San Francisco
