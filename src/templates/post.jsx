@@ -80,7 +80,14 @@ class BlogPost extends Component {
     const { siteUrl } = this.props.data.site.siteMetadata
     const { href } = this.props.location
     const {
-      frontmatter: { title, subtitle, thumbnail, thumbnailCaption, date },
+      frontmatter: {
+        title,
+        subtitle,
+        thumbnail,
+        thumbnailCaption,
+        date,
+        thumbnailIsCover,
+      },
       html,
       excerpt,
     } = this.props.data.markdownRemark
@@ -122,7 +129,7 @@ class BlogPost extends Component {
             {subtitle && <h2>${subtitle}</h2>}
             <DateLabel>{date}</DateLabel>
           </ArticleHeader>
-          {thumbnail && (
+          {thumbnail && thumbnailIsCover && (
             <PostHero>
               <Img
                 key={thumbnail.childImageSharp.fluid.src}

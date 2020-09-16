@@ -3,6 +3,7 @@ title: "🎤 Tacit Editing Livestream"
 date: "2020-09-15"
 slug: "tacit-editing-livestream"
 thumbnail: "cover.jpg"
+thumbnailIsCover: false
 ---
 
 This month, Cedric is helping me level up my writing dojo. Every Thursday, we get on call and I watch as he edits my drafts, sentence after sentence. 
