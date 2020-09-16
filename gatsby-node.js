@@ -11,13 +11,18 @@ const { attachFields } = require('gatsby-plugin-node-fields')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 function isArticle(node) {
-  return node.frontmatter != null && node.fileAbsolutePath.includes('/posts/');
+  return node.frontmatter != null && node.fileAbsolutePath.includes('/posts/')
 }
 
 const descriptors = [
   {
     predicate: isArticle,
     fields: [
+      {
+        name: 'thumbnailIsCover',
+        getter: node => node.frontmatter.thumbnailIsCover,
+        defaultValue: true,
+      },
       {
         name: 'thumbnail',
         getter: node => node.frontmatter.thumbnail,
@@ -26,7 +31,7 @@ const descriptors = [
       {
         name: 'thumbnailCaption',
         getter: node => node.frontmatter.thumbnailCaption,
-        defaultValue: undefined 
+        defaultValue: undefined,
       },
       {
         name: 'postPath',
@@ -38,26 +43,26 @@ const descriptors = [
           }
         },
         defaultValue: null,
-        transformer: value => getFullPath(value)
-      }
-    ]
-  }
+        transformer: value => getFullPath(value),
+      },
+    ],
+  },
 ]
 
 const getFullPath = ({ date, slug, path }) => {
-  const pathSlug = (path != null) ? path.split('/').pop() : slug
+  const pathSlug = path != null ? path.split('/').pop() : slug
 
-  const parsedDate = new Date(date);
-  const paddedMonth = ('0' + (parsedDate.getMonth()+1)).slice(-2)
+  const parsedDate = new Date(date)
+  const paddedMonth = ('0' + (parsedDate.getMonth() + 1)).slice(-2)
   return `/posts/${parsedDate.getFullYear()}/${paddedMonth}/${pathSlug}`
 }
 
-exports.onCreateNode = ({node, actions, getNode}) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
   // const { createNodeField } = actions;
-  attachFields(node, actions, getNode, descriptors);
+  attachFields(node, actions, getNode, descriptors)
 }
 
-exports.createPages = async  ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { data } = await graphql(`
     query {
       allMarkdownRemark(limit: 1000) {
@@ -69,7 +74,7 @@ exports.createPages = async  ({ graphql, actions }) => {
           }
         }
       }
-    } 
+    }
   `)
 
   data.allMarkdownRemark.edges.forEach(edge => {
