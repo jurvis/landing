@@ -21,3 +21,5 @@ We are planning to live-stream our session this week and will like to invite you
 <br>12 am in Sydney
 
 [Add Event to Calendar](https://s3-ap-southeast-1.amazonaws.com/jurvis.co/Tacit_Editing_with_Cedric_and_Jurvis.ics)
+
+**Edit (September 23rd, 2020):**  Link updated for this week's stream. 
