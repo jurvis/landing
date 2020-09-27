@@ -92,6 +92,8 @@ class BlogPost extends Component {
       excerpt,
     } = this.props.data.markdownRemark
 
+    console.log(this.props.data.markdownRemark.thumbnailCaption)
+
     let meta = [
       { name: 'viewport', content: 'width=device-width, user-scalable=no' },
       { name: 'viewport', content: 'initial-scale=1.0' },
@@ -129,7 +131,7 @@ class BlogPost extends Component {
             {subtitle && <h2>${subtitle}</h2>}
             <DateLabel>{date}</DateLabel>
           </ArticleHeader>
-          {thumbnail && thumbnailIsCover && (
+          {thumbnail && (thumbnailIsCover == undefined || thumbnailIsCover) && (
             <PostHero>
               <Img
                 key={thumbnail.childImageSharp.fluid.src}
