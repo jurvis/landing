@@ -65,9 +65,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { data } = await graphql(`
     query {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              title
+              date(formatString: "MMMM Do, YYYY")
+            }
             fields {
               postPath
             }
@@ -85,8 +89,8 @@ exports.createPages = async ({ graphql, actions }) => {
       path: slug,
       component: require.resolve('./src/templates/post.jsx'),
       context: {
-        prev: index === 0 ? null : posts[index - 1],
-        next: index === posts.length - 1 ? null : posts[index + 1],
+        prev: index === 0 ? null : posts[index - 1].node,
+        next: index === posts.length - 1 ? null : posts[index + 1].node,
       },
     })
   })
