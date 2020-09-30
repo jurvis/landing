@@ -77,11 +77,17 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  data.allMarkdownRemark.edges.forEach(edge => {
-    const slug = edge.node.fields.postPath
+  const posts = data.allMarkdownRemark.edges
+
+  posts.forEach(({ node }, index) => {
+    const slug = node.fields.postPath
     actions.createPage({
       path: slug,
       component: require.resolve('./src/templates/post.jsx'),
+      context: {
+        prev: index === 0 ? null : posts[index - 1],
+        next: index === posts.length - 1 ? null : posts[index + 1],
+      },
     })
   })
 }
