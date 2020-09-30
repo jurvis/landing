@@ -8,6 +8,7 @@ import Img from 'gatsby-image'
 import Header from '../components/header.js'
 import Article from '../components/articlePost.jsx'
 import Footer from '../components/Footer'
+import RelatedPosts from '../components/RelatedPosts'
 
 const Container = styled.div``
 
@@ -92,7 +93,7 @@ class BlogPost extends Component {
       excerpt,
     } = this.props.data.markdownRemark
 
-    console.log(this.props.data.markdownRemark.thumbnailCaption)
+    const { next, prev } = this.props.pageContext
 
     let meta = [
       { name: 'viewport', content: 'width=device-width, user-scalable=no' },
@@ -144,6 +145,7 @@ class BlogPost extends Component {
           )}
           <Article dangerouslySetInnerHTML={{ __html: html }} />
         </Content>
+        <RelatedPosts prevPost={next} nextPost={prev} />
         <Footer />
       </Container>
     )
