@@ -1,6 +1,6 @@
 ---
 title: "✍️ I Grew Up Here" 
-date: "2020-09-27"
+date: "2020-09-30"
 slug: "i-grew-up-here"
 thumbnail: "maplestory-screenshot.png"
 ---
