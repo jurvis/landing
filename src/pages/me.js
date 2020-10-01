@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -5,12 +6,12 @@ import Layout from '../components/layout'
 import ProfileImage from '../components/profile_image'
 import SocialBar from '../components/SocialBar'
 
-import GoodreadsBook from '../components/GoodreadsBook';
+import GoodreadsBook from '../components/GoodreadsBook'
 
 const Para = styled.p`
   line-height: 1.6;
   margin: 0 0 1rem;
-  text-align: ${props => props.center ? 'center' : 'left'};
+  text-align: ${props => (props.center ? 'center' : 'left')};
 
   &:last-of-type {
     margin: 0;
@@ -36,7 +37,7 @@ const ProfileImageContainer = styled.div`
 const HorizontalContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
 
   @media only screen and (min-width: 850px) {
     flex-direction: row;
@@ -55,9 +56,7 @@ const HeaderContainer = styled(HorizontalContainer)`
 
 const IntroContainer = styled.div`
   order: 2;
-  width: 100%
-
-  @media only screen and (min-width: 850px) {
+  width: 100% @media only screen and (min-width: 850px) {
     order: 1;
     width: 40rem;
   }
@@ -100,7 +99,7 @@ const SubstackContainer = styled(ContentContainer)`
   @media only screen and (min-width: 850px) {
     padding-top: 40%;
   }
-  
+
   iframe {
     position: absolute;
     top: 0;
@@ -127,7 +126,7 @@ const ContentSeparator = styled.hr`
   margin-top: calc(1.8rem - 1px);
 
   &:after {
-    content: "◆";
+    content: '◆';
     display: inline-block;
     position: relative;
     top: -0.95em;
@@ -136,28 +135,17 @@ const ContentSeparator = styled.hr`
   }
 
   @media only screen and (min-width: 850px) {
-    width: 90%
+    width: 90%;
   }
 `
 
-const MePage = () => {
-  const nowReadingBooks = [
-    { name: 'The Great Depression: A Diary', link: 'https://www.goodreads.com/book/show/6601224-the-great-depression' },
-    { name: 'Carrying The Fire', link: 'https://www.goodreads.com/book/show/612456.Carrying_the_Fire' },
-    { name: 'Work Clean', link: 'https://www.goodreads.com/book/show/26114603-work-clean' },
-    { name: 'Superforecasting', link: 'https://www.goodreads.com/book/show/23995360-superforecasting'},
-    { name: 'On the Shortness of Life', link: 'https://www.goodreads.com/book/show/97412.On_the_Shortness_of_Life' },
-    { name: 'Jerusalem, The Biography', link: 'https://www.goodreads.com/book/show/12114607-jerusalem-the-biography' },
-    { name: 'A History of Interest Rates', link: 'https://www.goodreads.com/book/show/19076493-a-history-of-interest-rates' },
-    { name: 'The Sovereign Individual: Mastering the Transition to the Information Age', link: 'https://www.goodreads.com/book/show/82256.The_Sovereign_Individual' },
-    { name: 'Cryptonomicon', link: 'https://www.goodreads.com/book/show/38897904-cryptonomicon' }
-  ].map( b => {
-    return (
-      <GoodreadsBook url={b.link} name={b.name}/>
-    )
-  });
+const MePage = ({ data }) => {
+  const nowReadingBooks = data ? data.allBooks.nodes : []
+  const books = nowReadingBooks.map(b => {
+    return <GoodreadsBook url={b.url} name={b.title} />
+  })
 
-  return ( 
+  return (
     <Layout>
       <TitleContainer>
         <HeaderTitle>About</HeaderTitle>
@@ -165,43 +153,70 @@ const MePage = () => {
       <HeaderContainer>
         <IntroContainer>
           <Para>
-            Hello there, my name is Jurvis. I am a software engineer now based in Los Angeles for college.
+            Hello there, my name is Jurvis. I am a software engineer now based
+            in Los Angeles for college.
           </Para>
           <Para>
-            I enjoy spending my time thinking about the governance and identity systems that make up our world. My interest in that topic surrounds my desire to work on products and services that aim to provision equitable access to core services like healthcare, finance, energy, and education. 
+            I enjoy spending my time thinking about the governance and identity
+            systems that make up our world. My interest in that topic surrounds
+            my desire to work on products and services that aim to provision
+            equitable access to core services like healthcare, finance, energy,
+            and education.
           </Para>
           <Para>
-            I measure the value of my life's work by my participation in applying technology to open up innovation, participation, and ingenuity to people around the globe. 
+            I measure the value of my life's work by my participation in
+            applying technology to open up innovation, participation, and
+            ingenuity to people around the globe.
           </Para>
           <Para>
-            I take a lot of <a href="https://instagram.com/jurv.is">photos</a> too! 
+            I take a lot of <a href="https://instagram.com/jurv.is">photos</a>{' '}
+            too!
           </Para>
         </IntroContainer>
         <ProfileImageContainer>
-          <ProfileImage/>
+          <ProfileImage />
           <SocialsContainer>
-            <SocialBar/>
+            <SocialBar />
           </SocialsContainer>
         </ProfileImageContainer>
       </HeaderContainer>
-      <ContentSeparator/>
+      <ContentSeparator />
       <ContentContainer>
         <TitleContainer>
           <HeaderTitle>What Am I Reading?</HeaderTitle>
-          {nowReadingBooks}
-        </TitleContainer> 
+          {books}
+        </TitleContainer>
       </ContentContainer>
-      <ContentSeparator/>
+      <ContentSeparator />
       <SubstackParentContainer>
         <HeaderTitle>Let's Keep In Touch</HeaderTitle>
-        <SubstackPara>Want to be friends? The best way is to sign up for my newsletter where I share the comings and goings of what I'm working/thinking about.</SubstackPara>
+        <SubstackPara>
+          Want to be friends? The best way is to sign up for my newsletter where
+          I share the comings and goings of what I'm working/thinking about.
+        </SubstackPara>
         <SubstackPara>Join the conversation!</SubstackPara>
         <SubstackContainer>
-          <iframe height="320px" src="https://jurvis.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+          <iframe
+            height="320px"
+            src="https://jurvis.substack.com/embed"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
         </SubstackContainer>
       </SubstackParentContainer>
     </Layout>
   )
 }
 
-export default MePage;
+export default MePage
+
+export const pageQuery = graphql`
+  query BooksQuery {
+    allBooks {
+      nodes {
+        title
+        url
+      }
+    }
+  }
+`

@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const path = require('path')
+const axios = require('axios').default
 const { attachFields } = require('gatsby-plugin-node-fields')
 const { createFilePath } = require('gatsby-source-filesystem')
 
@@ -55,6 +56,41 @@ const getFullPath = ({ date, slug, path }) => {
   const parsedDate = new Date(date)
   const paddedMonth = ('0' + (parsedDate.getMonth() + 1)).slice(-2)
   return `/posts/${parsedDate.getFullYear()}/${paddedMonth}/${pathSlug}`
+}
+
+const getReadingBooks = async () => {
+  const books = await axios.get(
+    `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE}/Books?fields%5B%5D=Title&fields%5B%5D=Goodreads+URL&filterByFormula=AND(%7BStatus%7D+%3D+%27Reading%27)&view=All+Books`,
+    {
+      params: {},
+      headers: { Authorization: `Bearer ${process.env.AIRTABLE_KEY}` },
+    }
+  )
+
+  return books.data.records.map(record => record.fields)
+}
+
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) => {
+  const nowReadingBooks = await getReadingBooks()
+
+  console.log(nowReadingBooks)
+
+  nowReadingBooks.forEach(book => {
+    const node = {
+      title: book.Title,
+      url: book['Goodreads URL'],
+      id: createNodeId(`Book-${book.Title}`),
+      internal: {
+        type: 'Books',
+        contentDigest: createContentDigest(book),
+      },
+    }
+    actions.createNode(node)
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
