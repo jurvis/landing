@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image';
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobeAsia, faCodeBranch, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import {
+  faGlobeAsia,
+  faCodeBranch,
+  faPlayCircle,
+} from '@fortawesome/free-solid-svg-icons'
 
 const List = styled.ul`
   margin: 0 0 2rem;
@@ -37,18 +41,18 @@ const WorkTitle = styled.h4`
 
 const WorkLocation = styled.p`
   margin: 0;
-  color: #8895A7;
+  color: #8895a7;
 `
 
 const WorkSkills = styled.p`
   margin: 0;
-  color: #5F6B7A;
+  color: #5f6b7a;
 `
 
 const Para = styled.p`
   line-height: 1.6;
   margin: 0 0 1rem;
-  text-align: ${props => props.center ? 'center' : 'left'};
+  text-align: ${props => (props.center ? 'center' : 'left')};
 
   &:last-of-type {
     margin: 0;
@@ -90,7 +94,7 @@ const MetaContainer = styled.div`
 
 const WorkMetaContainer = styled(MetaContainer)`
   align-items: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 
   @media only screen and (min-width: 850px) {
     align-items: left;
@@ -115,7 +119,7 @@ const WorkDescriptionContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 `
 
 const ContentSeparator = styled.hr`
@@ -131,7 +135,7 @@ const ContentSeparator = styled.hr`
   margin-top: calc(1.8rem - 1px);
 
   &:after {
-    content: "◆";
+    content: '◆';
     display: inline-block;
     position: relative;
     top: -0.95em;
@@ -140,13 +144,13 @@ const ContentSeparator = styled.hr`
   }
 
   @media only screen and (min-width: 850px) {
-    width: 90%
+    width: 90%;
   }
 `
 
 const CompanyImage = styled(Img)`
   border-radius: 20%;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 `
 
 const ProjectLinks = styled.ul`
@@ -171,21 +175,43 @@ const ProjectIcon = styled(FontAwesomeIcon)`
 const ProjectLink = styled.a`
   font-weight: 600;
   text-transform: uppercase;
-  background: rgba(245,215,110,0.5);
+  background: rgba(245, 215, 110, 0.5);
   text-decoration: none;
-  transition: all linear .2s;
+  transition: all linear 0.2s;
   padding: 3px 4px;
 
   &:hover {
-    background: rgba(245,215,110,1);
+    background: rgba(245, 215, 110, 1);
   }
 `
 
-const WorkPage = ({ data }) => {
-  const { harmanyImage, fossasiaImage, nebuloImage, exhibitGuideImage } = data;
-  const { oromicoImage, userTestingImage, buuukImage, carousellImage, undertideImage, safImage } = data;
+const BetaBadge = styled.small`
+  background: lightgray;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 5px;
+  margin-left: 0.5rem;
+`
 
-  return ( 
+const WorkPage = ({ data }) => {
+  const {
+    harmanyImage,
+    fossasiaImage,
+    nebuloImage,
+    exhibitGuideImage,
+    speedboardImage,
+  } = data
+  const {
+    oromicoImage,
+    userTestingImage,
+    buuukImage,
+    carousellImage,
+    undertideImage,
+    safImage,
+  } = data
+
+  return (
     <Layout>
       <ContentContainer>
         <TitleContainer>
@@ -195,7 +221,39 @@ const WorkPage = ({ data }) => {
           <ProjectListItem>
             <ProjectMetaContainer>
               <ImageContainer>
-                <Img fluid={harmanyImage.childImageSharp.fluid}/>
+                <Img fluid={speedboardImage.childImageSharp.fluid} />
+              </ImageContainer>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <WorkTitle>SpeedBoard</WorkTitle>
+                <BetaBadge>BETA</BetaBadge>
+              </div>
+              <WorkSkills>Get to your favorites faster.</WorkSkills>
+              <WorkLocation>iOS</WorkLocation>
+            </ProjectMetaContainer>
+            <WorkDescriptionContainer>
+              <Para>
+                SpeedBoard makes it easy to access your favorite contacts on the
+                go. This user-friendly speed dial app uses a simple interface
+                with instant access to your favorite contacts.
+              </Para>
+              <Para>
+                Whether its your mom, dad, or your partner, SpeedDial makes
+                calling them faster than ever.
+              </Para>
+              <ProjectLinks>
+                <ProjectLinkContainer>
+                  <ProjectIcon icon={faGlobeAsia} size="text" />
+                  <ProjectLink href="http://speedboard.undertide.co/">
+                    Website
+                  </ProjectLink>
+                </ProjectLinkContainer>
+              </ProjectLinks>
+            </WorkDescriptionContainer>
+          </ProjectListItem>
+          <ProjectListItem>
+            <ProjectMetaContainer>
+              <ImageContainer>
+                <Img fluid={harmanyImage.childImageSharp.fluid} />
               </ImageContainer>
               <WorkTitle>Harmany</WorkTitle>
               <WorkSkills>Music Sharing Made Easy</WorkSkills>
@@ -203,15 +261,20 @@ const WorkPage = ({ data }) => {
             </ProjectMetaContainer>
             <WorkDescriptionContainer>
               <Para>
-                Harmany is a simple utility that allows you to share music with your friends without having to know which streaming service they use. Especially when you have a song you really want to share, making it as easy as possible to reach the play button is crucial. 
+                Harmany is a simple utility that allows you to share music with
+                your friends without having to know which streaming service they
+                use. Especially when you have a song you really want to share,
+                making it as easy as possible to reach the play button is
+                crucial.
               </Para>
               <Para>
-                Just hit share from your music service of choice, and let Harmany take care of the rest.
+                Just hit share from your music service of choice, and let
+                Harmany take care of the rest.
               </Para>
               <ProjectLinks>
                 <ProjectLinkContainer>
-                    <ProjectIcon icon={ faGlobeAsia } size="text" />
-                    <ProjectLink href="https://harmany.me/">Website</ProjectLink>
+                  <ProjectIcon icon={faGlobeAsia} size="text" />
+                  <ProjectLink href="https://harmany.me/">Website</ProjectLink>
                 </ProjectLinkContainer>
               </ProjectLinks>
             </WorkDescriptionContainer>
@@ -219,19 +282,31 @@ const WorkPage = ({ data }) => {
           <ProjectListItem>
             <ProjectMetaContainer>
               <ImageContainer>
-                <Img fluid={nebuloImage.childImageSharp.fluid}/>
+                <Img fluid={nebuloImage.childImageSharp.fluid} />
               </ImageContainer>
               <WorkTitle>Nebulo</WorkTitle>
               <WorkSkills>Beautiful Smog Reports</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
             </ProjectMetaContainer>
             <WorkDescriptionContainer>
-              <Para>Nebulo aims at creating a seamless and easy experience for people to check for the current air quality data. With just a tap, Nebulo puts smog advisory first so users can care less about the science and focus on how to react when air quality reaches unhealthy levels.</Para>
-              <Para>Featured regionally and nationally, Nebulo is the top app in South East Asia for those looking to receive alerts and stay up to date with air quality.</Para>
+              <Para>
+                Nebulo aims at creating a seamless and easy experience for
+                people to check for the current air quality data. With just a
+                tap, Nebulo puts smog advisory first so users can care less
+                about the science and focus on how to react when air quality
+                reaches unhealthy levels.
+              </Para>
+              <Para>
+                Featured regionally and nationally, Nebulo is the top app in
+                South East Asia for those looking to receive alerts and stay up
+                to date with air quality.
+              </Para>
               <ProjectLinks>
                 <ProjectLinkContainer>
-                    <ProjectIcon icon={ faGlobeAsia } size="text" />
-                    <ProjectLink href="https://nebulo.undertide.co/">Website</ProjectLink>
+                  <ProjectIcon icon={faGlobeAsia} size="text" />
+                  <ProjectLink href="https://nebulo.undertide.co/">
+                    Website
+                  </ProjectLink>
                 </ProjectLinkContainer>
               </ProjectLinks>
             </WorkDescriptionContainer>
@@ -239,18 +314,26 @@ const WorkPage = ({ data }) => {
           <ProjectListItem>
             <ProjectMetaContainer>
               <ImageContainer>
-                <Img fluid={fossasiaImage.childImageSharp.fluid}/>
+                <Img fluid={fossasiaImage.childImageSharp.fluid} />
               </ImageContainer>
               <WorkTitle>FOSSAsia iOS</WorkTitle>
               <WorkSkills>Asia's largest open technology conference</WorkSkills>
               <WorkLocation>iOS, Design</WorkLocation>
             </ProjectMetaContainer>
             <WorkDescriptionContainer>
-              <Para>Designed with usability as a priority, I volunteered and led the design and open-source development of the companion iOS app for FOSSAsia 2016. The app allows to conference attendees to view more information about speakers, browse and bookmark available sessions, and set reminders for them.</Para>
+              <Para>
+                Designed with usability as a priority, I volunteered and led the
+                design and open-source development of the companion iOS app for
+                FOSSAsia 2016. The app allows to conference attendees to view
+                more information about speakers, browse and bookmark available
+                sessions, and set reminders for them.
+              </Para>
               <ProjectLinks>
                 <ProjectLinkContainer>
-                    <ProjectIcon icon={ faCodeBranch } size="text" />
-                    <ProjectLink href="https://github.com/fossasia/open-event-ios">Code</ProjectLink>
+                  <ProjectIcon icon={faCodeBranch} size="text" />
+                  <ProjectLink href="https://github.com/fossasia/open-event-ios">
+                    Code
+                  </ProjectLink>
                 </ProjectLinkContainer>
               </ProjectLinks>
             </WorkDescriptionContainer>
@@ -258,7 +341,7 @@ const WorkPage = ({ data }) => {
           <ProjectListItem>
             <ProjectMetaContainer>
               <ImageContainer>
-                <Img fluid={exhibitGuideImage.childImageSharp.fluid}/>
+                <Img fluid={exhibitGuideImage.childImageSharp.fluid} />
               </ImageContainer>
               <WorkTitle>ExhibitGuide</WorkTitle>
               <WorkSkills>Context-Aware Exhibition Experiences</WorkSkills>
@@ -266,22 +349,30 @@ const WorkPage = ({ data }) => {
             </ProjectMetaContainer>
             <WorkDescriptionContainer>
               <Para>
-                Created with the purpose of improving audio tours, ExhibitGuide uses proximity-based information gathered from Bluetooth Low-Energy Beacons to track a user's position within an exhibition and displays relevant exhibit data to the user’s phones.
+                Created with the purpose of improving audio tours, ExhibitGuide
+                uses proximity-based information gathered from Bluetooth
+                Low-Energy Beacons to track a user's position within an
+                exhibition and displays relevant exhibit data to the user’s
+                phones.
               </Para>
               <Para>
-                I was involved in the product design process and wrote the iOS app as an experiment for potential clients like the Singapore Art Science Museum.
+                I was involved in the product design process and wrote the iOS
+                app as an experiment for potential clients like the Singapore
+                Art Science Museum.
               </Para>
               <ProjectLinks>
                 <ProjectLinkContainer>
-                    <ProjectIcon icon={ faPlayCircle } size="text" />
-                    <ProjectLink href="https://vimeo.com/126036144">Video</ProjectLink>
+                  <ProjectIcon icon={faPlayCircle} size="text" />
+                  <ProjectLink href="https://vimeo.com/126036144">
+                    Video
+                  </ProjectLink>
                 </ProjectLinkContainer>
               </ProjectLinks>
             </WorkDescriptionContainer>
           </ProjectListItem>
         </List>
-      </ContentContainer> 
-      <ContentSeparator/>
+      </ContentContainer>
+      <ContentSeparator />
       <ContentContainer>
         <TitleContainer>
           <HeaderTitle>Work Experience</HeaderTitle>
@@ -296,11 +387,18 @@ const WorkPage = ({ data }) => {
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para center>
-                Focused on helping technically talented middle/high school students in Singapore find fulfilling gigs beyond our tiny shores, Undertide's primary mission is to help young developers get the exposure and focus they need to level themselves up quickly. 
+                Focused on helping technically talented middle/high school
+                students in Singapore find fulfilling gigs beyond our tiny
+                shores, Undertide's primary mission is to help young developers
+                get the exposure and focus they need to level themselves up
+                quickly.
               </Para>
-              <Para center>                
-                We figure out what they feel passionate about the most, match them with the right contracts through people we trust, take care of everything administrative
-                from negotiations, product management, engineering management, and invoicing; so they can focus on their technical craft.
+              <Para center>
+                We figure out what they feel passionate about the most, match
+                them with the right contracts through people we trust, take care
+                of everything administrative from negotiations, product
+                management, engineering management, and invoicing; so they can
+                focus on their technical craft.
               </Para>
               <Para center>
                 Our Pride: We have never gotten a single late payment.
@@ -316,10 +414,17 @@ const WorkPage = ({ data }) => {
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para center>
-                I directly manage and train a platoon of soldiers, built in-house administrative systems with Node.JS, and designed knowledge management repositories for our operations post-mortems.
+                I directly manage and train a platoon of soldiers, built
+                in-house administrative systems with Node.JS, and designed
+                knowledge management repositories for our operations
+                post-mortems.
               </Para>
               <Para center>
-                Because our functional role relative to the rest of the Army is extremely technical, the training/knowledge management piece was my center of focus; to ensure maximum availability of our computer systems when coordinating and integrating fighting forces. 
+                Because our functional role relative to the rest of the Army is
+                extremely technical, the training/knowledge management piece was
+                my center of focus; to ensure maximum availability of our
+                computer systems when coordinating and integrating fighting
+                forces.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
@@ -332,7 +437,9 @@ const WorkPage = ({ data }) => {
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para center>
-                Early-stage engineer building asset report-parsing software to make it easier for individuals to surface their individual financial positions and file taxes with ease.
+                Early-stage engineer building asset report-parsing software to
+                make it easier for individuals to surface their individual
+                financial positions and file taxes with ease.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
@@ -345,10 +452,14 @@ const WorkPage = ({ data }) => {
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para center>
-                Worked on tools for managers to measure team productivity, QA tools for automated regression testing for our mobile apps, as well as a bug tracking tool that helps the engineering department prioritise in tandem with our customer support team.
+                Worked on tools for managers to measure team productivity, QA
+                tools for automated regression testing for our mobile apps, as
+                well as a bug tracking tool that helps the engineering
+                department prioritise in tandem with our customer support team.
               </Para>
               <Para center>
-                I also contributed to the UserTesting Dashboard iOS app, the app testers use to take usability tests on our platform.
+                I also contributed to the UserTesting Dashboard iOS app, the app
+                testers use to take usability tests on our platform.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
@@ -361,7 +472,11 @@ const WorkPage = ({ data }) => {
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para center>
-                Created with the purpose of enhancing the feature of existing audio tour systems, I prototyped an app that uses proximity-based information gathered from Bluetooth Low-Energy Beacons to track a user's position within an exhibition and displays relevant metadata on their phones.
+                Created with the purpose of enhancing the feature of existing
+                audio tour systems, I prototyped an app that uses
+                proximity-based information gathered from Bluetooth Low-Energy
+                Beacons to track a user's position within an exhibition and
+                displays relevant metadata on their phones.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
@@ -374,27 +489,31 @@ const WorkPage = ({ data }) => {
             </WorkMetaContainer>
             <WorkDescriptionContainer>
               <Para center>
-                Built an internal moderator tool for managing listings posted by users on the platform, as well as initial web functionality.
+                Built an internal moderator tool for managing listings posted by
+                users on the platform, as well as initial web functionality.
               </Para>
             </WorkDescriptionContainer>
           </ProjectListItem>
         </List>
       </ContentContainer>
-      <ContentSeparator/>
+      <ContentSeparator />
       <ContentContainer>
         <HeaderTitle>Awards</HeaderTitle>
         <List>
           <ListItem>Singapore Computer Society Silver Medal and Prize</ListItem>
-          <ListItem>Apple Worldwide Developer Conference (WWDC) 2016 Scholarship Recipient</ListItem>
+          <ListItem>
+            Apple Worldwide Developer Conference (WWDC) 2016 Scholarship
+            Recipient
+          </ListItem>
           <ListItem>CodeXtremeApps 2014 Hackathon Finalist</ListItem>
           <ListItem>AngelHack AppHack Fall 2013 Prize Winner</ListItem>
         </List>
-      </ContentContainer> 
+      </ContentContainer>
     </Layout>
   )
 }
 
-export default WorkPage;
+export default WorkPage
 
 export const pageQuery = graphql`
   query MePageQuery {
@@ -420,6 +539,13 @@ export const pageQuery = graphql`
       }
     }
     nebuloImage: file(relativePath: { eq: "nebulo.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    speedboardImage: file(relativePath: { eq: "speedboard.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 250) {
           ...GatsbyImageSharpFluid
@@ -469,4 +595,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
