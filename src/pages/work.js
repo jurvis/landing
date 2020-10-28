@@ -76,10 +76,6 @@ const TitleContainer = styled.div`
 const ContentContainer = styled.div`
   width: 100%;
   margin: 0 auto;
-
-  @media only screen and (min-width: 850px) {
-    width: 80%;
-  }
 `
 
 const MetaContainer = styled.div`
@@ -88,7 +84,7 @@ const MetaContainer = styled.div`
   width: 100%;
 
   @media only screen and (min-width: 850px) {
-    width: 25%;
+    width: 38%;
   }
 `
 
@@ -101,7 +97,7 @@ const WorkMetaContainer = styled(MetaContainer)`
   }
 `
 
-const ProjectMetaContainer = styled(MetaContainer)`
+const ProjectImageContainer = styled(MetaContainer)`
   justify-content: space-evenly;
   height: 325px;
 
@@ -114,7 +110,7 @@ const WorkDescriptionContainer = styled.div`
   width: 100%;
 
   @media only screen and (min-width: 850px) {
-    width: 70%;
+    width: 60%;
   }
 `
 
@@ -186,12 +182,28 @@ const ProjectLink = styled.a`
 `
 
 const BetaBadge = styled.small`
-  background: lightgray;
   border-radius: 3px;
+  background: #f7ef81;
   font-size: 10px;
   font-weight: 700;
   padding: 2px 5px;
-  margin-left: 0.5rem;
+`
+
+const ProjectMetaContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  * {
+    margin-right: 0.5rem;
+  }
+`
+
+const MetaSeparator = styled.hr`
+  width: 1.5rem;
+  border: none;
+  border-top: medium #333;
+  color: #666;
+  margin: 0.5rem 0rem;
 `
 
 const WorkPage = ({ data }) => {
@@ -220,18 +232,21 @@ const WorkPage = ({ data }) => {
         </TitleContainer>
         <List>
           <ProjectListItem>
-            <ProjectMetaContainer>
+            <ProjectImageContainer>
               <ImageContainer>
                 <Img fluid={speedboardImage.childImageSharp.fluid} />
               </ImageContainer>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+            </ProjectImageContainer>
+            <WorkDescriptionContainer>
+              <ProjectMetaContainer
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
                 <WorkTitle>SpeedBoard</WorkTitle>
                 <BetaBadge>BETA</BetaBadge>
-              </div>
+                <WorkLocation>iOS</WorkLocation>
+              </ProjectMetaContainer>
               <WorkSkills>Get to your favorites faster.</WorkSkills>
-              <WorkLocation>iOS</WorkLocation>
-            </ProjectMetaContainer>
-            <WorkDescriptionContainer>
+              <MetaSeparator />
               <Para>
                 SpeedBoard makes it easy to access your favorite contacts on the
                 go. This user-friendly speed dial app uses a simple interface
@@ -252,18 +267,21 @@ const WorkPage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
-            <ProjectMetaContainer>
+            <ProjectImageContainer>
               <ImageContainer>
                 <Img fluid={wukuImage.childImageSharp.fluid} />
               </ImageContainer>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+            </ProjectImageContainer>
+            <WorkDescriptionContainer>
+              <ProjectMetaContainer
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
                 <WorkTitle>Wuku</WorkTitle>
                 <BetaBadge>WIP</BetaBadge>
-              </div>
+                <WorkLocation>Next.js, Solidity</WorkLocation>
+              </ProjectMetaContainer>
               <WorkSkills>Fun Haikus For All.</WorkSkills>
-              <WorkLocation>Next.js, Solidity</WorkLocation>
-            </ProjectMetaContainer>
-            <WorkDescriptionContainer>
+              <MetaSeparator />
               <Para>
                 Wuku is a haiku word game built on top of the Ethereum
                 blockchain.
@@ -287,15 +305,20 @@ const WorkPage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
-            <ProjectMetaContainer>
+            <ProjectImageContainer>
               <ImageContainer>
                 <Img fluid={harmanyImage.childImageSharp.fluid} />
               </ImageContainer>
-              <WorkTitle>Harmany</WorkTitle>
-              <WorkSkills>Music Sharing Made Easy</WorkSkills>
-              <WorkLocation>iOS, Design</WorkLocation>
-            </ProjectMetaContainer>
+            </ProjectImageContainer>
             <WorkDescriptionContainer>
+              <ProjectMetaContainer
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <WorkTitle>Harmany</WorkTitle>
+                <WorkLocation>iOS, Design</WorkLocation>
+              </ProjectMetaContainer>
+              <WorkSkills>Music Sharing Made Easy</WorkSkills>
+              <MetaSeparator />
               <Para>
                 Harmany is a simple utility that allows you to share music with
                 your friends without having to know which streaming service they
@@ -316,15 +339,20 @@ const WorkPage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
-            <ProjectMetaContainer>
+            <ProjectImageContainer>
               <ImageContainer>
                 <Img fluid={nebuloImage.childImageSharp.fluid} />
               </ImageContainer>
-              <WorkTitle>Nebulo</WorkTitle>
-              <WorkSkills>Beautiful Smog Reports</WorkSkills>
-              <WorkLocation>iOS, Design</WorkLocation>
-            </ProjectMetaContainer>
+            </ProjectImageContainer>
             <WorkDescriptionContainer>
+              <ProjectMetaContainer
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <WorkTitle>Nebulo</WorkTitle>
+                <WorkLocation>iOS, Design</WorkLocation>
+              </ProjectMetaContainer>
+              <WorkSkills>Beautiful Smog Reports</WorkSkills>
+              <MetaSeparator />
               <Para>
                 Nebulo aims at creating a seamless and easy experience for
                 people to check for the current air quality data. With just a
@@ -348,15 +376,20 @@ const WorkPage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
-            <ProjectMetaContainer>
+            <ProjectImageContainer>
               <ImageContainer>
                 <Img fluid={fossasiaImage.childImageSharp.fluid} />
               </ImageContainer>
-              <WorkTitle>FOSSAsia iOS</WorkTitle>
-              <WorkSkills>Asia's largest open technology conference</WorkSkills>
-              <WorkLocation>iOS, Design</WorkLocation>
-            </ProjectMetaContainer>
+            </ProjectImageContainer>
             <WorkDescriptionContainer>
+              <ProjectMetaContainer
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <WorkTitle>FOSSAsia iOS</WorkTitle>
+                <WorkLocation>iOS, Design</WorkLocation>
+              </ProjectMetaContainer>
+              <WorkSkills>Asia's largest open technology conference</WorkSkills>
+              <MetaSeparator />
               <Para>
                 Designed with usability as a priority, I volunteered and led the
                 design and open-source development of the companion iOS app for
@@ -375,15 +408,20 @@ const WorkPage = ({ data }) => {
             </WorkDescriptionContainer>
           </ProjectListItem>
           <ProjectListItem>
-            <ProjectMetaContainer>
+            <ProjectImageContainer>
               <ImageContainer>
                 <Img fluid={exhibitGuideImage.childImageSharp.fluid} />
               </ImageContainer>
-              <WorkTitle>ExhibitGuide</WorkTitle>
-              <WorkSkills>Context-Aware Exhibition Experiences</WorkSkills>
-              <WorkLocation>iOS, Design</WorkLocation>
-            </ProjectMetaContainer>
+            </ProjectImageContainer>
             <WorkDescriptionContainer>
+              <ProjectMetaContainer
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <WorkTitle>ExhibitGuide</WorkTitle>
+                <WorkLocation>iOS, Design</WorkLocation>
+              </ProjectMetaContainer>
+              <WorkSkills>Context-Aware Exhibition Experiences</WorkSkills>
+              <MetaSeparator />
               <Para>
                 Created with the purpose of improving audio tours, ExhibitGuide
                 uses proximity-based information gathered from Bluetooth
