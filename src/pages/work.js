@@ -201,6 +201,7 @@ const WorkPage = ({ data }) => {
     nebuloImage,
     exhibitGuideImage,
     speedboardImage,
+    wukuImage,
   } = data
   const {
     oromicoImage,
@@ -245,6 +246,41 @@ const WorkPage = ({ data }) => {
                   <ProjectIcon icon={faGlobeAsia} size="text" />
                   <ProjectLink href="http://speedboard.undertide.co/">
                     Website
+                  </ProjectLink>
+                </ProjectLinkContainer>
+              </ProjectLinks>
+            </WorkDescriptionContainer>
+          </ProjectListItem>
+          <ProjectListItem>
+            <ProjectMetaContainer>
+              <ImageContainer>
+                <Img fluid={wukuImage.childImageSharp.fluid} />
+              </ImageContainer>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <WorkTitle>Wuku</WorkTitle>
+                <BetaBadge>WIP</BetaBadge>
+              </div>
+              <WorkSkills>Fun Haikus For All.</WorkSkills>
+              <WorkLocation>Next.js, Solidity</WorkLocation>
+            </ProjectMetaContainer>
+            <WorkDescriptionContainer>
+              <Para>
+                Wuku is a haiku word game built on top of the Ethereum
+                blockchain.
+              </Para>
+              <Para>
+                Stake ether to start or join Haiku battles, vote for your
+                favorite third line, earn Ether. Building to learn Solidity.
+              </Para>
+              <ProjectLinks>
+                <ProjectLinkContainer>
+                  <ProjectIcon icon={faGlobeAsia} size="text" />
+                  <ProjectLink href="https://wuku.app/">Website</ProjectLink>
+                </ProjectLinkContainer>
+                <ProjectLinkContainer>
+                  <ProjectIcon icon={faCodeBranch} size="text" />
+                  <ProjectLink href="https://github.com/undertideco/wuku">
+                    Code
                   </ProjectLink>
                 </ProjectLinkContainer>
               </ProjectLinks>
@@ -546,6 +582,13 @@ export const pageQuery = graphql`
       }
     }
     speedboardImage: file(relativePath: { eq: "speedboard.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    wukuImage: file(relativePath: { eq: "wuku.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 250) {
           ...GatsbyImageSharpFluid
