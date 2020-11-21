@@ -4,7 +4,6 @@ import Link from 'gatsby-link'
 
 function RelatedPages(props) {
   const { prevPost, nextPost } = props
-  console.log(prevPost)
 
   return (
     <Container>
