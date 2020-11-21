@@ -19,7 +19,7 @@ So you can call your loved ones like this:
 
 I will be honest. Most you of will not find this app useful. 
 
-I made this app after years of observing my grandparents struggle with adapting to smartphones. My hope is to be able to create a simple tool for them to use their smartphone. I write more about the product-building process [here](/posts/2020/11/speedboard-origins).
+I made this after years of watching my grandparents struggle with adapting to smartphones. My hope is to be able to create a simple tool for them to access their phone's most basic features. I write more about the product-building process [here](/posts/2020/11/speedboard-origins).
 
 If you will like to download SpeedBoard, it is also now available on the [App Store](https://apps.apple.com/us/app/speedboard-speed-dial-app/id1529980584). 
 
