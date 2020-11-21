@@ -77,8 +77,6 @@ exports.sourceNodes = async ({
 }) => {
   const nowReadingBooks = await getReadingBooks()
 
-  console.log(nowReadingBooks)
-
   nowReadingBooks.forEach(book => {
     const node = {
       title: book.Title,
