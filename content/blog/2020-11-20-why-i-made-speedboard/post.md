@@ -2,7 +2,6 @@
 title: "🔨 How My Grandparents Inspired Me To Build SpeedBoard" 
 date: "2020-11-20"
 slug: "speedboard-origins"
-thumbnail: "cover.jpg"
 ---
 
 When we gave my grandparents their first smartphones, they had a lot of trouble using it. Feature phones were simple. They came with hardware-based buttons and represented 90% of what my grandparents used their phone for: calling.
