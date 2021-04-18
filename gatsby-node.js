@@ -12,7 +12,7 @@ const { attachFields } = require('gatsby-plugin-node-fields')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 function isArticle(node) {
-  return node.frontmatter != null && node.fileAbsolutePath.includes('/posts/')
+  return node.frontmatter != null && node.fileAbsolutePath.includes('/blog/')
 }
 
 const descriptors = [
@@ -60,7 +60,7 @@ const getFullPath = ({ date, slug, path }) => {
 
 const getReadingBooks = async () => {
   const books = await axios.get(
-    `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE}/Books?fields%5B%5D=Title&fields%5B%5D=Goodreads+URL&filterByFormula=AND(%7BStatus%7D+%3D+%27Reading%27)&view=All+Books`,
+    `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE}/Books?view=Reading`,
     {
       params: {},
       headers: { Authorization: `Bearer ${process.env.AIRTABLE_KEY}` },
@@ -92,7 +92,6 @@ exports.sourceNodes = async ({
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  // const { createNodeField } = actions;
   attachFields(node, actions, getNode, descriptors)
 }
 
