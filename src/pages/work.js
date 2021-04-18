@@ -11,6 +11,7 @@ import {
   faCodeBranch,
   faPlayCircle,
 } from '@fortawesome/free-solid-svg-icons'
+import { faAppStore, faAppStoreIos } from '@fortawesome/free-brands-svg-icons'
 
 const List = styled.ul`
   margin: 0 0 2rem;
@@ -242,7 +243,6 @@ const WorkPage = ({ data }) => {
                 style={{ display: 'flex', alignItems: 'center' }}
               >
                 <WorkTitle>SpeedBoard</WorkTitle>
-                <BetaBadge>BETA</BetaBadge>
                 <WorkLocation>iOS</WorkLocation>
               </ProjectMetaContainer>
               <WorkSkills>Get to your favorites faster.</WorkSkills>
@@ -253,7 +253,7 @@ const WorkPage = ({ data }) => {
                 with instant access to your favorite contacts.
               </Para>
               <Para>
-                Whether its your mom, dad, or your partner, SpeedDial makes
+                Whether its your mom, dad, or your partner, SpeedBoard makes
                 calling them faster than ever.
               </Para>
               <ProjectLinks>
@@ -261,6 +261,18 @@ const WorkPage = ({ data }) => {
                   <ProjectIcon icon={faGlobeAsia} size="text" />
                   <ProjectLink href="http://speedboard.undertide.co/">
                     Website
+                  </ProjectLink>
+                </ProjectLinkContainer>
+                <ProjectLinkContainer>
+                  <ProjectIcon icon={faAppStoreIos} size="text" />
+                  <ProjectLink href="https://apps.apple.com/us/app/speedboard-speed-dial-app/id1529980584#?platform=iphone">
+                    App Store
+                  </ProjectLink>
+                </ProjectLinkContainer>
+                <ProjectLinkContainer>
+                  <ProjectIcon icon={faCodeBranch} size="text" />
+                  <ProjectLink href="https://github.com/undertideco/speedboard">
+                    Code
                   </ProjectLink>
                 </ProjectLinkContainer>
               </ProjectLinks>
@@ -334,6 +346,12 @@ const WorkPage = ({ data }) => {
                 <ProjectLinkContainer>
                   <ProjectIcon icon={faGlobeAsia} size="text" />
                   <ProjectLink href="https://harmany.me/">Website</ProjectLink>
+                </ProjectLinkContainer>
+                <ProjectLinkContainer>
+                  <ProjectIcon icon={faAppStoreIos} size="text" />
+                  <ProjectLink href="https://apps.apple.com/us/app/harmany-a-music-sharing-app/id1247767866?ls=1">
+                    App Store
+                  </ProjectLink>
                 </ProjectLinkContainer>
               </ProjectLinks>
             </WorkDescriptionContainer>
