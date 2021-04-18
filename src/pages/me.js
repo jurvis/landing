@@ -56,7 +56,9 @@ const HeaderContainer = styled(HorizontalContainer)`
 
 const IntroContainer = styled.div`
   order: 2;
-  width: 100% @media only screen and (min-width: 850px) {
+  width: 100%;
+
+  @media only screen and (min-width: 850px) {
     order: 1;
     width: 40rem;
   }
@@ -153,24 +155,15 @@ const MePage = ({ data }) => {
       <HeaderContainer>
         <IntroContainer>
           <Para>
-            Hello there, my name is Jurvis. I am a software engineer now based
-            in Los Angeles for college.
+            Hi there! My name is Jurvis.
           </Para>
           <Para>
-            I enjoy spending my time thinking about the governance and identity
-            systems that make up our world. My interest in that topic surrounds
-            my desire to work on products and services that aim to provision
-            equitable access to core services like healthcare, finance, energy,
-            and education.
+            I am currently a founding engineer at <a href="https://trymeasured.com">Measured</a> (YC W21),
+            managing partner at <a href="https://undertide.co">Undertide Apps</a>, 
+            and a philosophy major at Santa Monica College.
           </Para>
           <Para>
-            I measure the value of my life's work by my participation in
-            applying technology to open up innovation, participation, and
-            ingenuity to people around the globe.
-          </Para>
-          <Para>
-            I take a lot of <a href="https://instagram.com/jurv.is">photos</a>{' '}
-            too!
+            This blog hosts my ruminations on identity systems, crypto-assets, travel, and anything I am curently learning.
           </Para>
         </IntroContainer>
         <ProfileImageContainer>
