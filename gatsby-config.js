@@ -8,6 +8,7 @@ module.exports = {
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -97,7 +98,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'blogPosts',
-        path: `${__dirname}/posts`,
+        path: `${__dirname}/content/blog`,
       },
     },
     'gatsby-transformer-sharp',
