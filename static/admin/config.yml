@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
+media_folder: static/images
 public_folder: /img
 
 collections:
@@ -10,7 +10,7 @@ collections:
     label: 'Blog'
     folder: 'content/blog'
     create: true
-    slug: 'index'
+    slug: "{{slug}}"
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'
@@ -19,5 +19,5 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Featured Image", name: "thumbnail", widget: "image"}
