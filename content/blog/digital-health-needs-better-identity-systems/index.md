@@ -7,13 +7,13 @@ When Apple announced the Apple Watch in 2014, I was very excited about its possi
 
 I [wrote](https://jurv.is/posts/2014/09/letters-from-9914) in one of the earliest posts on this blog:
 
-\> Looking at HealthKit that has metrics like blood pressure and sugar levels got me so excited — what if the Watch could be the device that monitors and files all these important vitals for your doctor?
+> Looking at HealthKit that has metrics like blood pressure and sugar levels got me so excited — what if the Watch could be the device that monitors and files all these important vitals for your doctor?
 
 However, I did not entertain the idea or work on anything tangible until ResearchKit was announced in 2015. Again, from a [blog post](https://jurv.is/posts/2015/03/researchkit-apple-watch) I wrote at the time:
 
-\> The Apple Watch is a device that sits directly on top of your skin, and in due time will be able to monitor and collect more and more data about your body. These advancements will allow doctors to conduct more accurate diagnoses, not based on data collected annually on your medical checkup or when you feel like there’s a problem; but instead, daily.
-
-The thesis was simple: sensor advancements will unlock a new dimension for clinical health data. One that existing Electronic Medical Records (EMRs) did not support but could benefit from.
+> The Apple Watch is a device that sits directly on top of your skin, and in due time will be able to monitor and collect more and more data about your body. These advancements will allow doctors to conduct more accurate diagnoses, not based on data collected annually on your medical checkup or when you feel like there’s a problem; but instead, daily.
+>
+> The thesis was simple: sensor advancements will unlock a new dimension for clinical health data. One that existing Electronic Medical Records (EMRs) did not support but could benefit from.
 
 ## The First Stab
 
