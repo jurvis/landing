@@ -1,7 +1,7 @@
 ---
 title: Digital Health Needs Better Identity Systems
 date: 2021-10-15T14:17:12.028Z
-thumbnail: pasted-image-0.png
+thumbnail: nov._12_2017-rodinthinker.jpg
 ---
 When Apple announced the Apple Watch in 2014, I was very excited about its possibilities. 
 
@@ -36,8 +36,7 @@ Even if my little R&D project worked out, there was a larger issue: who should b
 
 My idea was in trouble. The last nail in the coffin was realizing that I had only a year left before my conscription (I had to do mandatory National Service, being Singaporean). 
 
-## \
-No One Wants To Manage Their Health Data
+## No One Wants To Manage Their Health Data
 
 Fast forward three years, the landscape had changed. Hardware sensors had improved, and that innovation was accompanied by an explosion of different storage services and data collection streams. We now have a novel and valuable source of health data sitting in the phones in our pockets, and everyone, it seemed, wanted a slice of it.
 
@@ -107,8 +106,7 @@ Chiefly of which is the tricky job of consistently identifying individuals betwe
 
 However, they still keep that information, because (1) there exists a need to consistently identify individuals between the clinics, health insurance, and hospitals they show up at, and (2) there is currently no way for an individual to link a specific piece of their identity to a specific health record.
 
-## \
-The Story So Far
+## The Story So Far
 
 I've been tracking this space for half of the last decade now. The most convincing initial work around this was done during the "private blockchain" hype cycle.
 
