@@ -1,6 +1,7 @@
 ---
 title: Digital Health Needs Better Identity Systems
 date: 2021-10-15T14:17:12.028Z
+slug: digital-health-identity-systems
 thumbnail: nov._12_2017-rodinthinker.jpg
 ---
 When Apple announced the Apple Watch in 2014, I was very excited about its possibilities. 
