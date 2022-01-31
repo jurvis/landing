@@ -160,10 +160,10 @@ const MePage = ({ data }) => {
           <Para>
             I am currently a founding engineer at <a href="https://trymeasured.com">Measured</a> (YC W21),
             managing partner at <a href="https://undertide.co">Undertide Apps</a>, 
-            and a philosophy major at Santa Monica College.
+            and an Applied and Computational Mathematics student at the University of Southern California. 
           </Para>
           <Para>
-            This blog hosts my ruminations on identity systems, crypto-assets, travel, and anything I am curently learning.
+            This blog currently hosts my higher-level ruminations on identity systems, travel, and anything I am curently learning.
           </Para>
         </IntroContainer>
         <ProfileImageContainer>
