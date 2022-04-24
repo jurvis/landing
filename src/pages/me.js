@@ -158,9 +158,8 @@ const MePage = ({ data }) => {
             Hi there! My name is Jurvis.
           </Para>
           <Para>
-            I am currently a founding engineer at <a href="https://trymeasured.com">Measured</a> (YC W21),
-            managing partner at <a href="https://undertide.co">Undertide Apps</a>, 
-            and an Applied and Computational Mathematics student at the University of Southern California. 
+            I am a software engineer working on Lightning and helping people secure their Bitcoin at <a href="https://keys.casa">Casa</a>.
+            I also spend my time at the University of Southern California studying Applied and Computational Mathematics.
           </Para>
           <Para>
             This blog currently hosts my higher-level ruminations on identity systems, travel, and anything I am curently learning.
@@ -181,22 +180,6 @@ const MePage = ({ data }) => {
         </TitleContainer>
       </ContentContainer>
       <ContentSeparator />
-      <SubstackParentContainer>
-        <HeaderTitle>Let's Keep In Touch</HeaderTitle>
-        <SubstackPara>
-          Want to be friends? The best way is to sign up for my newsletter where
-          I share the comings and goings of what I'm working/thinking about.
-        </SubstackPara>
-        <SubstackPara>Join the conversation!</SubstackPara>
-        <SubstackContainer>
-          <iframe
-            height="320px"
-            src="https://jurvis.substack.com/embed"
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
-        </SubstackContainer>
-      </SubstackParentContainer>
     </Layout>
   )
 }
