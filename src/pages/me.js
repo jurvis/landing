@@ -88,33 +88,6 @@ const SocialsContainer = styled.div`
   margin: 0 auto;
 `
 
-const SubstackParentContainer = styled(ContentContainer)`
-  margin: 0 auto;
-  text-align: center;
-`
-
-const SubstackContainer = styled(ContentContainer)`
-  position: relative;
-  overflow: hidden;
-  padding-top: 100%;
-
-  @media only screen and (min-width: 850px) {
-    padding-top: 40%;
-  }
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-`
-
-const SubstackPara = styled.p`
-  margin-bottom: 1rem;
-`
-
 const ContentSeparator = styled.hr`
   width: 100%;
   margin-left: auto;
