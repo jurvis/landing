@@ -1,6 +1,7 @@
 ---
 title: My Summer of Bitcoin
 date: 2022-09-03T23:47:17.032Z
+slug: my-summer-of-bitcoin
 thumbnail: img_7712.jpg
 ---
 I finally did it. I contributed to open-source. I started writing code professionally about nine years ago but have always found a way to avoid it. When encountering an issue with a library, the pain of switching to another always appealed to me more than going through the crippling emotional anxiety of contributing a bug fix or proposing a feature.
@@ -9,7 +10,7 @@ In other words, open-source work sounded like hell. 
 
 ## The Motivation
 
-However, more recently, that changed, and I finally started participating in open-source. I was motivated by a desire to participate in developing Bitcoin’s transaction scaling solution, the Lightning Network. The thought of working on an open-source initiative was intimidating. Why would any project out there benefit from my contribution? But I wanted to give it at least a shot. If I found it emotionally repulsive – I thought – I could just give up and say I at least tried.
+However, more recently, that changed, and I finally started participating in open-source. I was motivated by a desire to participate in developing Bitcoin’s transaction scaling solution, the Lightning Network. The thought of working on an open-source initiative was intimidating. Why would any project out there benefit from *my* contribution? But I wanted to give it at least a shot. If I found it emotionally repulsive – I thought – I could just give up and say I at least tried.
 
 I started where I always do when I learn something new: find a mentor. I concede that it is a resource-inefficient way to learn anything, but that’s what I have found to have worked consistently for me. My search brought me to [Summer of Bitcoin](https://www.summerofbitcoin.org/). The program provides some structure for college students to learn how the protocol works by pairing them with mentors who contribute to open-source projects.
 
