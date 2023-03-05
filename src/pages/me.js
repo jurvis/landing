@@ -131,7 +131,7 @@ const MePage = ({ data }) => {
             Hi there! My name is Jurvis.
           </Para>
           <Para>
-            I am a software engineer working on Lightning and helping people secure their Bitcoin at <a href="https://keys.casa">Casa</a>.
+            I am a software engineer at Block working on Lightning and our new bitcoin <a href="https://wallet.build/">wallet</a>.
             I also spend my time at the University of Southern California studying Applied and Computational Mathematics.
           </Para>
           <Para>
